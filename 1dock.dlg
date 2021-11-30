@@ -1,0 +1,3258 @@
+          AutoDock 4.2 Release 4.2.6   
+         (C) 1989-2012 The Scripps Research Institute
+        AutoDock comes with ABSOLUTELY NO WARRANTY.
+        AutoDock is free software, and you are welcome
+        to redistribute it under certain conditions;
+        for details type 'autodock4 -C'
+
+                     main.cc  $Revision: 1.213 $
+
+                   Compiled on Jul 18 2014 at 15:34:58
+
+
+This file was created at:			9:36 44" p.m., 11/21/2021
+                   on host:		"LAPTOP-B353CJIT"
+Current Working Directory = "C:\Users\kossa\Desktop\Programy\AutoDock\TheBest\lisinopril"
+
+      ________________________________________________________________
+
+                   SETTING UP DEFAULT PARAMETER LIBRARY
+      ________________________________________________________________
+
+
+Random number generator was seeded with values 19196, 1637527004.
+Docking parameter file (DPF) used for this docking:		C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dpf
+DPF> autodock_parameter_version 4.2       # used by autodock to validate parameter set
+
+	Autodock parameter version 4.2.
+DPF> outlev 1                             # diagnostic output level
+
+Output Level = 1  ADT-COMPATIBLE OUTPUT DURING DOCKING.
+DPF> intelec                              # calculate internal electrostatics
+
+Electrostatic energies will be calculated for all non-bonds between moving atoms.
+DPF> seed pid time                        # seeds for random generator
+
+Random number generator was seeded with values 19196, 1637527004.
+DPF> ligand_types A NA C OA N             # atoms types in ligand
+
+DPF> fld 1protein.maps.fld                # grid_data_file
+
+Opening Grid Map Dimensions file:		1protein.maps.fld
+Grid Point Spacing =				0.100 Angstroms
+
+Even Number of User-specified Grid Points =	80 x-points
+						104 y-points
+						126 z-points
+
+Coordinates of Central Grid Point of Maps =	(40.553, 32.798, 47.286)
+Macromolecule file used to create Grid Maps =	1protein.pdbqt
+Grid Parameter file used to create Grid Maps =	C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/6grid.gpf
+Minimum coordinates in grid = (36.553, 27.598, 40.986)
+Maximum coordinates in grid = (44.553, 37.998, 53.586)
+
+DPF> map 1protein.A.map                   # atom-specific affinity map
+
+DPF> map 1protein.NA.map                  # atom-specific affinity map
+
+DPF> map 1protein.C.map                   # atom-specific affinity map
+
+DPF> map 1protein.OA.map                  # atom-specific affinity map
+
+DPF> map 1protein.N.map                   # atom-specific affinity map
+
+DPF> elecmap 1protein.e.map               # electrostatics map
+
+DPF> desolvmap 1protein.d.map             # desolvation map
+
+DPF> move lisinopril.pdbqt                # small molecule
+
+1,4-interactions will be _ignored_ in the non-bonded internal energy calculation.
+
+Ligand PDBQT file = "lisinopril.pdbqt"
+
+INPUT LIGAND PDBQT FILE:
+________________________
+
+INPUT-LIGAND-PDBQT: REMARK  12 active torsions:
+INPUT-LIGAND-PDBQT: REMARK  status: ('A' for Active; 'I' for Inactive)
+INPUT-LIGAND-PDBQT: REMARK    1  A    between atoms: C3_3  and  C4_4 
+INPUT-LIGAND-PDBQT: REMARK    2  A    between atoms: C14_5  and  C4_4 
+INPUT-LIGAND-PDBQT: REMARK    3  A    between atoms: C4_4  and  N1_13 
+INPUT-LIGAND-PDBQT: REMARK    4  A    between atoms: C14_5  and  C15_6 
+INPUT-LIGAND-PDBQT: REMARK    5  A    between atoms: C15_6  and  C16_7 
+INPUT-LIGAND-PDBQT: REMARK    6  A    between atoms: C2_16  and  N1_13 
+INPUT-LIGAND-PDBQT: REMARK       I    between atoms: C1_15  and  N2_24 
+INPUT-LIGAND-PDBQT: REMARK    7  A    between atoms: C1_15  and  C2_16 
+INPUT-LIGAND-PDBQT: REMARK    8  A    between atoms: C10_18  and  C2_16 
+INPUT-LIGAND-PDBQT: REMARK    9  A    between atoms: C10_18  and  C11_19 
+INPUT-LIGAND-PDBQT: REMARK   10  A    between atoms: C11_19  and  C12_20 
+INPUT-LIGAND-PDBQT: REMARK   11  A    between atoms: C12_20  and  C13_21 
+INPUT-LIGAND-PDBQT: REMARK   12  A    between atoms: C5_25  and  C9_29 
+INPUT-LIGAND-PDBQT: ROOT
+INPUT-LIGAND-PDBQT: HETATM    1  C2  LPR A 702      42.612  33.852  45.943  1.00 12.80     0.177 C 
+INPUT-LIGAND-PDBQT: ENDROOT
+INPUT-LIGAND-PDBQT: BRANCH   1   2
+INPUT-LIGAND-PDBQT: HETATM    2  C1  LPR A 702      41.502  34.052  44.840  1.00 13.99     0.256 C 
+INPUT-LIGAND-PDBQT: HETATM    3  N2  LPR A 702      41.810  34.533  43.599  1.00 13.77    -0.311 N 
+INPUT-LIGAND-PDBQT: HETATM    4  C5  LPR A 702      40.715  34.685  42.559  1.00 14.91     0.171 A 
+INPUT-LIGAND-PDBQT: HETATM    5  C8  LPR A 702      43.138  34.956  43.062  1.00 12.52     0.105 A 
+INPUT-LIGAND-PDBQT: HETATM    6  C6  LPR A 702      41.505  35.237  41.353  1.00 14.97     0.035 A 
+INPUT-LIGAND-PDBQT: HETATM    7  C7  LPR A 702      42.826  35.369  41.680  1.00 16.22     0.027 A 
+INPUT-LIGAND-PDBQT: HETATM    8  O1  LPR A 702      40.291  33.743  45.120  1.00 13.04    -0.270 OA
+INPUT-LIGAND-PDBQT: BRANCH   4   9
+INPUT-LIGAND-PDBQT: HETATM    9  C9  LPR A 702      40.081  33.284  42.224  1.00 13.82     0.207 C 
+INPUT-LIGAND-PDBQT: HETATM   10  O5  LPR A 702      40.703  32.272  42.326  1.00 11.94    -0.646 OA
+INPUT-LIGAND-PDBQT: HETATM   11  O4  LPR A 702      38.843  33.368  41.867  1.00 13.99    -0.646 OA
+INPUT-LIGAND-PDBQT: ENDBRANCH   4   9
+INPUT-LIGAND-PDBQT: ENDBRANCH   1   2
+INPUT-LIGAND-PDBQT: BRANCH   1  12
+INPUT-LIGAND-PDBQT: HETATM   12  C10 LPR A 702      43.252  32.473  45.784  1.00 14.69     0.034 C 
+INPUT-LIGAND-PDBQT: BRANCH  12  13
+INPUT-LIGAND-PDBQT: HETATM   13  C11 LPR A 702      42.484  31.248  45.536  1.00 16.12     0.005 C 
+INPUT-LIGAND-PDBQT: BRANCH  13  14
+INPUT-LIGAND-PDBQT: HETATM   14  C12 LPR A 702      43.296  30.062  44.842  1.00 17.50     0.041 C 
+INPUT-LIGAND-PDBQT: BRANCH  14  15
+INPUT-LIGAND-PDBQT: HETATM   15  C13 LPR A 702      42.487  28.895  44.629  1.00 20.10     0.338 C 
+INPUT-LIGAND-PDBQT: HETATM   16  N3  LPR A 702      43.329  27.774  44.087  1.00 21.85     0.618 N 
+INPUT-LIGAND-PDBQT: ENDBRANCH  14  15
+INPUT-LIGAND-PDBQT: ENDBRANCH  13  14
+INPUT-LIGAND-PDBQT: ENDBRANCH  12  13
+INPUT-LIGAND-PDBQT: ENDBRANCH   1  12
+INPUT-LIGAND-PDBQT: BRANCH   1  17
+INPUT-LIGAND-PDBQT: HETATM   17  N1  LPR A 702      41.897  34.063  47.266  1.00 14.83    -0.279 NA
+INPUT-LIGAND-PDBQT: BRANCH  17  18
+INPUT-LIGAND-PDBQT: HETATM   18  C4  LPR A 702      41.315  35.065  47.682  1.00 14.83     0.185 C 
+INPUT-LIGAND-PDBQT: BRANCH  18  19
+INPUT-LIGAND-PDBQT: HETATM   19  C14 LPR A 702      40.586  35.365  48.932  1.00 12.04     0.035 C 
+INPUT-LIGAND-PDBQT: BRANCH  19  20
+INPUT-LIGAND-PDBQT: HETATM   20  C15 LPR A 702      39.408  36.299  49.163  1.00 13.87     0.003 C 
+INPUT-LIGAND-PDBQT: BRANCH  20  21
+INPUT-LIGAND-PDBQT: HETATM   21  C16 LPR A 702      38.847  36.401  50.549  1.00 15.99     0.000 A 
+INPUT-LIGAND-PDBQT: HETATM   22  C21 LPR A 702      38.568  37.710  51.112  1.00 16.62     0.000 A 
+INPUT-LIGAND-PDBQT: HETATM   23  C20 LPR A 702      38.014  37.822  52.443  1.00 18.46     0.000 A 
+INPUT-LIGAND-PDBQT: HETATM   24  C19 LPR A 702      37.737  36.627  53.218  1.00 18.68     0.000 A 
+INPUT-LIGAND-PDBQT: HETATM   25  C18 LPR A 702      38.016  35.319  52.656  1.00 17.75     0.000 A 
+INPUT-LIGAND-PDBQT: HETATM   26  C17 LPR A 702      38.566  35.206  51.331  1.00 14.59     0.000 A 
+INPUT-LIGAND-PDBQT: ENDBRANCH  20  21
+INPUT-LIGAND-PDBQT: ENDBRANCH  19  20
+INPUT-LIGAND-PDBQT: ENDBRANCH  18  19
+INPUT-LIGAND-PDBQT: BRANCH  18  27
+INPUT-LIGAND-PDBQT: HETATM   27  C3  LPR A 702      42.259  36.267  47.654  1.00 13.57     0.208 C 
+INPUT-LIGAND-PDBQT: HETATM   28  O2  LPR A 702      43.369  36.201  48.269  1.00 15.16    -0.646 OA
+INPUT-LIGAND-PDBQT: HETATM   29  O3  LPR A 702      41.939  37.283  47.069  1.00 13.89    -0.646 OA
+INPUT-LIGAND-PDBQT: ENDBRANCH  18  27
+INPUT-LIGAND-PDBQT: ENDBRANCH  17  18
+INPUT-LIGAND-PDBQT: ENDBRANCH   1  17
+INPUT-LIGAND-PDBQT: TORSDOF 12
+________________________________________________________________________________
+
+Total charge on ligand                               =	-0.999 e
+REMARK  12 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C3_3  and  C4_4 
+REMARK    2  A    between atoms: C14_5  and  C4_4 
+REMARK    3  A    between atoms: C4_4  and  N1_13 
+REMARK    4  A    between atoms: C14_5  and  C15_6 
+REMARK    5  A    between atoms: C15_6  and  C16_7 
+REMARK    6  A    between atoms: C2_16  and  N1_13 
+REMARK       I    between atoms: C1_15  and  N2_24 
+REMARK    7  A    between atoms: C1_15  and  C2_16 
+REMARK    8  A    between atoms: C10_18  and  C2_16 
+REMARK    9  A    between atoms: C10_18  and  C11_19 
+REMARK   10  A    between atoms: C11_19  and  C12_20 
+REMARK   11  A    between atoms: C12_20  and  C13_21 
+REMARK   12  A    between atoms: C5_25  and  C9_29 
+
+
+Number of Rotatable Bonds in Small Molecule =	12 torsions
+Number of atoms in ligand:  29
+
+Number of non-hydrogen atoms in ligand:  29
+
+Number of vibrational degrees of freedom of ligand:  81
+
+
+Number of torsional degrees of freedom = 12
+Estimated loss of torsional free energy upon binding = +3.5796 kcal/mol
+
+
+DPF> about 41.0136 34.3252 46.4412        # small molecule center
+
+Small molecule center of rotation =	(+41.014, +34.325, +46.441)
+
+DPF> tran0 random                         # initial coordinates/A or random
+
+Initial translation =			(39.465, 35.178, 49.563) Angstroms
+DPF> quaternion0 random                   # initial orientation
+
+Each run will begin with a new, random initial orientation.
+Initial quaternion,  (x,y,z,w) =	( 0.236, 0.906, 0.351, -0.027 ),
+DPF> dihe0 random                         # initial dihedrals (relative) or random
+
+DPF> torsdof 12                            # torsional degrees of freedom
+
+Number of torsional degrees of freedom = 12
+Free energy coefficient for torsional degrees of freedom = 0.2983, the factory default value.
+
+Estimated loss of torsional free energy upon binding = +3.5796 kcal/mol
+
+DPF> rmstol 2.0                           # cluster_tolerance/A
+
+Maximum RMS tolerance for conformational cluster analysis = 2.00 Angstroms
+DPF> extnrg 1000.0                        # external grid energy
+
+External grid energy (beyond grid map walls) = 1000.00
+
+DPF> e0max 0.0 10000                      # max initial energy; max number of retries
+
+Using user-specified maximum number of retries for simanneal initialization, 10000 retries.
+If the simanneal initial energy is greater than e0max, 0.000,
+then a new, random initial state will be created.
+
+DPF> ga_pop_size 150                      # number of individuals in population
+
+A population of 150 individuals will be used
+DPF> ga_num_evals 2500000                 # maximum number of energy evaluations
+
+There will be at most 2500000 function evaluations used.
+DPF> ga_num_generations 27000             # maximum number of generations
+
+The GA will run for at most 27000 generations.
+DPF> ga_elitism 1                         # number of top individuals to survive to next generation
+
+The 1 best will be preserved each GA generation.
+DPF> ga_mutation_rate 0.02                # rate of gene mutation
+
+The mutation rate is 0.020000.
+DPF> ga_crossover_rate 0.8                # rate of crossover
+
+The crossover rate is 0.800000.
+DPF> ga_window_size 10                    # 
+
+The GA's selection window is 10 generations.
+DPF> ga_cauchy_alpha 0.0                  # Alpha parameter of Cauchy distribution
+
+The alpha parameter (for the Cauchy distribution) is being set to 0.000000.
+DPF> ga_cauchy_beta 1.0                   # Beta parameter Cauchy distribution
+
+The beta parameter (for the Cauchy distribution) is being set to 1.000000.
+DPF> set_ga                               # set the above parameters for GA or LGA
+
+DPF> sw_max_its 300                       # iterations of Solis & Wets local search
+
+Solis & Wets algorithms will perform at most 300 iterations.
+DPF> sw_max_succ 4                        # consecutive successes before changing rho
+
+Solis & Wets algorithms expand rho every 4 in a row successes.
+DPF> sw_max_fail 4                        # consecutive failures before changing rho
+
+Solis & Wets algorithms contract rho every 4 in a row failures.
+DPF> sw_rho 1.0                           # size of local search space to sample
+
+rho is set to 1.000000.
+DPF> sw_lb_rho 0.01                       # lower bound on rho
+
+rho will never get smaller than 0.010000.
+DPF> ls_search_freq 0.06                  # probability of performing local search on individual
+
+Local search will be performed with frequency 0.060000.
+DPF> set_psw1                             # set the above pseudo-Solis & Wets parameters
+
+Creating a new Local Search object using the pseudo-Solis-Wets algorithm (pSW1) with the current settings.
+
+DPF> unbound_model bound                  # state of unbound ligand
+
+DPF> ga_run 20                            # do this many hybrid GA-LS runs
+
+centering ligand on specified point: 41.014 34.325 46.441
+Furthest true ligand atom from "about" center is 7.871 Angstroms (maxrad).
+Number of requested GA dockings = 20 runs
+Unbound model to be used is 'same as bound' [AutoDock 4.2 default].
+
+	BEGINNING GENETIC ALGORITHM DOCKING 1 of 20
+Run: 1 Seed: 1261265058 855664037 [ Run 1 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -11.315
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 40.568 33.341 42.979 quatxyzw 0.679838 -0.007595 0.144968 0.718851 center 41.014 34.325 46.441 ntor 12 124.5647 -22.0041 48.8239 160.0620 -76.2059 73.3917 125.4242 45.1483 -163.1653 -14.7143 111.8562 -126.8811
+State:	 40.568  33.341  42.979   0.978 -0.011  0.209 88.081    124.56  -22.00   48.82  160.06  -76.21   73.39  125.42   45.15 -163.17  -14.71  111.86 -126.88
+
+DOCKED: MODEL        1
+DOCKED: USER    Run = 1
+DOCKED: USER    DPF = C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -4.83 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =  289.36 uM (micromolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -8.41 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -7.24 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -1.17 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -2.91 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -2.91 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lisinopril.pdbqt
+DOCKED: USER    NEWDPF about 41.013600 34.325200 46.441200
+DOCKED: USER    NEWDPF tran0 40.568258 33.341455 42.978958
+DOCKED: USER    NEWDPF quaternion0 0.679838 -0.007595 0.144968 0.718851
+DOCKED: USER    NEWDPF axisangle0 0.977953 -0.010926 0.208537 88.080571
+DOCKED: USER    NEWDPF quat0 0.977953 -0.010926 0.208537 88.080571
+DOCKED: USER    NEWDPF dihe0 124.56 -22.00 48.82 160.06 -76.21 73.39 125.42 45.15 -163.17 -14.71 111.86 -126.88 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  12 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C3_3  and  C4_4 
+DOCKED: REMARK    2  A    between atoms: C14_5  and  C4_4 
+DOCKED: REMARK    3  A    between atoms: C4_4  and  N1_13 
+DOCKED: REMARK    4  A    between atoms: C14_5  and  C15_6 
+DOCKED: REMARK    5  A    between atoms: C15_6  and  C16_7 
+DOCKED: REMARK    6  A    between atoms: C2_16  and  N1_13 
+DOCKED: REMARK       I    between atoms: C1_15  and  N2_24 
+DOCKED: REMARK    7  A    between atoms: C1_15  and  C2_16 
+DOCKED: REMARK    8  A    between atoms: C10_18  and  C2_16 
+DOCKED: REMARK    9  A    between atoms: C10_18  and  C11_19 
+DOCKED: REMARK   10  A    between atoms: C11_19  and  C12_20 
+DOCKED: REMARK   11  A    between atoms: C12_20  and  C13_21 
+DOCKED: REMARK   12  A    between atoms: C5_25  and  C9_29 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C2  LPR A 702      41.902  32.490  43.702 -0.14 -0.09    +0.177 C 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C1  LPR A 702      40.649  31.664  43.217 -0.17 -0.01    +0.256 C 
+DOCKED: ATOM      3  N2  LPR A 702      40.789  30.544  42.446 -0.09 +0.01    -0.311 N 
+DOCKED: ATOM      4  C5  LPR A 702      39.558  29.764  42.023 -0.21 +0.09    +0.171 A 
+DOCKED: ATOM      5  C8  LPR A 702      42.041  29.919  41.924 -0.09 -0.05    +0.105 A 
+DOCKED: ATOM      6  C6  LPR A 702      40.183  28.617  41.200 -0.21 -0.00    +0.035 A 
+DOCKED: ATOM      7  C7  LPR A 702      41.544  28.748  41.175 -0.21 -0.01    +0.027 A 
+DOCKED: ATOM      8  O1  LPR A 702      39.480  32.053  43.567 -0.31 -0.10    -0.270 OA
+DOCKED: BRANCH   4   9
+DOCKED: ATOM      9  C9  LPR A 702      38.804  29.206  43.286 -0.27 +0.08    +0.207 C 
+DOCKED: ATOM     10  O5  LPR A 702      39.373  28.603  44.143 +0.02 +0.20    -0.646 OA
+DOCKED: ATOM     11  O4  LPR A 702      37.546  29.498  43.287 -0.53 -0.96    -0.646 OA
+DOCKED: ENDBRANCH   4   9
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  12
+DOCKED: ATOM     12  C10 LPR A 702      42.209  32.149  45.161 -0.30 -0.03    +0.034 C 
+DOCKED: BRANCH  12  13
+DOCKED: ATOM     13  C11 LPR A 702      41.913  30.846  45.766 -0.27 -0.00    +0.005 C 
+DOCKED: BRANCH  13  14
+DOCKED: ATOM     14  C12 LPR A 702      42.975  29.694  45.460 -0.34 -0.04    +0.041 C 
+DOCKED: BRANCH  14  15
+DOCKED: ATOM     15  C13 LPR A 702      42.353  28.477  45.020 -0.12 -0.41    +0.338 C 
+DOCKED: ATOM     16  N3  LPR A 702      41.253  28.088  45.967 -0.01 -0.90    +0.618 N 
+DOCKED: ENDBRANCH  14  15
+DOCKED: ENDBRANCH  13  14
+DOCKED: ENDBRANCH  12  13
+DOCKED: ENDBRANCH   1  12
+DOCKED: BRANCH   1  17
+DOCKED: ATOM     17  N1  LPR A 702      41.534  33.944  43.463 -0.11 +0.13    -0.279 NA
+DOCKED: BRANCH  17  18
+DOCKED: ATOM     18  C4  LPR A 702      42.136  34.962  43.803 -0.28 -0.13    +0.185 C 
+DOCKED: BRANCH  18  19
+DOCKED: ATOM     19  C14 LPR A 702      42.394  35.594  45.114 -0.42 -0.03    +0.035 C 
+DOCKED: BRANCH  19  20
+DOCKED: ATOM     20  C15 LPR A 702      42.900  34.968  46.405 -0.47 -0.00    +0.003 C 
+DOCKED: BRANCH  20  21
+DOCKED: ATOM     21  C16 LPR A 702      42.220  35.343  47.687 -0.47 -0.00    +0.000 A 
+DOCKED: ATOM     22  C21 LPR A 702      42.839  36.319  48.565 -0.49 -0.00    +0.000 A 
+DOCKED: ATOM     23  C20 LPR A 702      42.187  36.699  49.798 -0.42 -0.00    +0.000 A 
+DOCKED: ATOM     24  C19 LPR A 702      40.914  36.105  50.160 -0.30 -0.00    +0.000 A 
+DOCKED: ATOM     25  C18 LPR A 702      40.295  35.129  49.283 -0.41 -0.00    +0.000 A 
+DOCKED: ATOM     26  C17 LPR A 702      40.942  34.751  48.055 -0.43 -0.00    +0.000 A 
+DOCKED: ENDBRANCH  20  21
+DOCKED: ENDBRANCH  19  20
+DOCKED: ENDBRANCH  18  19
+DOCKED: BRANCH  18  27
+DOCKED: ATOM     27  C3  LPR A 702      43.564  34.932  43.260 -0.23 -0.19    +0.208 C 
+DOCKED: ATOM     28  O2  LPR A 702      43.865  35.653  42.258 +0.02 +0.63    -0.646 OA
+DOCKED: ATOM     29  O3  LPR A 702      44.397  34.206  43.767 +0.02 +0.65    -0.646 OA
+DOCKED: ENDBRANCH  18  27
+DOCKED: ENDBRANCH  17  18
+DOCKED: ENDBRANCH   1  17
+DOCKED: TORSDOF 12
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 2 of 20
+Run: 2 Seed: 781649710 1565134455 [ Run 2 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -11.574
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 41.085 35.318 44.647 quatxyzw 0.569177 -0.807018 0.064041 -0.143728 center 41.014 34.325 46.441 ntor 12 32.2835 105.0811 -120.4899 93.6380 116.9475 16.9539 -161.1796 66.7687 -176.1149 -18.6086 179.5189 -134.9965
+State:	 41.085  35.318  44.647   0.575 -0.815  0.065 -163.473     32.28  105.08 -120.49   93.64  116.95   16.95 -161.18   66.77 -176.11  -18.61  179.52 -135.00
+
+DOCKED: MODEL        2
+DOCKED: USER    Run = 2
+DOCKED: USER    DPF = C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -5.58 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =   80.57 uM (micromolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -9.16 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -8.67 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -0.50 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -2.41 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -2.41 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lisinopril.pdbqt
+DOCKED: USER    NEWDPF about 41.013600 34.325200 46.441200
+DOCKED: USER    NEWDPF tran0 41.084701 35.318390 44.647360
+DOCKED: USER    NEWDPF quaternion0 0.569177 -0.807018 0.064041 -0.143728
+DOCKED: USER    NEWDPF axisangle0 0.575148 -0.815485 0.064713 -163.472700
+DOCKED: USER    NEWDPF quat0 0.575148 -0.815485 0.064713 -163.472700
+DOCKED: USER    NEWDPF dihe0 32.28 105.08 -120.49 93.64 116.95 16.95 -161.18 66.77 -176.11 -18.61 179.52 -135.00 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  12 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C3_3  and  C4_4 
+DOCKED: REMARK    2  A    between atoms: C14_5  and  C4_4 
+DOCKED: REMARK    3  A    between atoms: C4_4  and  N1_13 
+DOCKED: REMARK    4  A    between atoms: C14_5  and  C15_6 
+DOCKED: REMARK    5  A    between atoms: C15_6  and  C16_7 
+DOCKED: REMARK    6  A    between atoms: C2_16  and  N1_13 
+DOCKED: REMARK       I    between atoms: C1_15  and  N2_24 
+DOCKED: REMARK    7  A    between atoms: C1_15  and  C2_16 
+DOCKED: REMARK    8  A    between atoms: C10_18  and  C2_16 
+DOCKED: REMARK    9  A    between atoms: C10_18  and  C11_19 
+DOCKED: REMARK   10  A    between atoms: C11_19  and  C12_20 
+DOCKED: REMARK   11  A    between atoms: C12_20  and  C13_21 
+DOCKED: REMARK   12  A    between atoms: C5_25  and  C9_29 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C2  LPR A 702      41.111  33.850  45.580 -0.10 -0.09    +0.177 C 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C1  LPR A 702      41.444  35.212  46.302 -0.29 -0.20    +0.256 C 
+DOCKED: ATOM      3  N2  LPR A 702      40.794  35.591  47.442 -0.21 +0.22    -0.311 N 
+DOCKED: ATOM      4  C5  LPR A 702      41.164  36.898  48.119 -0.19 -0.15    +0.171 A 
+DOCKED: ATOM      5  C8  LPR A 702      39.711  34.878  48.183 -0.33 -0.06    +0.105 A 
+DOCKED: ATOM      6  C6  LPR A 702      40.206  36.904  49.330 -0.26 -0.02    +0.035 A 
+DOCKED: ATOM      7  C7  LPR A 702      39.431  35.778  49.319 -0.37 -0.02    +0.027 A 
+DOCKED: ATOM      8  O1  LPR A 702      42.352  35.967  45.807 -0.45 +0.29    -0.270 OA
+DOCKED: BRANCH   4   9
+DOCKED: ATOM      9  C9  LPR A 702      42.666  36.864  48.588 -0.38 -0.29    +0.207 C 
+DOCKED: ATOM     10  O5  LPR A 702      43.567  37.011  47.822 -0.40 +1.01    -0.646 OA
+DOCKED: ATOM     11  O4  LPR A 702      42.788  36.693  49.862 -0.12 +0.84    -0.646 OA
+DOCKED: ENDBRANCH   4   9
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  12
+DOCKED: ATOM     12  C10 LPR A 702      42.229  32.842  45.843 -0.38 -0.03    +0.034 C 
+DOCKED: BRANCH  12  13
+DOCKED: ATOM     13  C11 LPR A 702      43.616  33.227  46.126 -0.42 -0.01    +0.005 C 
+DOCKED: BRANCH  13  14
+DOCKED: ATOM     14  C12 LPR A 702      44.536  33.459  44.842 -0.40 -0.05    +0.041 C 
+DOCKED: BRANCH  14  15
+DOCKED: ATOM     15  C13 LPR A 702      44.028  34.491  43.983 -0.10 -0.35    +0.338 C 
+DOCKED: ATOM     16  N3  LPR A 702      44.255  34.124  42.543 +0.08 -0.53    +0.618 N 
+DOCKED: ENDBRANCH  14  15
+DOCKED: ENDBRANCH  13  14
+DOCKED: ENDBRANCH  12  13
+DOCKED: ENDBRANCH   1  12
+DOCKED: BRANCH   1  17
+DOCKED: ATOM     17  N1  LPR A 702      40.925  34.213  44.117 -0.21 +0.11    -0.279 NA
+DOCKED: BRANCH  17  18
+DOCKED: ATOM     18  C4  LPR A 702      40.916  33.477  43.130 -0.27 -0.04    +0.185 C 
+DOCKED: BRANCH  18  19
+DOCKED: ATOM     19  C14 LPR A 702      41.094  32.020  42.953 -0.26 -0.01    +0.035 C 
+DOCKED: BRANCH  19  20
+DOCKED: ATOM     20  C15 LPR A 702      40.667  30.877  43.861 -0.19 -0.00    +0.003 C 
+DOCKED: BRANCH  20  21
+DOCKED: ATOM     21  C16 LPR A 702      41.735  30.053  44.512 -0.21 -0.00    +0.000 A 
+DOCKED: ATOM     22  C21 LPR A 702      43.029  29.920  43.865 -0.15 -0.00    +0.000 A 
+DOCKED: ATOM     23  C20 LPR A 702      44.073  29.139  44.489 -0.16 -0.00    +0.000 A 
+DOCKED: ATOM     24  C19 LPR A 702      43.830  28.485  45.761 -0.35 -0.00    +0.000 A 
+DOCKED: ATOM     25  C18 LPR A 702      42.538  28.616  46.408 -0.43 -0.00    +0.000 A 
+DOCKED: ATOM     26  C17 LPR A 702      41.498  29.395  45.789 -0.28 -0.00    +0.000 A 
+DOCKED: ENDBRANCH  20  21
+DOCKED: ENDBRANCH  19  20
+DOCKED: ENDBRANCH  18  19
+DOCKED: BRANCH  18  27
+DOCKED: ATOM     27  C3  LPR A 702      39.613  33.660  42.353 -0.39 +0.08    +0.208 C 
+DOCKED: ATOM     28  O2  LPR A 702      39.106  34.821  42.253 -0.06 -0.12    -0.646 OA
+DOCKED: ATOM     29  O3  LPR A 702      39.056  32.701  41.855 -1.40 -1.08    -0.646 OA
+DOCKED: ENDBRANCH  18  27
+DOCKED: ENDBRANCH  17  18
+DOCKED: ENDBRANCH   1  17
+DOCKED: TORSDOF 12
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 3 of 20
+Run: 3 Seed: 1461796763 87106060 [ Run 3 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -9.185
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 41.766 33.595 46.352 quatxyzw -0.061040 0.419348 0.869199 -0.254784 center 41.014 34.325 46.441 ntor 12 136.7493 179.1466 -61.4115 -40.5721 97.2581 24.5795 42.5808 -29.9305 163.7335 24.3887 -90.4320 -99.0402
+State:	 41.766  33.595  46.352  -0.063  0.434  0.899 -150.478    136.75  179.15  -61.41  -40.57   97.26   24.58   42.58  -29.93  163.73   24.39  -90.43  -99.04
+
+DOCKED: MODEL        3
+DOCKED: USER    Run = 3
+DOCKED: USER    DPF = C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -2.62 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =   11.92 mM (millimolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -6.20 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -7.72 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +1.52 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -2.98 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -2.98 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lisinopril.pdbqt
+DOCKED: USER    NEWDPF about 41.013600 34.325200 46.441200
+DOCKED: USER    NEWDPF tran0 41.766194 33.595078 46.352372
+DOCKED: USER    NEWDPF quaternion0 -0.061040 0.419348 0.869199 -0.254784
+DOCKED: USER    NEWDPF axisangle0 -0.063123 0.433660 0.898863 -150.478368
+DOCKED: USER    NEWDPF quat0 -0.063123 0.433660 0.898863 -150.478368
+DOCKED: USER    NEWDPF dihe0 136.75 179.15 -61.41 -40.57 97.26 24.58 42.58 -29.93 163.73 24.39 -90.43 -99.04 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  12 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C3_3  and  C4_4 
+DOCKED: REMARK    2  A    between atoms: C14_5  and  C4_4 
+DOCKED: REMARK    3  A    between atoms: C4_4  and  N1_13 
+DOCKED: REMARK    4  A    between atoms: C14_5  and  C15_6 
+DOCKED: REMARK    5  A    between atoms: C15_6  and  C16_7 
+DOCKED: REMARK    6  A    between atoms: C2_16  and  N1_13 
+DOCKED: REMARK       I    between atoms: C1_15  and  N2_24 
+DOCKED: REMARK    7  A    between atoms: C1_15  and  C2_16 
+DOCKED: REMARK    8  A    between atoms: C10_18  and  C2_16 
+DOCKED: REMARK    9  A    between atoms: C10_18  and  C11_19 
+DOCKED: REMARK   10  A    between atoms: C11_19  and  C12_20 
+DOCKED: REMARK   11  A    between atoms: C12_20  and  C13_21 
+DOCKED: REMARK   12  A    between atoms: C5_25  and  C9_29 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C2  LPR A 702      40.567  34.088  45.192 -0.17 -0.06    +0.177 C 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C1  LPR A 702      41.308  32.711  44.979 -0.05 -0.13    +0.256 C 
+DOCKED: ATOM      3  N2  LPR A 702      40.899  31.823  44.025 -0.08 +0.09    -0.311 N 
+DOCKED: ATOM      4  C5  LPR A 702      41.656  30.521  43.837 -0.09 -0.09    +0.171 A 
+DOCKED: ATOM      5  C8  LPR A 702      39.756  31.935  43.070 -0.31 +0.05    +0.105 A 
+DOCKED: ATOM      6  C6  LPR A 702      40.865  29.864  42.686 -0.20 -0.01    +0.035 A 
+DOCKED: ATOM      7  C7  LPR A 702      39.834  30.676  42.303 -0.27 +0.02    +0.027 A 
+DOCKED: ATOM      8  O1  LPR A 702      42.319  32.434  45.715 -0.22 +0.23    -0.270 OA
+DOCKED: BRANCH   4   9
+DOCKED: ATOM      9  C9  LPR A 702      43.142  30.810  43.407 -0.08 -0.15    +0.207 C 
+DOCKED: ATOM     10  O5  LPR A 702      44.032  30.064  43.678 +0.10 +0.59    -0.646 OA
+DOCKED: ATOM     11  O4  LPR A 702      43.262  31.900  42.725 +0.11 +0.41    -0.646 OA
+DOCKED: ENDBRANCH   4   9
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  12
+DOCKED: ATOM     12  C10 LPR A 702      40.680  34.933  43.923 -0.41 -0.01    +0.034 C 
+DOCKED: BRANCH  12  13
+DOCKED: ATOM     13  C11 LPR A 702      41.687  34.701  42.882 -0.39 -0.00    +0.005 C 
+DOCKED: BRANCH  13  14
+DOCKED: ATOM     14  C12 LPR A 702      42.881  35.760  42.840 -0.39 -0.04    +0.041 C 
+DOCKED: BRANCH  14  15
+DOCKED: ATOM     15  C13 LPR A 702      44.161  35.153  43.075 -0.09 -0.36    +0.338 C 
+DOCKED: ATOM     16  N3  LPR A 702      44.041  34.085  44.126 +0.06 -0.62    +0.618 N 
+DOCKED: ENDBRANCH  14  15
+DOCKED: ENDBRANCH  13  14
+DOCKED: ENDBRANCH  12  13
+DOCKED: ENDBRANCH   1  12
+DOCKED: BRANCH   1  17
+DOCKED: ATOM     17  N1  LPR A 702      41.222  34.704  46.415 -0.53 +0.20    -0.279 NA
+DOCKED: BRANCH  17  18
+DOCKED: ATOM     18  C4  LPR A 702      40.796  35.585  47.162 -0.18 -0.12    +0.185 C 
+DOCKED: BRANCH  18  19
+DOCKED: ATOM     19  C14 LPR A 702      39.970  35.561  48.387 -0.47 -0.02    +0.035 C 
+DOCKED: BRANCH  19  20
+DOCKED: ATOM     20  C15 LPR A 702      39.621  34.390  49.293 -0.28 -0.00    +0.003 C 
+DOCKED: BRANCH  20  21
+DOCKED: ATOM     21  C16 LPR A 702      39.398  34.665  50.750 -0.38 -0.00    +0.000 A 
+DOCKED: ATOM     22  C21 LPR A 702      38.981  33.584  51.625 -0.42 -0.00    +0.000 A 
+DOCKED: ATOM     23  C20 LPR A 702      38.776  33.832  53.034 -0.38 -0.00    +0.000 A 
+DOCKED: ATOM     24  C19 LPR A 702      38.985  35.162  53.576 -0.28 -0.00    +0.000 A 
+DOCKED: ATOM     25  C18 LPR A 702      39.401  36.243  52.702 -0.20 -0.00    +0.000 A 
+DOCKED: ATOM     26  C17 LPR A 702      39.607  35.996  51.299 -0.24 -0.00    +0.000 A 
+DOCKED: ENDBRANCH  20  21
+DOCKED: ENDBRANCH  19  20
+DOCKED: ENDBRANCH  18  19
+DOCKED: BRANCH  18  27
+DOCKED: ATOM     27  C3  LPR A 702      41.953  36.449  47.664 -0.36 -0.23    +0.208 C 
+DOCKED: ATOM     28  O2  LPR A 702      42.470  36.200  48.798 -0.05 +0.91    -0.646 OA
+DOCKED: ATOM     29  O3  LPR A 702      42.358  37.379  46.995 -1.46 +0.88    -0.646 OA
+DOCKED: ENDBRANCH  18  27
+DOCKED: ENDBRANCH  17  18
+DOCKED: ENDBRANCH   1  17
+DOCKED: TORSDOF 12
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 4 of 20
+Run: 4 Seed: 266050302 562637279 [ Run 4 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -13.454
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 40.735 35.970 45.932 quatxyzw 0.307625 0.012668 0.084034 0.947705 center 41.014 34.325 46.441 ntor 12 -39.8247 3.8156 89.7021 42.5913 172.8158 142.6130 -29.7183 41.4199 76.5938 -34.8398 137.1589 -174.5149
+State:	 40.735  35.970  45.932   0.964  0.040  0.263 37.223    -39.82    3.82   89.70   42.59  172.82  142.61  -29.72   41.42   76.59  -34.84  137.16 -174.51
+
+DOCKED: MODEL        4
+DOCKED: USER    Run = 4
+DOCKED: USER    DPF = C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -7.08 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    6.42 uM (micromolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =  -10.66 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =  -10.44 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -0.23 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -2.79 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -2.79 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lisinopril.pdbqt
+DOCKED: USER    NEWDPF about 41.013600 34.325200 46.441200
+DOCKED: USER    NEWDPF tran0 40.735434 35.970371 45.932147
+DOCKED: USER    NEWDPF quaternion0 0.307625 0.012668 0.084034 0.947705
+DOCKED: USER    NEWDPF axisangle0 0.963895 0.039692 0.263308 37.222814
+DOCKED: USER    NEWDPF quat0 0.963895 0.039692 0.263308 37.222814
+DOCKED: USER    NEWDPF dihe0 -39.82 3.82 89.70 42.59 172.82 142.61 -29.72 41.42 76.59 -34.84 137.16 -174.51 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  12 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C3_3  and  C4_4 
+DOCKED: REMARK    2  A    between atoms: C14_5  and  C4_4 
+DOCKED: REMARK    3  A    between atoms: C4_4  and  N1_13 
+DOCKED: REMARK    4  A    between atoms: C14_5  and  C15_6 
+DOCKED: REMARK    5  A    between atoms: C15_6  and  C16_7 
+DOCKED: REMARK    6  A    between atoms: C2_16  and  N1_13 
+DOCKED: REMARK       I    between atoms: C1_15  and  N2_24 
+DOCKED: REMARK    7  A    between atoms: C1_15  and  C2_16 
+DOCKED: REMARK    8  A    between atoms: C10_18  and  C2_16 
+DOCKED: REMARK    9  A    between atoms: C10_18  and  C11_19 
+DOCKED: REMARK   10  A    between atoms: C11_19  and  C12_20 
+DOCKED: REMARK   11  A    between atoms: C12_20  and  C13_21 
+DOCKED: REMARK   12  A    between atoms: C5_25  and  C9_29 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C2  LPR A 702      42.218  35.060  45.924 -0.36 -0.18    +0.177 C 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C1  LPR A 702      41.127  34.742  44.830 -0.28 -0.14    +0.256 C 
+DOCKED: ATOM      3  N2  LPR A 702      41.335  35.033  43.512 -0.19 +0.16    -0.311 N 
+DOCKED: ATOM      4  C5  LPR A 702      40.269  34.686  42.489 -0.40 -0.03    +0.171 A 
+DOCKED: ATOM      5  C8  LPR A 702      42.521  35.675  42.871 -0.23 -0.08    +0.105 A 
+DOCKED: ATOM      6  C6  LPR A 702      40.922  35.178  41.179 -0.50 -0.01    +0.035 A 
+DOCKED: ATOM      7  C7  LPR A 702      42.152  35.712  41.442 -0.40 -0.02    +0.027 A 
+DOCKED: ATOM      8  O1  LPR A 702      40.031  34.188  45.194 -0.71 +0.06    -0.270 OA
+DOCKED: BRANCH   4   9
+DOCKED: ATOM      9  C9  LPR A 702      40.032  33.131  42.451 -0.35 +0.06    +0.207 C 
+DOCKED: ATOM     10  O5  LPR A 702      40.872  32.359  42.800 +0.04 +0.04    -0.646 OA
+DOCKED: ATOM     11  O4  LPR A 702      38.851  32.814  42.039 -1.40 -1.11    -0.646 OA
+DOCKED: ENDBRANCH   4   9
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  12
+DOCKED: ATOM     12  C10 LPR A 702      42.614  33.771  46.645 -0.45 -0.05    +0.034 C 
+DOCKED: BRANCH  12  13
+DOCKED: ATOM     13  C11 LPR A 702      43.816  32.997  46.317 -0.36 -0.01    +0.005 C 
+DOCKED: BRANCH  13  14
+DOCKED: ATOM     14  C12 LPR A 702      44.279  33.070  44.791 -0.37 -0.04    +0.041 C 
+DOCKED: BRANCH  14  15
+DOCKED: ATOM     15  C13 LPR A 702      43.688  32.036  43.989 -0.06 -0.27    +0.338 C 
+DOCKED: ATOM     16  N3  LPR A 702      43.413  32.550  42.603 +0.13 -0.40    +0.618 N 
+DOCKED: ENDBRANCH  14  15
+DOCKED: ENDBRANCH  13  14
+DOCKED: ENDBRANCH  12  13
+DOCKED: ENDBRANCH   1  12
+DOCKED: BRANCH   1  17
+DOCKED: ATOM     17  N1  LPR A 702      41.585  36.110  46.820 -0.44 +0.23    -0.279 NA
+DOCKED: BRANCH  17  18
+DOCKED: ATOM     18  C4  LPR A 702      41.416  36.090  48.039 -0.34 -0.18    +0.185 C 
+DOCKED: BRANCH  18  19
+DOCKED: ATOM     19  C14 LPR A 702      40.945  35.050  48.978 -0.42 -0.03    +0.035 C 
+DOCKED: BRANCH  19  20
+DOCKED: ATOM     20  C15 LPR A 702      39.544  34.494  49.179 -0.35 -0.00    +0.003 C 
+DOCKED: BRANCH  20  21
+DOCKED: ATOM     21  C16 LPR A 702      39.082  34.229  50.580 -0.38 -0.00    +0.000 A 
+DOCKED: ATOM     22  C21 LPR A 702      38.153  35.148  51.212 -0.30 -0.00    +0.000 A 
+DOCKED: ATOM     23  C20 LPR A 702      37.689  34.897  52.558 -0.28 -0.00    +0.000 A 
+DOCKED: ATOM     24  C19 LPR A 702      38.153  33.727  53.281 -0.39 -0.00    +0.000 A 
+DOCKED: ATOM     25  C18 LPR A 702      39.083  32.809  52.650 -0.52 -0.00    +0.000 A 
+DOCKED: ATOM     26  C17 LPR A 702      39.543  33.057  51.310 -0.41 -0.00    +0.000 A 
+DOCKED: ENDBRANCH  20  21
+DOCKED: ENDBRANCH  19  20
+DOCKED: ENDBRANCH  18  19
+DOCKED: BRANCH  18  27
+DOCKED: ATOM     27  C3  LPR A 702      42.705  36.499  48.752 -0.39 -0.30    +0.208 C 
+DOCKED: ATOM     28  O2  LPR A 702      43.792  36.545  48.096 -0.24 +1.28    -0.646 OA
+DOCKED: ATOM     29  O3  LPR A 702      42.692  36.754  49.940 -0.11 +0.79    -0.646 OA
+DOCKED: ENDBRANCH  18  27
+DOCKED: ENDBRANCH  17  18
+DOCKED: ENDBRANCH   1  17
+DOCKED: TORSDOF 12
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 5 of 20
+Run: 5 Seed: 173399872 777635915 [ Run 5 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -11.033
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 40.844 32.631 44.000 quatxyzw 0.104987 0.331337 0.634571 -0.690300 center 41.014 34.325 46.441 ntor 12 99.6366 83.1300 -127.7572 -43.9026 -57.8326 176.4749 -123.8074 -35.2300 170.2534 155.3059 -82.2120 -130.6073
+State:	 40.844  32.631  44.000   0.145  0.458  0.877 -92.692     99.64   83.13 -127.76  -43.90  -57.83  176.47 -123.81  -35.23  170.25  155.31  -82.21 -130.61
+
+DOCKED: MODEL        5
+DOCKED: USER    Run = 5
+DOCKED: USER    DPF = C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -5.55 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =   85.46 uM (micromolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -9.13 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -8.10 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -1.03 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -1.90 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -1.90 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lisinopril.pdbqt
+DOCKED: USER    NEWDPF about 41.013600 34.325200 46.441200
+DOCKED: USER    NEWDPF tran0 40.844208 32.631132 43.999930
+DOCKED: USER    NEWDPF quaternion0 0.104987 0.331337 0.634571 -0.690300
+DOCKED: USER    NEWDPF axisangle0 0.145105 0.457949 0.877056 -92.692325
+DOCKED: USER    NEWDPF quat0 0.145105 0.457949 0.877056 -92.692325
+DOCKED: USER    NEWDPF dihe0 99.64 83.13 -127.76 -43.90 -57.83 176.47 -123.81 -35.23 170.25 155.31 -82.21 -130.61 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  12 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C3_3  and  C4_4 
+DOCKED: REMARK    2  A    between atoms: C14_5  and  C4_4 
+DOCKED: REMARK    3  A    between atoms: C4_4  and  N1_13 
+DOCKED: REMARK    4  A    between atoms: C14_5  and  C15_6 
+DOCKED: REMARK    5  A    between atoms: C15_6  and  C16_7 
+DOCKED: REMARK    6  A    between atoms: C2_16  and  N1_13 
+DOCKED: REMARK       I    between atoms: C1_15  and  N2_24 
+DOCKED: REMARK    7  A    between atoms: C1_15  and  C2_16 
+DOCKED: REMARK    8  A    between atoms: C10_18  and  C2_16 
+DOCKED: REMARK    9  A    between atoms: C10_18  and  C11_19 
+DOCKED: REMARK   10  A    between atoms: C11_19  and  C12_20 
+DOCKED: REMARK   11  A    between atoms: C12_20  and  C13_21 
+DOCKED: REMARK   12  A    between atoms: C5_25  and  C9_29 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C2  LPR A 702      40.892  33.924  42.836 -0.32 -0.04    +0.177 C 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C1  LPR A 702      40.107  32.605  42.473 -0.27 +0.09    +0.256 C 
+DOCKED: ATOM      3  N2  LPR A 702      40.727  31.388  42.457 -0.10 -0.02    -0.311 N 
+DOCKED: ATOM      4  C5  LPR A 702      39.928  30.140  42.128 -0.21 +0.07    +0.171 A 
+DOCKED: ATOM      5  C8  LPR A 702      42.159  31.063  42.736 -0.08 -0.05    +0.105 A 
+DOCKED: ATOM      6  C6  LPR A 702      41.007  29.042  42.233 -0.18 -0.01    +0.035 A 
+DOCKED: ATOM      7  C7  LPR A 702      42.211  29.598  42.567 -0.11 -0.02    +0.027 A 
+DOCKED: ATOM      8  O1  LPR A 702      38.858  32.685  42.199 -1.59 -0.45    -0.270 OA
+DOCKED: BRANCH   4   9
+DOCKED: ATOM      9  C9  LPR A 702      38.793  29.920  43.196 -0.19 +0.17    +0.207 C 
+DOCKED: ATOM     10  O5  LPR A 702      37.990  30.766  43.443 +0.24 -1.07    -0.646 OA
+DOCKED: ATOM     11  O4  LPR A 702      38.827  28.744  43.726 -0.03 -0.03    -0.646 OA
+DOCKED: ENDBRANCH   4   9
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  12
+DOCKED: ATOM     12  C10 LPR A 702      41.894  34.247  41.728 -0.35 -0.01    +0.034 C 
+DOCKED: BRANCH  12  13
+DOCKED: ATOM     13  C11 LPR A 702      42.042  35.581  41.135 -0.52 -0.00    +0.005 C 
+DOCKED: BRANCH  13  14
+DOCKED: ATOM     14  C12 LPR A 702      43.252  36.451  41.707 -0.47 -0.04    +0.041 C 
+DOCKED: BRANCH  14  15
+DOCKED: ATOM     15  C13 LPR A 702      44.501  35.745  41.670 -0.20 -0.37    +0.338 C 
+DOCKED: ATOM     16  N3  LPR A 702      44.548  34.719  42.767 +0.07 -0.62    +0.618 N 
+DOCKED: ENDBRANCH  14  15
+DOCKED: ENDBRANCH  13  14
+DOCKED: ENDBRANCH  12  13
+DOCKED: ENDBRANCH   1  12
+DOCKED: BRANCH   1  17
+DOCKED: ATOM     17  N1  LPR A 702      41.521  33.649  44.191 -0.13 +0.14    -0.279 NA
+DOCKED: BRANCH  17  18
+DOCKED: ATOM     18  C4  LPR A 702      42.377  34.295  44.794 -0.27 -0.15    +0.185 C 
+DOCKED: BRANCH  18  19
+DOCKED: ATOM     19  C14 LPR A 702      42.309  35.314  45.863 -0.46 -0.04    +0.035 C 
+DOCKED: BRANCH  19  20
+DOCKED: ATOM     20  C15 LPR A 702      41.198  35.591  46.864 -0.35 -0.00    +0.003 C 
+DOCKED: BRANCH  20  21
+DOCKED: ATOM     21  C16 LPR A 702      41.582  36.013  48.249 -0.42 -0.00    +0.000 A 
+DOCKED: ATOM     22  C21 LPR A 702      42.965  36.350  48.535 -0.48 -0.00    +0.000 A 
+DOCKED: ATOM     23  C20 LPR A 702      43.347  36.772  49.864 -0.42 -0.00    +0.000 A 
+DOCKED: ATOM     24  C19 LPR A 702      42.349  36.858  50.914 -0.38 -0.00    +0.000 A 
+DOCKED: ATOM     25  C18 LPR A 702      40.968  36.521  50.629 -0.26 -0.00    +0.000 A 
+DOCKED: ATOM     26  C17 LPR A 702      40.586  36.102  49.307 -0.33 -0.00    +0.000 A 
+DOCKED: ENDBRANCH  20  21
+DOCKED: ENDBRANCH  19  20
+DOCKED: ENDBRANCH  18  19
+DOCKED: BRANCH  18  27
+DOCKED: ATOM     27  C3  LPR A 702      43.401  33.349  45.421 -0.26 -0.23    +0.208 C 
+DOCKED: ATOM     28  O2  LPR A 702      43.309  33.063  46.656 -0.03 +1.01    -0.646 OA
+DOCKED: ATOM     29  O3  LPR A 702      44.307  32.896  44.750 +0.01 +0.66    -0.646 OA
+DOCKED: ENDBRANCH  18  27
+DOCKED: ENDBRANCH  17  18
+DOCKED: ENDBRANCH   1  17
+DOCKED: TORSDOF 12
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 6 of 20
+Run: 6 Seed: 1396339517 725489948 [ Run 6 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -13.301
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 40.613 35.258 46.857 quatxyzw -0.111231 0.020653 0.072951 -0.990898 center 41.014 34.325 46.441 ntor 12 -178.6805 41.0185 -20.0815 -151.3145 77.0853 47.5374 163.8219 -135.7654 -174.9458 0.8275 -62.8299 -32.9829
+State:	 40.613  35.258  46.857  -0.826  0.153  0.542 -15.473   -178.68   41.02  -20.08 -151.31   77.09   47.54  163.82 -135.77 -174.95    0.83  -62.83  -32.98
+
+DOCKED: MODEL        6
+DOCKED: USER    Run = 6
+DOCKED: USER    DPF = C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -6.85 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    9.51 uM (micromolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =  -10.43 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -9.78 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -0.65 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -2.87 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -2.87 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lisinopril.pdbqt
+DOCKED: USER    NEWDPF about 41.013600 34.325200 46.441200
+DOCKED: USER    NEWDPF tran0 40.613171 35.257636 46.857177
+DOCKED: USER    NEWDPF quaternion0 -0.111231 0.020653 0.072951 -0.990898
+DOCKED: USER    NEWDPF axisangle0 -0.826301 0.153424 0.541929 -15.472525
+DOCKED: USER    NEWDPF quat0 -0.826301 0.153424 0.541929 -15.472525
+DOCKED: USER    NEWDPF dihe0 -178.68 41.02 -20.08 -151.31 77.09 47.54 163.82 -135.77 -174.95 0.83 -62.83 -32.98 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  12 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C3_3  and  C4_4 
+DOCKED: REMARK    2  A    between atoms: C14_5  and  C4_4 
+DOCKED: REMARK    3  A    between atoms: C4_4  and  N1_13 
+DOCKED: REMARK    4  A    between atoms: C14_5  and  C15_6 
+DOCKED: REMARK    5  A    between atoms: C15_6  and  C16_7 
+DOCKED: REMARK    6  A    between atoms: C2_16  and  N1_13 
+DOCKED: REMARK       I    between atoms: C1_15  and  N2_24 
+DOCKED: REMARK    7  A    between atoms: C1_15  and  C2_16 
+DOCKED: REMARK    8  A    between atoms: C10_18  and  C2_16 
+DOCKED: REMARK    9  A    between atoms: C10_18  and  C11_19 
+DOCKED: REMARK   10  A    between atoms: C11_19  and  C12_20 
+DOCKED: REMARK   11  A    between atoms: C12_20  and  C13_21 
+DOCKED: REMARK   12  A    between atoms: C5_25  and  C9_29 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C2  LPR A 702      42.251  34.914  46.383 -0.37 -0.20    +0.177 C 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C1  LPR A 702      41.097  34.705  45.328 -0.28 -0.15    +0.256 C 
+DOCKED: ATOM      3  N2  LPR A 702      41.304  34.918  43.995 -0.20 +0.17    -0.311 N 
+DOCKED: ATOM      4  C5  LPR A 702      40.173  34.680  43.012 -0.38 -0.03    +0.171 A 
+DOCKED: ATOM      5  C8  LPR A 702      42.546  35.373  43.301 -0.27 -0.08    +0.105 A 
+DOCKED: ATOM      6  C6  LPR A 702      40.848  35.033  41.669 -0.49 -0.01    +0.035 A 
+DOCKED: ATOM      7  C7  LPR A 702      42.145  35.408  41.882 -0.37 -0.02    +0.027 A 
+DOCKED: ATOM      8  O1  LPR A 702      39.948  34.315  45.740 -0.80 +0.04    -0.270 OA
+DOCKED: BRANCH   4   9
+DOCKED: ATOM      9  C9  LPR A 702      39.732  33.169  43.041 -0.30 +0.05    +0.207 C 
+DOCKED: ATOM     10  O5  LPR A 702      40.087  32.428  43.905 +0.04 +0.01    -0.646 OA
+DOCKED: ATOM     11  O4  LPR A 702      38.946  32.859  42.065 -1.45 -0.98    -0.646 OA
+DOCKED: ENDBRANCH   4   9
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  12
+DOCKED: ATOM     12  C10 LPR A 702      43.086  33.637  46.492 -0.40 -0.05    +0.034 C 
+DOCKED: BRANCH  12  13
+DOCKED: ATOM     13  C11 LPR A 702      42.864  32.452  45.656 -0.40 -0.00    +0.005 C 
+DOCKED: BRANCH  13  14
+DOCKED: ATOM     14  C12 LPR A 702      42.660  31.084  46.453 -0.44 -0.04    +0.041 C 
+DOCKED: BRANCH  14  15
+DOCKED: ATOM     15  C13 LPR A 702      42.007  30.081  45.660 -0.16 -0.28    +0.338 C 
+DOCKED: ATOM     16  N3  LPR A 702      41.840  30.565  44.247 +0.09 -0.37    +0.618 N 
+DOCKED: ENDBRANCH  14  15
+DOCKED: ENDBRANCH  13  14
+DOCKED: ENDBRANCH  12  13
+DOCKED: ENDBRANCH   1  12
+DOCKED: BRANCH   1  17
+DOCKED: ATOM     17  N1  LPR A 702      41.546  35.313  47.667 -0.24 +0.29    -0.279 NA
+DOCKED: BRANCH  17  18
+DOCKED: ATOM     18  C4  LPR A 702      41.307  36.439  48.103 -0.31 -0.17    +0.185 C 
+DOCKED: BRANCH  18  19
+DOCKED: ATOM     19  C14 LPR A 702      40.054  37.171  48.382 -0.27 -0.02    +0.035 C 
+DOCKED: BRANCH  19  20
+DOCKED: ATOM     20  C15 LPR A 702      38.729  36.649  48.917 -0.42 -0.00    +0.003 C 
+DOCKED: BRANCH  20  21
+DOCKED: ATOM     21  C16 LPR A 702      38.759  35.679  50.059 -0.35 -0.00    +0.000 A 
+DOCKED: ATOM     22  C21 LPR A 702      39.398  34.387  49.882 -0.37 -0.00    +0.000 A 
+DOCKED: ATOM     23  C20 LPR A 702      39.447  33.447  50.980 -0.41 -0.00    +0.000 A 
+DOCKED: ATOM     24  C19 LPR A 702      38.856  33.793  52.259 -0.39 -0.00    +0.000 A 
+DOCKED: ATOM     25  C18 LPR A 702      38.217  35.083  52.436 -0.27 -0.00    +0.000 A 
+DOCKED: ATOM     26  C17 LPR A 702      38.169  36.020  51.345 -0.26 -0.00    +0.000 A 
+DOCKED: ENDBRANCH  20  21
+DOCKED: ENDBRANCH  19  20
+DOCKED: ENDBRANCH  18  19
+DOCKED: BRANCH  18  27
+DOCKED: ATOM     27  C3  LPR A 702      42.012  36.640  49.445 -0.32 -0.23    +0.208 C 
+DOCKED: ATOM     28  O2  LPR A 702      42.339  37.814  49.806 +0.03 +0.71    -0.646 OA
+DOCKED: ATOM     29  O3  LPR A 702      42.278  35.684  50.146 -0.02 +0.72    -0.646 OA
+DOCKED: ENDBRANCH  18  27
+DOCKED: ENDBRANCH  17  18
+DOCKED: ENDBRANCH   1  17
+DOCKED: TORSDOF 12
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 7 of 20
+Run: 7 Seed: 401334973 1541405269 [ Run 7 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -11.586
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 41.285 32.877 44.115 quatxyzw -0.215793 -0.292058 -0.881679 0.301292 center 41.014 34.325 46.441 ntor 12 -100.2512 176.6198 40.6010 -179.7478 167.9398 9.7240 -100.9184 104.1653 -176.1615 -123.8925 -62.2250 180.0000
+State:	 41.285  32.877  44.115  -0.226 -0.306 -0.925 144.930   -100.25  176.62   40.60 -179.75  167.94    9.72 -100.92  104.17 -176.16 -123.89  -62.23  180.00
+
+DOCKED: MODEL        7
+DOCKED: USER    Run = 7
+DOCKED: USER    DPF = C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -5.68 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =   68.97 uM (micromolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -9.26 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -7.97 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -1.28 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -2.33 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -2.33 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lisinopril.pdbqt
+DOCKED: USER    NEWDPF about 41.013600 34.325200 46.441200
+DOCKED: USER    NEWDPF tran0 41.285218 32.876583 44.115033
+DOCKED: USER    NEWDPF quaternion0 -0.215793 -0.292058 -0.881679 0.301292
+DOCKED: USER    NEWDPF axisangle0 -0.226309 -0.306291 -0.924646 144.929528
+DOCKED: USER    NEWDPF quat0 -0.226309 -0.306291 -0.924646 144.929528
+DOCKED: USER    NEWDPF dihe0 -100.25 176.62 40.60 -179.75 167.94 9.72 -100.92 104.17 -176.16 -123.89 -62.23 180.00 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  12 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C3_3  and  C4_4 
+DOCKED: REMARK    2  A    between atoms: C14_5  and  C4_4 
+DOCKED: REMARK    3  A    between atoms: C4_4  and  N1_13 
+DOCKED: REMARK    4  A    between atoms: C14_5  and  C15_6 
+DOCKED: REMARK    5  A    between atoms: C15_6  and  C16_7 
+DOCKED: REMARK    6  A    between atoms: C2_16  and  N1_13 
+DOCKED: REMARK       I    between atoms: C1_15  and  N2_24 
+DOCKED: REMARK    7  A    between atoms: C1_15  and  C2_16 
+DOCKED: REMARK    8  A    between atoms: C10_18  and  C2_16 
+DOCKED: REMARK    9  A    between atoms: C10_18  and  C11_19 
+DOCKED: REMARK   10  A    between atoms: C11_19  and  C12_20 
+DOCKED: REMARK   11  A    between atoms: C12_20  and  C13_21 
+DOCKED: REMARK   12  A    between atoms: C5_25  and  C9_29 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C2  LPR A 702      40.040  34.042  43.770 -0.18 -0.03    +0.177 C 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C1  LPR A 702      40.151  32.758  42.860 -0.27 +0.05    +0.256 C 
+DOCKED: ATOM      3  N2  LPR A 702      40.762  31.621  43.305 -0.10 +0.03    -0.311 N 
+DOCKED: ATOM      4  C5  LPR A 702      40.823  30.399  42.405 -0.14 -0.01    +0.171 A 
+DOCKED: ATOM      5  C8  LPR A 702      41.420  31.365  44.621 -0.07 -0.06    +0.105 A 
+DOCKED: ATOM      6  C6  LPR A 702      41.575  29.391  43.300 -0.13 -0.02    +0.035 A 
+DOCKED: ATOM      7  C7  LPR A 702      41.881  29.968  44.501 -0.19 -0.02    +0.027 A 
+DOCKED: ATOM      8  O1  LPR A 702      39.642  32.789  41.685 -1.24 -0.26    -0.270 OA
+DOCKED: BRANCH   4   9
+DOCKED: ATOM      9  C9  LPR A 702      39.371  29.889  42.078 -0.17 +0.16    +0.207 C 
+DOCKED: ATOM     10  O5  LPR A 702      39.109  29.360  41.042 +0.18 -0.48    -0.646 OA
+DOCKED: ATOM     11  O4  LPR A 702      38.542  30.084  43.049 -0.12 -0.81    -0.646 OA
+DOCKED: ENDBRANCH   4   9
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  12
+DOCKED: ATOM     12  C10 LPR A 702      40.047  35.295  42.894 -0.40 -0.01    +0.034 C 
+DOCKED: BRANCH  12  13
+DOCKED: ATOM     13  C11 LPR A 702      40.811  35.407  41.647 -0.58 -0.00    +0.005 C 
+DOCKED: BRANCH  13  14
+DOCKED: ATOM     14  C12 LPR A 702      42.220  34.657  41.641 -0.36 -0.02    +0.041 C 
+DOCKED: BRANCH  14  15
+DOCKED: ATOM     15  C13 LPR A 702      43.246  35.424  40.991 -0.19 -0.24    +0.338 C 
+DOCKED: ATOM     16  N3  LPR A 702      43.856  36.397  41.960 +0.04 -0.65    +0.618 N 
+DOCKED: ENDBRANCH  14  15
+DOCKED: ENDBRANCH  13  14
+DOCKED: ENDBRANCH  12  13
+DOCKED: ENDBRANCH   1  12
+DOCKED: BRANCH   1  17
+DOCKED: ATOM     17  N1  LPR A 702      41.210  33.945  44.734 -0.24 +0.14    -0.279 NA
+DOCKED: BRANCH  17  18
+DOCKED: ATOM     18  C4  LPR A 702      42.157  34.717  44.885 -0.30 -0.15    +0.185 C 
+DOCKED: BRANCH  18  19
+DOCKED: ATOM     19  C14 LPR A 702      42.613  35.547  46.019 -0.44 -0.04    +0.035 C 
+DOCKED: BRANCH  19  20
+DOCKED: ATOM     20  C15 LPR A 702      42.554  35.260  47.512 -0.51 -0.00    +0.003 C 
+DOCKED: BRANCH  20  21
+DOCKED: ATOM     21  C16 LPR A 702      41.237  35.410  48.210 -0.43 -0.00    +0.000 A 
+DOCKED: ATOM     22  C21 LPR A 702      40.010  35.112  47.491 -0.42 -0.00    +0.000 A 
+DOCKED: ATOM     23  C20 LPR A 702      38.733  35.239  48.157 -0.50 -0.00    +0.000 A 
+DOCKED: ATOM     24  C19 LPR A 702      38.675  35.665  49.543 -0.40 -0.00    +0.000 A 
+DOCKED: ATOM     25  C18 LPR A 702      39.900  35.963  50.260 -0.29 -0.00    +0.000 A 
+DOCKED: ATOM     26  C17 LPR A 702      41.172  35.836  49.600 -0.35 -0.00    +0.000 A 
+DOCKED: ENDBRANCH  20  21
+DOCKED: ENDBRANCH  19  20
+DOCKED: ENDBRANCH  18  19
+DOCKED: BRANCH  18  27
+DOCKED: ATOM     27  C3  LPR A 702      43.469  34.004  44.559 -0.22 -0.21    +0.208 C 
+DOCKED: ATOM     28  O2  LPR A 702      44.245  34.500  43.683 +0.03 +0.67    -0.646 OA
+DOCKED: ATOM     29  O3  LPR A 702      43.755  32.962  45.115 +0.03 +0.68    -0.646 OA
+DOCKED: ENDBRANCH  18  27
+DOCKED: ENDBRANCH  17  18
+DOCKED: ENDBRANCH   1  17
+DOCKED: TORSDOF 12
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 8 of 20
+Run: 8 Seed: 1480232143 947030730 [ Run 8 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -11.366
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 40.500 33.252 44.217 quatxyzw -0.085537 -0.283098 -0.774281 0.559489 center 41.014 34.325 46.441 ntor 12 -66.7861 41.1074 139.9887 13.7827 109.5036 36.1414 1.9346 162.1024 -134.1890 174.5119 -92.1869 180.0000
+State:	 40.500  33.252  44.217  -0.103 -0.342 -0.934 111.959    -66.79   41.11  139.99   13.78  109.50   36.14    1.93  162.10 -134.19  174.51  -92.19  180.00
+
+DOCKED: MODEL        8
+DOCKED: USER    Run = 8
+DOCKED: USER    DPF = C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -5.97 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =   42.33 uM (micromolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -9.55 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -8.47 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -1.07 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -1.82 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -1.82 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lisinopril.pdbqt
+DOCKED: USER    NEWDPF about 41.013600 34.325200 46.441200
+DOCKED: USER    NEWDPF tran0 40.499582 33.252331 44.216593
+DOCKED: USER    NEWDPF quaternion0 -0.085537 -0.283098 -0.774281 0.559489
+DOCKED: USER    NEWDPF axisangle0 -0.103201 -0.341561 -0.934177 111.959072
+DOCKED: USER    NEWDPF quat0 -0.103201 -0.341561 -0.934177 111.959072
+DOCKED: USER    NEWDPF dihe0 -66.79 41.11 139.99 13.78 109.50 36.14 1.93 162.10 -134.19 174.51 -92.19 180.00 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  12 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C3_3  and  C4_4 
+DOCKED: REMARK    2  A    between atoms: C14_5  and  C4_4 
+DOCKED: REMARK    3  A    between atoms: C4_4  and  N1_13 
+DOCKED: REMARK    4  A    between atoms: C14_5  and  C15_6 
+DOCKED: REMARK    5  A    between atoms: C15_6  and  C16_7 
+DOCKED: REMARK    6  A    between atoms: C2_16  and  N1_13 
+DOCKED: REMARK       I    between atoms: C1_15  and  N2_24 
+DOCKED: REMARK    7  A    between atoms: C1_15  and  C2_16 
+DOCKED: REMARK    8  A    between atoms: C10_18  and  C2_16 
+DOCKED: REMARK    9  A    between atoms: C10_18  and  C11_19 
+DOCKED: REMARK   10  A    between atoms: C11_19  and  C12_20 
+DOCKED: REMARK   11  A    between atoms: C12_20  and  C13_21 
+DOCKED: REMARK   12  A    between atoms: C5_25  and  C9_29 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C2  LPR A 702      40.089  34.645  43.258 -0.40 -0.03    +0.177 C 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C1  LPR A 702      39.828  33.209  42.660 -0.33 +0.08    +0.256 C 
+DOCKED: ATOM      3  N2  LPR A 702      40.713  32.186  42.852 -0.12 -0.00    -0.311 N 
+DOCKED: ATOM      4  C5  LPR A 702      40.411  30.813  42.280 -0.17 +0.04    +0.171 A 
+DOCKED: ATOM      5  C8  LPR A 702      42.014  32.199  43.587 -0.12 -0.05    +0.105 A 
+DOCKED: ATOM      6  C6  LPR A 702      41.645  30.006  42.738 -0.13 -0.02    +0.035 A 
+DOCKED: ATOM      7  C7  LPR A 702      42.493  30.811  43.447 -0.12 -0.02    +0.027 A 
+DOCKED: ATOM      8  O1  LPR A 702      38.756  33.004  41.990 -1.76 -0.46    -0.270 OA
+DOCKED: BRANCH   4   9
+DOCKED: ATOM      9  C9  LPR A 702      39.092  30.235  42.916 -0.15 +0.17    +0.207 C 
+DOCKED: ATOM     10  O5  LPR A 702      38.346  30.918  43.547 +0.02 -0.77    -0.646 OA
+DOCKED: ATOM     11  O4  LPR A 702      38.917  28.983  42.652 +0.02 -0.30    -0.646 OA
+DOCKED: ENDBRANCH   4   9
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  12
+DOCKED: ATOM     12  C10 LPR A 702      40.915  35.471  42.272 -0.40 -0.01    +0.034 C 
+DOCKED: BRANCH  12  13
+DOCKED: ATOM     13  C11 LPR A 702      41.513  34.915  41.053 -0.52 -0.00    +0.005 C 
+DOCKED: BRANCH  13  14
+DOCKED: ATOM     14  C12 LPR A 702      43.023  34.420  41.198 -0.29 -0.03    +0.041 C 
+DOCKED: BRANCH  14  15
+DOCKED: ATOM     15  C13 LPR A 702      43.815  35.303  42.007 -0.16 -0.30    +0.338 C 
+DOCKED: ATOM     16  N3  LPR A 702      44.320  34.578  43.223 +0.07 -0.62    +0.618 N 
+DOCKED: ENDBRANCH  14  15
+DOCKED: ENDBRANCH  13  14
+DOCKED: ENDBRANCH  12  13
+DOCKED: ENDBRANCH   1  12
+DOCKED: BRANCH   1  17
+DOCKED: ATOM     17  N1  LPR A 702      40.767  34.399  44.594 -0.28 +0.12    -0.279 NA
+DOCKED: BRANCH  17  18
+DOCKED: ATOM     18  C4  LPR A 702      41.884  34.752  44.973 -0.32 -0.14    +0.185 C 
+DOCKED: BRANCH  18  19
+DOCKED: ATOM     19  C14 LPR A 702      42.391  35.981  45.618 -0.39 -0.04    +0.035 C 
+DOCKED: BRANCH  19  20
+DOCKED: ATOM     20  C15 LPR A 702      42.271  36.433  47.066 -0.52 -0.00    +0.003 C 
+DOCKED: BRANCH  20  21
+DOCKED: ATOM     21  C16 LPR A 702      41.216  35.798  47.920 -0.42 -0.00    +0.000 A 
+DOCKED: ATOM     22  C21 LPR A 702      41.547  35.376  49.269 -0.38 -0.00    +0.000 A 
+DOCKED: ATOM     23  C20 LPR A 702      40.535  34.775  50.108 -0.28 -0.00    +0.000 A 
+DOCKED: ATOM     24  C19 LPR A 702      39.187  34.592  49.603 -0.36 -0.00    +0.000 A 
+DOCKED: ATOM     25  C18 LPR A 702      38.855  35.013  48.255 -0.48 -0.00    +0.000 A 
+DOCKED: ATOM     26  C17 LPR A 702      39.862  35.613  47.419 -0.19 -0.00    +0.000 A 
+DOCKED: ENDBRANCH  20  21
+DOCKED: ENDBRANCH  19  20
+DOCKED: ENDBRANCH  18  19
+DOCKED: BRANCH  18  27
+DOCKED: ATOM     27  C3  LPR A 702      42.461  33.714  45.936 -0.29 -0.22    +0.208 C 
+DOCKED: ATOM     28  O2  LPR A 702      41.708  33.197  46.819 -0.01 +0.62    -0.646 OA
+DOCKED: ATOM     29  O3  LPR A 702      43.635  33.405  45.870 +0.01 +0.89    -0.646 OA
+DOCKED: ENDBRANCH  18  27
+DOCKED: ENDBRANCH  17  18
+DOCKED: ENDBRANCH   1  17
+DOCKED: TORSDOF 12
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 9 of 20
+Run: 9 Seed: 1233066927 2030803864 [ Run 9 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -13.368
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 40.955 34.628 46.333 quatxyzw 0.139725 0.037975 0.187450 0.971544 center 41.014 34.325 46.441 ntor 12 -147.3695 179.9871 -90.6388 -16.7433 50.5982 122.8656 -70.1321 -87.6357 153.6356 -1.9292 -54.3177 29.9622
+State:	 40.955  34.628  46.333   0.590  0.160  0.791 27.403   -147.37  179.99  -90.64  -16.74   50.60  122.87  -70.13  -87.64  153.64   -1.93  -54.32   29.96
+
+DOCKED: MODEL        9
+DOCKED: USER    Run = 9
+DOCKED: USER    DPF = C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -7.14 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    5.86 uM (micromolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =  -10.72 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =  -10.09 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -0.63 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -2.65 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -2.65 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lisinopril.pdbqt
+DOCKED: USER    NEWDPF about 41.013600 34.325200 46.441200
+DOCKED: USER    NEWDPF tran0 40.955067 34.628336 46.332696
+DOCKED: USER    NEWDPF quaternion0 0.139725 0.037975 0.187450 0.971544
+DOCKED: USER    NEWDPF axisangle0 0.589906 0.160326 0.791395 27.402561
+DOCKED: USER    NEWDPF quat0 0.589906 0.160326 0.791395 27.402561
+DOCKED: USER    NEWDPF dihe0 -147.37 179.99 -90.64 -16.74 50.60 122.87 -70.13 -87.64 153.64 -1.93 -54.32 29.96 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  12 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C3_3  and  C4_4 
+DOCKED: REMARK    2  A    between atoms: C14_5  and  C4_4 
+DOCKED: REMARK    3  A    between atoms: C4_4  and  N1_13 
+DOCKED: REMARK    4  A    between atoms: C14_5  and  C15_6 
+DOCKED: REMARK    5  A    between atoms: C15_6  and  C16_7 
+DOCKED: REMARK    6  A    between atoms: C2_16  and  N1_13 
+DOCKED: REMARK       I    between atoms: C1_15  and  N2_24 
+DOCKED: REMARK    7  A    between atoms: C1_15  and  C2_16 
+DOCKED: REMARK    8  A    between atoms: C10_18  and  C2_16 
+DOCKED: REMARK    9  A    between atoms: C10_18  and  C11_19 
+DOCKED: REMARK   10  A    between atoms: C11_19  and  C12_20 
+DOCKED: REMARK   11  A    between atoms: C12_20  and  C13_21 
+DOCKED: REMARK   12  A    between atoms: C5_25  and  C9_29 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C2  LPR A 702      42.270  33.499  46.179 -0.32 -0.18    +0.177 C 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C1  LPR A 702      41.340  33.755  44.931 -0.23 -0.14    +0.256 C 
+DOCKED: ATOM      3  N2  LPR A 702      41.839  33.758  43.659 -0.08 +0.16    -0.311 N 
+DOCKED: ATOM      4  C5  LPR A 702      40.904  33.982  42.485 -0.28 -0.04    +0.171 A 
+DOCKED: ATOM      5  C8  LPR A 702      43.249  33.558  43.207 -0.14 -0.08    +0.105 A 
+DOCKED: ATOM      6  C6  LPR A 702      41.878  33.899  41.290 -0.29 -0.01    +0.035 A 
+DOCKED: ATOM      7  C7  LPR A 702      43.149  33.668  41.738 -0.16 -0.02    +0.027 A 
+DOCKED: ATOM      8  O1  LPR A 702      40.089  33.951  45.123 -0.66 +0.05    -0.270 OA
+DOCKED: BRANCH   4   9
+DOCKED: ATOM      9  C9  LPR A 702      39.829  32.835  42.416 -0.34 +0.11    +0.207 C 
+DOCKED: ATOM     10  O5  LPR A 702      38.748  33.013  41.945 -1.42 -1.12    -0.646 OA
+DOCKED: ATOM     11  O4  LPR A 702      40.262  31.714  42.890 -0.05 -0.14    -0.646 OA
+DOCKED: ENDBRANCH   4   9
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  12
+DOCKED: ATOM     12  C10 LPR A 702      42.349  31.999  46.462 -0.41 -0.03    +0.034 C 
+DOCKED: BRANCH  12  13
+DOCKED: ATOM     13  C11 LPR A 702      43.202  31.077  45.704 -0.40 -0.00    +0.005 C 
+DOCKED: BRANCH  13  14
+DOCKED: ATOM     14  C12 LPR A 702      42.690  29.566  45.647 -0.37 -0.04    +0.041 C 
+DOCKED: BRANCH  14  15
+DOCKED: ATOM     15  C13 LPR A 702      41.817  29.324  44.533 -0.09 -0.28    +0.338 C 
+DOCKED: ATOM     16  N3  LPR A 702      42.288  30.093  43.331 +0.11 -0.40    +0.618 N 
+DOCKED: ENDBRANCH  14  15
+DOCKED: ENDBRANCH  13  14
+DOCKED: ENDBRANCH  12  13
+DOCKED: ENDBRANCH   1  12
+DOCKED: BRANCH   1  17
+DOCKED: ATOM     17  N1  LPR A 702      41.658  34.318  47.302 -0.33 +0.30    -0.279 NA
+DOCKED: BRANCH  17  18
+DOCKED: ATOM     18  C4  LPR A 702      41.035  35.378  47.238 -0.34 -0.14    +0.185 C 
+DOCKED: BRANCH  18  19
+DOCKED: ATOM     19  C14 LPR A 702      39.701  35.797  47.716 -0.33 -0.02    +0.035 C 
+DOCKED: BRANCH  19  20
+DOCKED: ATOM     20  C15 LPR A 702      38.688  35.028  48.550 -0.50 -0.00    +0.003 C 
+DOCKED: BRANCH  20  21
+DOCKED: ATOM     21  C16 LPR A 702      38.739  35.177  50.041 -0.36 -0.00    +0.000 A 
+DOCKED: ATOM     22  C21 LPR A 702      38.485  36.477  50.637 -0.25 -0.00    +0.000 A 
+DOCKED: ATOM     23  C20 LPR A 702      38.518  36.632  52.075 -0.18 -0.00    +0.000 A 
+DOCKED: ATOM     24  C19 LPR A 702      38.805  35.490  52.923 -0.24 -0.00    +0.000 A 
+DOCKED: ATOM     25  C18 LPR A 702      39.059  34.191  52.327 -0.29 -0.00    +0.000 A 
+DOCKED: ATOM     26  C17 LPR A 702      39.025  34.036  50.897 -0.39 -0.00    +0.000 A 
+DOCKED: ENDBRANCH  20  21
+DOCKED: ENDBRANCH  19  20
+DOCKED: ENDBRANCH  18  19
+DOCKED: BRANCH  18  27
+DOCKED: ATOM     27  C3  LPR A 702      41.874  36.513  47.826 -0.36 -0.23    +0.208 C 
+DOCKED: ATOM     28  O2  LPR A 702      42.044  36.575  49.084 +0.01 +0.74    -0.646 OA
+DOCKED: ATOM     29  O3  LPR A 702      42.353  37.360  47.098 -1.42 +0.87    -0.646 OA
+DOCKED: ENDBRANCH  18  27
+DOCKED: ENDBRANCH  17  18
+DOCKED: ENDBRANCH   1  17
+DOCKED: TORSDOF 12
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 10 of 20
+Run: 10 Seed: 2146579619 405601021 [ Run 10 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -10.740
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 40.561 35.681 45.295 quatxyzw 0.767132 -0.615187 -0.042564 -0.176756 center 41.014 34.325 46.441 ntor 12 -135.4590 161.4711 -39.2984 -84.7537 173.7850 -179.9373 -149.2919 13.1954 -149.5070 -63.2238 -151.0108 -132.9421
+State:	 40.561  35.681  45.295   0.779 -0.625 -0.043 -159.638   -135.46  161.47  -39.30  -84.75  173.78 -179.94 -149.29   13.20 -149.51  -63.22 -151.01 -132.94
+
+DOCKED: MODEL       10
+DOCKED: USER    Run = 10
+DOCKED: USER    DPF = C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -5.21 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =  151.37 uM (micromolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -8.79 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -8.28 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -0.51 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -1.95 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -1.95 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lisinopril.pdbqt
+DOCKED: USER    NEWDPF about 41.013600 34.325200 46.441200
+DOCKED: USER    NEWDPF tran0 40.560667 35.681446 45.294926
+DOCKED: USER    NEWDPF quaternion0 0.767132 -0.615187 -0.042564 -0.176756
+DOCKED: USER    NEWDPF axisangle0 0.779404 -0.625028 -0.043244 -159.638279
+DOCKED: USER    NEWDPF quat0 0.779404 -0.625028 -0.043244 -159.638279
+DOCKED: USER    NEWDPF dihe0 -135.46 161.47 -39.30 -84.75 173.78 -179.94 -149.29 13.20 -149.51 -63.22 -151.01 -132.94 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  12 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C3_3  and  C4_4 
+DOCKED: REMARK    2  A    between atoms: C14_5  and  C4_4 
+DOCKED: REMARK    3  A    between atoms: C4_4  and  N1_13 
+DOCKED: REMARK    4  A    between atoms: C14_5  and  C15_6 
+DOCKED: REMARK    5  A    between atoms: C15_6  and  C16_7 
+DOCKED: REMARK    6  A    between atoms: C2_16  and  N1_13 
+DOCKED: REMARK       I    between atoms: C1_15  and  N2_24 
+DOCKED: REMARK    7  A    between atoms: C1_15  and  C2_16 
+DOCKED: REMARK    8  A    between atoms: C10_18  and  C2_16 
+DOCKED: REMARK    9  A    between atoms: C10_18  and  C11_19 
+DOCKED: REMARK   10  A    between atoms: C11_19  and  C12_20 
+DOCKED: REMARK   11  A    between atoms: C12_20  and  C13_21 
+DOCKED: REMARK   12  A    between atoms: C5_25  and  C9_29 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C2  LPR A 702      41.524  34.343  45.850 -0.34 -0.13    +0.177 C 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C1  LPR A 702      41.384  35.613  46.776 -0.20 -0.21    +0.256 C 
+DOCKED: ATOM      3  N2  LPR A 702      40.303  35.782  47.595 -0.17 +0.20    -0.311 N 
+DOCKED: ATOM      4  C5  LPR A 702      40.222  37.006  48.489 -0.18 -0.12    +0.171 A 
+DOCKED: ATOM      5  C8  LPR A 702      39.113  34.896  47.768 -0.27 -0.05    +0.105 A 
+DOCKED: ATOM      6  C6  LPR A 702      38.878  36.774  49.212 -0.31 -0.02    +0.035 A 
+DOCKED: ATOM      7  C7  LPR A 702      38.309  35.608  48.781 -0.44 -0.01    +0.027 A 
+DOCKED: ATOM      8  O1  LPR A 702      42.315  36.493  46.762 -1.02 +0.31    -0.270 OA
+DOCKED: BRANCH   4   9
+DOCKED: ATOM      9  C9  LPR A 702      41.418  37.016  49.512 -0.24 -0.19    +0.207 C 
+DOCKED: ATOM     10  O5  LPR A 702      42.068  37.995  49.709 +0.04 +0.69    -0.646 OA
+DOCKED: ATOM     11  O4  LPR A 702      41.577  35.880  50.106 +0.01 +0.57    -0.646 OA
+DOCKED: ENDBRANCH   4   9
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  12
+DOCKED: ATOM     12  C10 LPR A 702      43.003  34.013  45.650 -0.40 -0.04    +0.034 C 
+DOCKED: BRANCH  12  13
+DOCKED: ATOM     13  C11 LPR A 702      43.545  32.652  45.718 -0.43 -0.01    +0.005 C 
+DOCKED: BRANCH  13  14
+DOCKED: ATOM     14  C12 LPR A 702      42.759  31.652  46.682 -0.45 -0.04    +0.041 C 
+DOCKED: BRANCH  14  15
+DOCKED: ATOM     15  C13 LPR A 702      42.654  30.330  46.132 -0.23 -0.30    +0.338 C 
+DOCKED: ATOM     16  N3  LPR A 702      44.001  29.856  45.663 +0.07 -0.62    +0.618 N 
+DOCKED: ENDBRANCH  14  15
+DOCKED: ENDBRANCH  13  14
+DOCKED: ENDBRANCH  12  13
+DOCKED: ENDBRANCH   1  12
+DOCKED: BRANCH   1  17
+DOCKED: ATOM     17  N1  LPR A 702      40.783  34.701  44.574 -0.31 +0.13    -0.279 NA
+DOCKED: BRANCH  17  18
+DOCKED: ATOM     18  C4  LPR A 702      40.805  34.138  43.480 -0.33 -0.06    +0.185 C 
+DOCKED: BRANCH  18  19
+DOCKED: ATOM     19  C14 LPR A 702      41.044  32.739  43.067 -0.30 -0.01    +0.035 C 
+DOCKED: BRANCH  19  20
+DOCKED: ATOM     20  C15 LPR A 702      40.260  31.483  43.414 -0.33 +0.00    +0.003 C 
+DOCKED: BRANCH  20  21
+DOCKED: ATOM     21  C16 LPR A 702      40.876  30.154  43.097 -0.21 -0.00    +0.000 A 
+DOCKED: ATOM     22  C21 LPR A 702      42.004  30.089  42.184 -0.13 -0.00    +0.000 A 
+DOCKED: ATOM     23  C20 LPR A 702      42.616  28.815  41.881 -0.13 -0.00    +0.000 A 
+DOCKED: ATOM     24  C19 LPR A 702      42.105  27.599  42.486 -0.15 -0.00    +0.000 A 
+DOCKED: ATOM     25  C18 LPR A 702      40.978  27.664  43.398 -0.22 -0.00    +0.000 A 
+DOCKED: ATOM     26  C17 LPR A 702      40.368  28.931  43.702 -0.26 -0.00    +0.000 A 
+DOCKED: ENDBRANCH  20  21
+DOCKED: ENDBRANCH  19  20
+DOCKED: ENDBRANCH  18  19
+DOCKED: BRANCH  18  27
+DOCKED: ATOM     27  C3  LPR A 702      39.497  34.394  42.733 -0.34 +0.02    +0.208 C 
+DOCKED: ATOM     28  O2  LPR A 702      38.969  33.453  42.061 -1.05 -0.69    -0.646 OA
+DOCKED: ATOM     29  O3  LPR A 702      38.980  35.493  42.763 +0.03 +0.07    -0.646 OA
+DOCKED: ENDBRANCH  18  27
+DOCKED: ENDBRANCH  17  18
+DOCKED: ENDBRANCH   1  17
+DOCKED: TORSDOF 12
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 11 of 20
+Run: 11 Seed: 863654694 1217023375 [ Run 11 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -8.684
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 42.970 34.633 45.693 quatxyzw -0.148248 -0.218487 -0.487428 -0.832286 center 41.014 34.325 46.441 ntor 12 -166.3253 27.9538 -63.2172 40.9168 -78.5224 97.5190 -22.7312 -113.8450 -166.9048 132.2119 -85.8282 99.5575
+State:	 42.970  34.633  45.693  -0.267 -0.394 -0.879 -67.331   -166.33   27.95  -63.22   40.92  -78.52   97.52  -22.73 -113.85 -166.90  132.21  -85.83   99.56
+
+DOCKED: MODEL       11
+DOCKED: USER    Run = 11
+DOCKED: USER    DPF = C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -3.67 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    2.06 mM (millimolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -7.25 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -8.44 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +1.19 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -1.44 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -1.44 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lisinopril.pdbqt
+DOCKED: USER    NEWDPF about 41.013600 34.325200 46.441200
+DOCKED: USER    NEWDPF tran0 42.969897 34.632852 45.692773
+DOCKED: USER    NEWDPF quaternion0 -0.148248 -0.218487 -0.487428 -0.832286
+DOCKED: USER    NEWDPF axisangle0 -0.267428 -0.394134 -0.879284 -67.331444
+DOCKED: USER    NEWDPF quat0 -0.267428 -0.394134 -0.879284 -67.331444
+DOCKED: USER    NEWDPF dihe0 -166.33 27.95 -63.22 40.92 -78.52 97.52 -22.73 -113.85 -166.90 132.21 -85.83 99.56 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  12 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C3_3  and  C4_4 
+DOCKED: REMARK    2  A    between atoms: C14_5  and  C4_4 
+DOCKED: REMARK    3  A    between atoms: C4_4  and  N1_13 
+DOCKED: REMARK    4  A    between atoms: C14_5  and  C15_6 
+DOCKED: REMARK    5  A    between atoms: C15_6  and  C16_7 
+DOCKED: REMARK    6  A    between atoms: C2_16  and  N1_13 
+DOCKED: REMARK       I    between atoms: C1_15  and  N2_24 
+DOCKED: REMARK    7  A    between atoms: C1_15  and  C2_16 
+DOCKED: REMARK    8  A    between atoms: C10_18  and  C2_16 
+DOCKED: REMARK    9  A    between atoms: C10_18  and  C11_19 
+DOCKED: REMARK   10  A    between atoms: C11_19  and  C12_20 
+DOCKED: REMARK   11  A    between atoms: C12_20  and  C13_21 
+DOCKED: REMARK   12  A    between atoms: C5_25  and  C9_29 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C2  LPR A 702      43.351  32.983  46.092 -0.33 -0.23    +0.177 C 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C1  LPR A 702      43.291  33.401  44.572 -0.16 -0.23    +0.256 C 
+DOCKED: ATOM      3  N2  LPR A 702      42.103  33.483  43.903 -0.06 +0.18    -0.311 N 
+DOCKED: ATOM      4  C5  LPR A 702      42.089  33.915  42.448 -0.14 -0.08    +0.171 A 
+DOCKED: ATOM      5  C8  LPR A 702      40.724  33.205  44.405 -0.24 -0.03    +0.105 A 
+DOCKED: ATOM      6  C6  LPR A 702      40.581  33.869  42.123 -0.41 -0.00    +0.035 A 
+DOCKED: ATOM      7  C7  LPR A 702      39.877  33.473  43.227 -0.36 +0.00    +0.027 A 
+DOCKED: ATOM      8  O1  LPR A 702      44.384  33.678  43.965 -0.22 +0.26    -0.270 OA
+DOCKED: BRANCH   4   9
+DOCKED: ATOM      9  C9  LPR A 702      42.652  35.377  42.306 -0.27 -0.15    +0.207 C 
+DOCKED: ATOM     10  O5  LPR A 702      43.020  36.004  43.251 -0.00 +0.64    -0.646 OA
+DOCKED: ATOM     11  O4  LPR A 702      42.690  35.782  41.080 +0.00 +0.42    -0.646 OA
+DOCKED: ENDBRANCH   4   9
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  12
+DOCKED: ATOM     12  C10 LPR A 702      42.452  31.769  46.327 -0.43 -0.03    +0.034 C 
+DOCKED: BRANCH  12  13
+DOCKED: ATOM     13  C11 LPR A 702      42.553  30.526  45.555 -0.38 -0.00    +0.005 C 
+DOCKED: BRANCH  13  14
+DOCKED: ATOM     14  C12 LPR A 702      43.750  29.556  45.975 -0.36 -0.04    +0.041 C 
+DOCKED: BRANCH  14  15
+DOCKED: ATOM     15  C13 LPR A 702      43.283  28.294  46.476 -0.24 -0.43    +0.338 C 
+DOCKED: ATOM     16  N3  LPR A 702      41.860  28.063  46.049 -0.00 -0.95    +0.618 N 
+DOCKED: ENDBRANCH  14  15
+DOCKED: ENDBRANCH  13  14
+DOCKED: ENDBRANCH  12  13
+DOCKED: ENDBRANCH   1  12
+DOCKED: BRANCH   1  17
+DOCKED: ATOM     17  N1  LPR A 702      42.939  34.226  46.860 -0.19 +0.47    -0.279 NA
+DOCKED: BRANCH  17  18
+DOCKED: ATOM     18  C4  LPR A 702      42.075  35.059  46.583 -0.38 -0.20    +0.185 C 
+DOCKED: BRANCH  18  19
+DOCKED: ATOM     19  C14 LPR A 702      40.651  35.199  46.952 -0.42 -0.02    +0.035 C 
+DOCKED: BRANCH  19  20
+DOCKED: ATOM     20  C15 LPR A 702      39.982  35.024  48.307 -0.51 -0.00    +0.003 C 
+DOCKED: BRANCH  20  21
+DOCKED: ATOM     21  C16 LPR A 702      40.334  35.988  49.400 -0.33 -0.00    +0.000 A 
+DOCKED: ATOM     22  C21 LPR A 702      39.341  36.944  49.856 -0.26 -0.00    +0.000 A 
+DOCKED: ATOM     23  C20 LPR A 702      39.663  37.870  50.919 -0.16 -0.00    +0.000 A 
+DOCKED: ATOM     24  C19 LPR A 702      40.979  37.847  51.529 -0.20 -0.00    +0.000 A 
+DOCKED: ATOM     25  C18 LPR A 702      41.972  36.893  51.073 -0.33 -0.00    +0.000 A 
+DOCKED: ATOM     26  C17 LPR A 702      41.652  35.969  50.016 -0.35 -0.00    +0.000 A 
+DOCKED: ENDBRANCH  20  21
+DOCKED: ENDBRANCH  19  20
+DOCKED: ENDBRANCH  18  19
+DOCKED: BRANCH  18  27
+DOCKED: ATOM     27  C3  LPR A 702      42.562  36.460  46.950 -0.32 -0.26    +0.208 C 
+DOCKED: ATOM     28  O2  LPR A 702      43.572  36.589  47.711 -0.46 +1.12    -0.646 OA
+DOCKED: ATOM     29  O3  LPR A 702      41.975  37.440  46.536 -0.92 +0.76    -0.646 OA
+DOCKED: ENDBRANCH  18  27
+DOCKED: ENDBRANCH  17  18
+DOCKED: ENDBRANCH   1  17
+DOCKED: TORSDOF 12
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 12 of 20
+Run: 12 Seed: 1121517039 1780263587 [ Run 12 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -13.544
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 41.276 34.258 46.364 quatxyzw 0.097251 0.069408 0.209460 -0.970490 center 41.014 34.325 46.441 ntor 12 -66.5830 -176.8294 100.1246 -20.8196 -58.8392 -63.4192 -80.3242 -173.1254 -21.1896 18.6758 93.1325 -43.0369
+State:	 41.276  34.258  46.364   0.403  0.288  0.869 -27.908    -66.58 -176.83  100.12  -20.82  -58.84  -63.42  -80.32 -173.13  -21.19   18.68   93.13  -43.04
+
+DOCKED: MODEL       12
+DOCKED: USER    Run = 12
+DOCKED: USER    DPF = C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -6.96 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    7.91 uM (micromolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =  -10.54 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -9.74 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -0.80 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -3.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -3.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lisinopril.pdbqt
+DOCKED: USER    NEWDPF about 41.013600 34.325200 46.441200
+DOCKED: USER    NEWDPF tran0 41.275987 34.258128 46.364121
+DOCKED: USER    NEWDPF quaternion0 0.097251 0.069408 0.209460 -0.970490
+DOCKED: USER    NEWDPF axisangle0 0.403295 0.287831 0.868623 -27.907723
+DOCKED: USER    NEWDPF quat0 0.403295 0.287831 0.868623 -27.907723
+DOCKED: USER    NEWDPF dihe0 -66.58 -176.83 100.12 -20.82 -58.84 -63.42 -80.32 -173.13 -21.19 18.68 93.13 -43.04 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  12 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C3_3  and  C4_4 
+DOCKED: REMARK    2  A    between atoms: C14_5  and  C4_4 
+DOCKED: REMARK    3  A    between atoms: C4_4  and  N1_13 
+DOCKED: REMARK    4  A    between atoms: C14_5  and  C15_6 
+DOCKED: REMARK    5  A    between atoms: C15_6  and  C16_7 
+DOCKED: REMARK    6  A    between atoms: C2_16  and  N1_13 
+DOCKED: REMARK       I    between atoms: C1_15  and  N2_24 
+DOCKED: REMARK    7  A    between atoms: C1_15  and  C2_16 
+DOCKED: REMARK    8  A    between atoms: C10_18  and  C2_16 
+DOCKED: REMARK    9  A    between atoms: C10_18  and  C11_19 
+DOCKED: REMARK   10  A    between atoms: C11_19  and  C12_20 
+DOCKED: REMARK   11  A    between atoms: C12_20  and  C13_21 
+DOCKED: REMARK   12  A    between atoms: C5_25  and  C9_29 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C2  LPR A 702      42.817  34.586  45.627 -0.32 -0.20    +0.177 C 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C1  LPR A 702      41.543  34.475  44.703 -0.26 -0.16    +0.256 C 
+DOCKED: ATOM      3  N2  LPR A 702      41.558  34.922  43.412 -0.17 +0.17    -0.311 N 
+DOCKED: ATOM      4  C5  LPR A 702      40.318  34.771  42.550 -0.39 -0.03    +0.171 A 
+DOCKED: ATOM      5  C8  LPR A 702      42.673  35.572  42.660 -0.28 -0.08    +0.105 A 
+DOCKED: ATOM      6  C6  LPR A 702      40.789  35.389  41.216 -0.50 -0.01    +0.035 A 
+DOCKED: ATOM      7  C7  LPR A 702      42.084  35.814  41.329 -0.41 -0.02    +0.027 A 
+DOCKED: ATOM      8  O1  LPR A 702      40.480  33.942  45.180 -0.71 +0.08    -0.270 OA
+DOCKED: BRANCH   4   9
+DOCKED: ATOM      9  C9  LPR A 702      39.959  33.249  42.371 -0.37 +0.07    +0.207 C 
+DOCKED: ATOM     10  O5  LPR A 702      38.848  32.890  42.130 -1.41 -1.01    -0.646 OA
+DOCKED: ATOM     11  O4  LPR A 702      40.987  32.476  42.485 +0.03 +0.04    -0.646 OA
+DOCKED: ENDBRANCH   4   9
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  12
+DOCKED: ATOM     12  C10 LPR A 702      43.909  33.649  45.112 -0.38 -0.04    +0.034 C 
+DOCKED: BRANCH  12  13
+DOCKED: ATOM     13  C11 LPR A 702      44.290  32.403  45.786 -0.41 -0.01    +0.005 C 
+DOCKED: BRANCH  13  14
+DOCKED: ATOM     14  C12 LPR A 702      43.630  31.076  45.193 -0.30 -0.04    +0.041 C 
+DOCKED: BRANCH  14  15
+DOCKED: ATOM     15  C13 LPR A 702      42.283  30.883  45.650 -0.18 -0.27    +0.338 C 
+DOCKED: ATOM     16  N3  LPR A 702      41.335  30.892  44.484 +0.11 -0.32    +0.618 N 
+DOCKED: ENDBRANCH  14  15
+DOCKED: ENDBRANCH  13  14
+DOCKED: ENDBRANCH  12  13
+DOCKED: ENDBRANCH   1  12
+DOCKED: BRANCH   1  17
+DOCKED: ATOM     17  N1  LPR A 702      42.321  34.263  47.025 -0.25 +0.38    -0.279 NA
+DOCKED: BRANCH  17  18
+DOCKED: ATOM     18  C4  LPR A 702      42.100  35.027  47.965 -0.36 -0.26    +0.185 C 
+DOCKED: BRANCH  18  19
+DOCKED: ATOM     19  C14 LPR A 702      42.948  35.573  49.046 -0.31 -0.07    +0.035 C 
+DOCKED: BRANCH  19  20
+DOCKED: ATOM     20  C15 LPR A 702      42.547  36.356  50.286 -0.44 -0.00    +0.003 C 
+DOCKED: BRANCH  20  21
+DOCKED: ATOM     21  C16 LPR A 702      41.086  36.526  50.574 -0.27 -0.00    +0.000 A 
+DOCKED: ATOM     22  C21 LPR A 702      40.228  35.356  50.631 -0.24 -0.00    +0.000 A 
+DOCKED: ATOM     23  C20 LPR A 702      38.819  35.506  50.921 -0.31 -0.00    +0.000 A 
+DOCKED: ATOM     24  C19 LPR A 702      38.261  36.825  51.154 -0.20 -0.00    +0.000 A 
+DOCKED: ATOM     25  C18 LPR A 702      39.118  37.994  51.097 -0.15 -0.00    +0.000 A 
+DOCKED: ATOM     26  C17 LPR A 702      40.520  37.846  50.810 -0.17 -0.00    +0.000 A 
+DOCKED: ENDBRANCH  20  21
+DOCKED: ENDBRANCH  19  20
+DOCKED: ENDBRANCH  18  19
+DOCKED: BRANCH  18  27
+DOCKED: ATOM     27  C3  LPR A 702      41.492  36.330  47.448 -0.14 -0.18    +0.208 C 
+DOCKED: ATOM     28  O2  LPR A 702      42.244  37.191  46.893 -1.24 +0.80    -0.646 OA
+DOCKED: ATOM     29  O3  LPR A 702      40.305  36.550  47.589 +0.27 +0.36    -0.646 OA
+DOCKED: ENDBRANCH  18  27
+DOCKED: ENDBRANCH  17  18
+DOCKED: ENDBRANCH   1  17
+DOCKED: TORSDOF 12
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 13 of 20
+Run: 13 Seed: 700403381 1755511257 [ Run 13 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -13.675
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 41.404 34.051 46.142 quatxyzw -0.021185 0.082490 -0.029072 -0.995942 center 41.014 34.325 46.441 ntor 12 23.9736 3.3150 180.0000 158.1557 82.3590 69.2308 132.7959 169.7400 -15.3239 -7.5010 176.5897 -11.8958
+State:	 41.404  34.051  46.142  -0.235  0.917 -0.323 -10.326     23.97    3.31  180.00  158.16   82.36   69.23  132.80  169.74  -15.32   -7.50  176.59  -11.90
+
+DOCKED: MODEL       13
+DOCKED: USER    Run = 13
+DOCKED: USER    DPF = C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -8.04 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    1.28 uM (micromolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =  -11.62 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -9.49 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -2.13 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -2.06 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -2.06 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lisinopril.pdbqt
+DOCKED: USER    NEWDPF about 41.013600 34.325200 46.441200
+DOCKED: USER    NEWDPF tran0 41.403702 34.051159 46.142028
+DOCKED: USER    NEWDPF quaternion0 -0.021185 0.082490 -0.029072 -0.995942
+DOCKED: USER    NEWDPF axisangle0 -0.235412 0.916635 -0.323050 -10.326281
+DOCKED: USER    NEWDPF quat0 -0.235412 0.916635 -0.323050 -10.326281
+DOCKED: USER    NEWDPF dihe0 23.97 3.31 180.00 158.16 82.36 69.23 132.80 169.74 -15.32 -7.50 176.59 -11.90 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  12 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C3_3  and  C4_4 
+DOCKED: REMARK    2  A    between atoms: C14_5  and  C4_4 
+DOCKED: REMARK    3  A    between atoms: C4_4  and  N1_13 
+DOCKED: REMARK    4  A    between atoms: C14_5  and  C15_6 
+DOCKED: REMARK    5  A    between atoms: C15_6  and  C16_7 
+DOCKED: REMARK    6  A    between atoms: C2_16  and  N1_13 
+DOCKED: REMARK       I    between atoms: C1_15  and  N2_24 
+DOCKED: REMARK    7  A    between atoms: C1_15  and  C2_16 
+DOCKED: REMARK    8  A    between atoms: C10_18  and  C2_16 
+DOCKED: REMARK    9  A    between atoms: C10_18  and  C11_19 
+DOCKED: REMARK   10  A    between atoms: C11_19  and  C12_20 
+DOCKED: REMARK   11  A    between atoms: C12_20  and  C13_21 
+DOCKED: REMARK   12  A    between atoms: C5_25  and  C9_29 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C2  LPR A 702      42.869  33.462  45.413 -0.27 -0.18    +0.177 C 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C1  LPR A 702      41.605  33.689  44.497 -0.20 -0.14    +0.256 C 
+DOCKED: ATOM      3  N2  LPR A 702      41.716  34.246  43.255 -0.11 +0.16    -0.311 N 
+DOCKED: ATOM      4  C5  LPR A 702      40.476  34.421  42.397 -0.37 -0.03    +0.171 A 
+DOCKED: ATOM      5  C8  LPR A 702      42.940  34.737  42.555 -0.22 -0.08    +0.105 A 
+DOCKED: ATOM      6  C6  LPR A 702      41.067  35.061  41.122 -0.48 -0.01    +0.035 A 
+DOCKED: ATOM      7  C7  LPR A 702      42.419  35.215  41.260 -0.37 -0.02    +0.027 A 
+DOCKED: ATOM      8  O1  LPR A 702      40.455  33.329  44.933 -0.42 +0.07    -0.270 OA
+DOCKED: BRANCH   4   9
+DOCKED: ATOM      9  C9  LPR A 702      39.830  33.022  42.077 -0.30 +0.12    +0.207 C 
+DOCKED: ATOM     10  O5  LPR A 702      40.471  32.017  42.085 -0.28 -0.21    -0.646 OA
+DOCKED: ATOM     11  O4  LPR A 702      38.562  33.098  41.843 -1.24 -1.27    -0.646 OA
+DOCKED: ENDBRANCH   4   9
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  12
+DOCKED: ATOM     12  C10 LPR A 702      43.398  32.042  45.216 -0.33 -0.03    +0.034 C 
+DOCKED: BRANCH  12  13
+DOCKED: ATOM     13  C11 LPR A 702      43.184  31.260  43.994 -0.20 -0.00    +0.005 C 
+DOCKED: BRANCH  13  14
+DOCKED: ATOM     14  C12 LPR A 702      42.415  29.876  44.194 -0.19 -0.03    +0.041 C 
+DOCKED: BRANCH  14  15
+DOCKED: ATOM     15  C13 LPR A 702      42.063  29.638  45.566 -0.19 -0.30    +0.338 C 
+DOCKED: ATOM     16  N3  LPR A 702      42.014  28.161  45.839 +0.00 -0.90    +0.618 N 
+DOCKED: ENDBRANCH  14  15
+DOCKED: ENDBRANCH  13  14
+DOCKED: ENDBRANCH  12  13
+DOCKED: ENDBRANCH   1  12
+DOCKED: BRANCH   1  17
+DOCKED: ATOM     17  N1  LPR A 702      42.396  33.766  46.823 -0.25 +0.36    -0.279 NA
+DOCKED: BRANCH  17  18
+DOCKED: ATOM     18  C4  LPR A 702      42.133  34.854  47.336 -0.38 -0.24    +0.185 C 
+DOCKED: BRANCH  18  19
+DOCKED: ATOM     19  C14 LPR A 702      42.235  36.249  46.857 -0.49 -0.04    +0.035 C 
+DOCKED: BRANCH  19  20
+DOCKED: ATOM     20  C15 LPR A 702      42.194  37.547  47.647 -0.49 -0.00    +0.003 C 
+DOCKED: BRANCH  20  21
+DOCKED: ATOM     21  C16 LPR A 702      41.779  37.487  49.086 -0.38 -0.00    +0.000 A 
+DOCKED: ATOM     22  C21 LPR A 702      40.387  37.706  49.438 -0.26 -0.00    +0.000 A 
+DOCKED: ATOM     23  C20 LPR A 702      39.971  37.637  50.821 -0.17 -0.00    +0.000 A 
+DOCKED: ATOM     24  C19 LPR A 702      40.944  37.349  51.859 -0.23 -0.00    +0.000 A 
+DOCKED: ATOM     25  C18 LPR A 702      42.334  37.131  51.508 -0.33 -0.00    +0.000 A 
+DOCKED: ATOM     26  C17 LPR A 702      42.749  37.198  50.132 -0.45 -0.00    +0.000 A 
+DOCKED: ENDBRANCH  20  21
+DOCKED: ENDBRANCH  19  20
+DOCKED: ENDBRANCH  18  19
+DOCKED: BRANCH  18  27
+DOCKED: ATOM     27  C3  LPR A 702      40.683  34.867  47.820 -0.33 -0.16    +0.208 C 
+DOCKED: ATOM     28  O2  LPR A 702      40.439  34.716  49.058 -0.02 +0.52    -0.646 OA
+DOCKED: ATOM     29  O3  LPR A 702      39.773  34.997  47.025 -0.55 +0.28    -0.646 OA
+DOCKED: ENDBRANCH  18  27
+DOCKED: ENDBRANCH  17  18
+DOCKED: ENDBRANCH   1  17
+DOCKED: TORSDOF 12
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 14 of 20
+Run: 14 Seed: 640102147 54090808 [ Run 14 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -13.364
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 40.554 35.677 45.828 quatxyzw -0.269165 -0.063098 -0.115479 -0.954061 center 41.014 34.325 46.441 ntor 12 76.1096 -16.2998 -115.7808 146.8464 84.0895 147.0317 41.5449 -120.7375 -61.5975 -34.6494 -58.9635 -180.0000
+State:	 40.554  35.677  45.828  -0.898 -0.211 -0.385 -34.868     76.11  -16.30 -115.78  146.85   84.09  147.03   41.54 -120.74  -61.60  -34.65  -58.96 -180.00
+
+DOCKED: MODEL       14
+DOCKED: USER    Run = 14
+DOCKED: USER    DPF = C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -7.20 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    5.24 uM (micromolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =  -10.78 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -9.52 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -1.27 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -2.58 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -2.58 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lisinopril.pdbqt
+DOCKED: USER    NEWDPF about 41.013600 34.325200 46.441200
+DOCKED: USER    NEWDPF tran0 40.553856 35.676763 45.828484
+DOCKED: USER    NEWDPF quaternion0 -0.269165 -0.063098 -0.115479 -0.954061
+DOCKED: USER    NEWDPF axisangle0 -0.898383 -0.210600 -0.385429 -34.868466
+DOCKED: USER    NEWDPF quat0 -0.898383 -0.210600 -0.385429 -34.868466
+DOCKED: USER    NEWDPF dihe0 76.11 -16.30 -115.78 146.85 84.09 147.03 41.54 -120.74 -61.60 -34.65 -58.96 -180.00 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  12 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C3_3  and  C4_4 
+DOCKED: REMARK    2  A    between atoms: C14_5  and  C4_4 
+DOCKED: REMARK    3  A    between atoms: C4_4  and  N1_13 
+DOCKED: REMARK    4  A    between atoms: C14_5  and  C15_6 
+DOCKED: REMARK    5  A    between atoms: C15_6  and  C16_7 
+DOCKED: REMARK    6  A    between atoms: C2_16  and  N1_13 
+DOCKED: REMARK       I    between atoms: C1_15  and  N2_24 
+DOCKED: REMARK    7  A    between atoms: C1_15  and  C2_16 
+DOCKED: REMARK    8  A    between atoms: C10_18  and  C2_16 
+DOCKED: REMARK    9  A    between atoms: C10_18  and  C11_19 
+DOCKED: REMARK   10  A    between atoms: C11_19  and  C12_20 
+DOCKED: REMARK   11  A    between atoms: C12_20  and  C13_21 
+DOCKED: REMARK   12  A    between atoms: C5_25  and  C9_29 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C2  LPR A 702      42.006  34.724  45.934 -0.36 -0.16    +0.177 C 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C1  LPR A 702      41.049  34.514  44.698 -0.27 -0.13    +0.256 C 
+DOCKED: ATOM      3  N2  LPR A 702      41.424  34.883  43.437 -0.18 +0.16    -0.311 N 
+DOCKED: ATOM      4  C5  LPR A 702      40.483  34.639  42.271 -0.38 -0.03    +0.171 A 
+DOCKED: ATOM      5  C8  LPR A 702      42.696  35.526  42.989 -0.27 -0.08    +0.105 A 
+DOCKED: ATOM      6  C6  LPR A 702      41.304  35.193  41.087 -0.47 -0.01    +0.035 A 
+DOCKED: ATOM      7  C7  LPR A 702      42.506  35.668  41.532 -0.39 -0.02    +0.027 A 
+DOCKED: ATOM      8  O1  LPR A 702      39.903  33.974  44.888 -0.44 +0.05    -0.270 OA
+DOCKED: BRANCH   4   9
+DOCKED: ATOM      9  C9  LPR A 702      40.215  33.098  42.099 -0.31 +0.06    +0.207 C 
+DOCKED: ATOM     10  O5  LPR A 702      41.095  32.296  42.157 +0.02 +0.03    -0.646 OA
+DOCKED: ATOM     11  O4  LPR A 702      38.965  32.824  41.924 -1.44 -1.06    -0.646 OA
+DOCKED: ENDBRANCH   4   9
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  12
+DOCKED: ATOM     12  C10 LPR A 702      42.282  33.378  46.605 -0.44 -0.04    +0.034 C 
+DOCKED: BRANCH  12  13
+DOCKED: ATOM     13  C11 LPR A 702      43.537  32.635  46.442 -0.46 -0.01    +0.005 C 
+DOCKED: BRANCH  13  14
+DOCKED: ATOM     14  C12 LPR A 702      43.392  31.186  45.789 -0.39 -0.04    +0.041 C 
+DOCKED: BRANCH  14  15
+DOCKED: ATOM     15  C13 LPR A 702      42.913  31.240  44.437 -0.07 -0.25    +0.338 C 
+DOCKED: ATOM     16  N3  LPR A 702      41.436  30.963  44.401 +0.09 -0.32    +0.618 N 
+DOCKED: ENDBRANCH  14  15
+DOCKED: ENDBRANCH  13  14
+DOCKED: ENDBRANCH  12  13
+DOCKED: ENDBRANCH   1  12
+DOCKED: BRANCH   1  17
+DOCKED: ATOM     17  N1  LPR A 702      41.292  35.731  46.819 -0.30 +0.21    -0.279 NA
+DOCKED: BRANCH  17  18
+DOCKED: ATOM     18  C4  LPR A 702      40.894  35.601  47.977 -0.35 -0.15    +0.185 C 
+DOCKED: BRANCH  18  19
+DOCKED: ATOM     19  C14 LPR A 702      41.201  36.310  49.237 -0.38 -0.03    +0.035 C 
+DOCKED: BRANCH  19  20
+DOCKED: ATOM     20  C15 LPR A 702      40.313  36.557  50.447 -0.28 -0.00    +0.003 C 
+DOCKED: BRANCH  20  21
+DOCKED: ATOM     21  C16 LPR A 702      39.738  35.369  51.158 -0.24 -0.00    +0.000 A 
+DOCKED: ATOM     22  C21 LPR A 702      38.976  35.567  52.377 -0.24 -0.00    +0.000 A 
+DOCKED: ATOM     23  C20 LPR A 702      38.404  34.431  53.066 -0.32 -0.00    +0.000 A 
+DOCKED: ATOM     24  C19 LPR A 702      38.593  33.092  52.539 -0.45 -0.00    +0.000 A 
+DOCKED: ATOM     25  C18 LPR A 702      39.355  32.894  51.321 -0.44 -0.00    +0.000 A 
+DOCKED: ATOM     26  C17 LPR A 702      39.923  34.024  50.634 -0.28 -0.00    +0.000 A 
+DOCKED: ENDBRANCH  20  21
+DOCKED: ENDBRANCH  19  20
+DOCKED: ENDBRANCH  18  19
+DOCKED: BRANCH  18  27
+DOCKED: ATOM     27  C3  LPR A 702      39.368  35.679  48.017 -0.36 -0.12    +0.208 C 
+DOCKED: ATOM     28  O2  LPR A 702      38.687  34.611  47.908 -0.13 +0.32    -0.646 OA
+DOCKED: ATOM     29  O3  LPR A 702      38.813  36.754  48.129 +0.00 +0.36    -0.646 OA
+DOCKED: ENDBRANCH  18  27
+DOCKED: ENDBRANCH  17  18
+DOCKED: ENDBRANCH   1  17
+DOCKED: TORSDOF 12
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 15 of 20
+Run: 15 Seed: 1984532417 703016585 [ Run 15 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -11.955
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 39.803 33.770 45.637 quatxyzw 0.941808 -0.009031 -0.203865 -0.267123 center 41.014 34.325 46.441 ntor 12 175.0294 152.1978 -67.4880 75.0761 141.7672 -149.0145 172.1076 -131.4317 65.9904 22.6292 -57.4494 -117.5332
+State:	 39.803  33.770  45.637   0.977 -0.009 -0.212 -149.014    175.03  152.20  -67.49   75.08  141.77 -149.01  172.11 -131.43   65.99   22.63  -57.45 -117.53
+
+DOCKED: MODEL       15
+DOCKED: USER    Run = 15
+DOCKED: USER    DPF = C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -6.03 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =   38.18 uM (micromolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -9.61 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -8.22 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -1.39 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -2.35 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -2.35 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lisinopril.pdbqt
+DOCKED: USER    NEWDPF about 41.013600 34.325200 46.441200
+DOCKED: USER    NEWDPF tran0 39.803451 33.769986 45.637471
+DOCKED: USER    NEWDPF quaternion0 0.941808 -0.009031 -0.203865 -0.267123
+DOCKED: USER    NEWDPF axisangle0 0.977322 -0.009371 -0.211553 -149.013773
+DOCKED: USER    NEWDPF quat0 0.977322 -0.009371 -0.211553 -149.013773
+DOCKED: USER    NEWDPF dihe0 175.03 152.20 -67.49 75.08 141.77 -149.01 172.11 -131.43 65.99 22.63 -57.45 -117.53 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  12 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C3_3  and  C4_4 
+DOCKED: REMARK    2  A    between atoms: C14_5  and  C4_4 
+DOCKED: REMARK    3  A    between atoms: C4_4  and  N1_13 
+DOCKED: REMARK    4  A    between atoms: C14_5  and  C15_6 
+DOCKED: REMARK    5  A    between atoms: C15_6  and  C16_7 
+DOCKED: REMARK    6  A    between atoms: C2_16  and  N1_13 
+DOCKED: REMARK       I    between atoms: C1_15  and  N2_24 
+DOCKED: REMARK    7  A    between atoms: C1_15  and  C2_16 
+DOCKED: REMARK    8  A    between atoms: C10_18  and  C2_16 
+DOCKED: REMARK    9  A    between atoms: C10_18  and  C11_19 
+DOCKED: REMARK   10  A    between atoms: C11_19  and  C12_20 
+DOCKED: REMARK   11  A    between atoms: C12_20  and  C13_21 
+DOCKED: REMARK   12  A    between atoms: C5_25  and  C9_29 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C2  LPR A 702      41.419  34.223  45.177 -0.32 -0.11    +0.177 C 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C1  LPR A 702      40.849  34.742  46.553 -0.21 -0.15    +0.256 C 
+DOCKED: ATOM      3  N2  LPR A 702      41.657  35.339  47.479 -0.22 +0.33    -0.311 N 
+DOCKED: ATOM      4  C5  LPR A 702      41.062  35.848  48.779 -0.26 -0.15    +0.171 A 
+DOCKED: ATOM      5  C8  LPR A 702      43.127  35.594  47.413 -0.17 -0.19    +0.105 A 
+DOCKED: ATOM      6  C6  LPR A 702      42.305  36.429  49.485 -0.41 -0.04    +0.035 A 
+DOCKED: ATOM      7  C7  LPR A 702      43.410  36.264  48.697 -0.29 -0.05    +0.027 A 
+DOCKED: ATOM      8  O1  LPR A 702      39.598  34.607  46.793 -0.74 +0.07    -0.270 OA
+DOCKED: BRANCH   4   9
+DOCKED: ATOM      9  C9  LPR A 702      40.000  36.973  48.491 -0.21 -0.14    +0.207 C 
+DOCKED: ATOM     10  O5  LPR A 702      38.877  36.895  48.885 +0.03 +0.33    -0.646 OA
+DOCKED: ATOM     11  O4  LPR A 702      40.490  37.965  47.825 +0.11 +0.53    -0.646 OA
+DOCKED: ENDBRANCH   4   9
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  12
+DOCKED: ATOM     12  C10 LPR A 702      41.941  35.404  44.359 -0.33 -0.03    +0.034 C 
+DOCKED: BRANCH  12  13
+DOCKED: ATOM     13  C11 LPR A 702      42.776  35.253  43.162 -0.39 -0.00    +0.005 C 
+DOCKED: BRANCH  13  14
+DOCKED: ATOM     14  C12 LPR A 702      44.183  34.539  43.398 -0.31 -0.04    +0.041 C 
+DOCKED: BRANCH  14  15
+DOCKED: ATOM     15  C13 LPR A 702      44.259  33.253  42.762 -0.08 -0.27    +0.338 C 
+DOCKED: ATOM     16  N3  LPR A 702      42.970  32.952  42.050 +0.14 -0.34    +0.618 N 
+DOCKED: ENDBRANCH  14  15
+DOCKED: ENDBRANCH  13  14
+DOCKED: ENDBRANCH  12  13
+DOCKED: ENDBRANCH   1  12
+DOCKED: BRANCH   1  17
+DOCKED: ATOM     17  N1  LPR A 702      40.268  33.472  44.531 -0.31 +0.06    -0.279 NA
+DOCKED: BRANCH  17  18
+DOCKED: ATOM     18  C4  LPR A 702      40.241  32.869  43.458 -0.30 -0.00    +0.185 C 
+DOCKED: BRANCH  18  19
+DOCKED: ATOM     19  C14 LPR A 702      39.937  31.470  43.092 -0.37 +0.01    +0.035 C 
+DOCKED: BRANCH  19  20
+DOCKED: ATOM     20  C15 LPR A 702      40.839  30.246  43.118 -0.26 -0.00    +0.003 C 
+DOCKED: BRANCH  20  21
+DOCKED: ATOM     21  C16 LPR A 702      41.655  29.994  44.350 -0.20 -0.00    +0.000 A 
+DOCKED: ATOM     22  C21 LPR A 702      42.529  31.039  44.854 -0.24 -0.00    +0.000 A 
+DOCKED: ATOM     23  C20 LPR A 702      43.310  30.814  46.049 -0.37 -0.00    +0.000 A 
+DOCKED: ATOM     24  C19 LPR A 702      43.223  29.545  46.747 -0.13 -0.00    +0.000 A 
+DOCKED: ATOM     25  C18 LPR A 702      42.350  28.501  46.244 -0.42 -0.00    +0.000 A 
+DOCKED: ATOM     26  C17 LPR A 702      41.571  28.724  45.055 -0.28 -0.00    +0.000 A 
+DOCKED: ENDBRANCH  20  21
+DOCKED: ENDBRANCH  19  20
+DOCKED: ENDBRANCH  18  19
+DOCKED: BRANCH  18  27
+DOCKED: ATOM     27  C3  LPR A 702      39.312  33.586  42.479 -0.31 +0.11    +0.208 C 
+DOCKED: ATOM     28  O2  LPR A 702      39.007  34.802  42.688 -0.10 -0.07    -0.646 OA
+DOCKED: ATOM     29  O3  LPR A 702      38.852  32.992  41.524 -1.27 -1.22    -0.646 OA
+DOCKED: ENDBRANCH  18  27
+DOCKED: ENDBRANCH  17  18
+DOCKED: ENDBRANCH   1  17
+DOCKED: TORSDOF 12
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 16 of 20
+Run: 16 Seed: 820432409 639932350 [ Run 16 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -13.535
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 41.037 35.903 46.015 quatxyzw -0.322586 0.021839 -0.168064 -0.931244 center 41.014 34.325 46.441 ntor 12 -28.8132 -173.0070 -178.6490 140.1607 100.8973 153.0219 177.3907 78.9369 -21.0276 -42.3700 -180.0000 130.2524
+State:	 41.037  35.903  46.015  -0.885  0.060 -0.461 -42.741    -28.81 -173.01 -178.65  140.16  100.90  153.02  177.39   78.94  -21.03  -42.37 -180.00  130.25
+
+DOCKED: MODEL       16
+DOCKED: USER    Run = 16
+DOCKED: USER    DPF = C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -7.07 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    6.59 uM (micromolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =  -10.65 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -9.95 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -0.70 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -2.89 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -2.89 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lisinopril.pdbqt
+DOCKED: USER    NEWDPF about 41.013600 34.325200 46.441200
+DOCKED: USER    NEWDPF tran0 41.037110 35.903237 46.015020
+DOCKED: USER    NEWDPF quaternion0 -0.322586 0.021839 -0.168064 -0.931244
+DOCKED: USER    NEWDPF axisangle0 -0.885263 0.059933 -0.461213 -42.740742
+DOCKED: USER    NEWDPF quat0 -0.885263 0.059933 -0.461213 -42.740742
+DOCKED: USER    NEWDPF dihe0 -28.81 -173.01 -178.65 140.16 100.90 153.02 177.39 78.94 -21.03 -42.37 -180.00 130.25 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  12 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C3_3  and  C4_4 
+DOCKED: REMARK    2  A    between atoms: C14_5  and  C4_4 
+DOCKED: REMARK    3  A    between atoms: C4_4  and  N1_13 
+DOCKED: REMARK    4  A    between atoms: C14_5  and  C15_6 
+DOCKED: REMARK    5  A    between atoms: C15_6  and  C16_7 
+DOCKED: REMARK    6  A    between atoms: C2_16  and  N1_13 
+DOCKED: REMARK       I    between atoms: C1_15  and  N2_24 
+DOCKED: REMARK    7  A    between atoms: C1_15  and  C2_16 
+DOCKED: REMARK    8  A    between atoms: C10_18  and  C2_16 
+DOCKED: REMARK    9  A    between atoms: C10_18  and  C11_19 
+DOCKED: REMARK   10  A    between atoms: C11_19  and  C12_20 
+DOCKED: REMARK   11  A    between atoms: C12_20  and  C13_21 
+DOCKED: REMARK   12  A    between atoms: C5_25  and  C9_29 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C2  LPR A 702      42.328  34.737  46.017 -0.36 -0.19    +0.177 C 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C1  LPR A 702      41.177  34.592  44.948 -0.27 -0.14    +0.256 C 
+DOCKED: ATOM      3  N2  LPR A 702      41.369  34.948  43.643 -0.19 +0.17    -0.311 N 
+DOCKED: ATOM      4  C5  LPR A 702      40.243  34.768  42.642 -0.39 -0.03    +0.171 A 
+DOCKED: ATOM      5  C8  LPR A 702      42.590  35.517  42.998 -0.26 -0.08    +0.105 A 
+DOCKED: ATOM      6  C6  LPR A 702      40.897  35.280  41.341 -0.50 -0.01    +0.035 A 
+DOCKED: ATOM      7  C7  LPR A 702      42.180  35.681  41.589 -0.39 -0.02    +0.027 A 
+DOCKED: ATOM      8  O1  LPR A 702      40.046  34.120  45.319 -0.73 +0.05    -0.270 OA
+DOCKED: BRANCH   4   9
+DOCKED: ATOM      9  C9  LPR A 702      39.859  33.246  42.518 -0.37 +0.07    +0.207 C 
+DOCKED: ATOM     10  O5  LPR A 702      38.799  32.897  42.099 -1.41 -1.06    -0.646 OA
+DOCKED: ATOM     11  O4  LPR A 702      40.813  32.459  42.888 +0.04 +0.04    -0.646 OA
+DOCKED: ENDBRANCH   4   9
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  12
+DOCKED: ATOM     12  C10 LPR A 702      42.495  33.419  46.773 -0.45 -0.04    +0.034 C 
+DOCKED: BRANCH  12  13
+DOCKED: ATOM     13  C11 LPR A 702      43.652  32.532  46.608 -0.42 -0.01    +0.005 C 
+DOCKED: BRANCH  13  14
+DOCKED: ATOM     14  C12 LPR A 702      43.399  31.243  45.700 -0.38 -0.04    +0.041 C 
+DOCKED: BRANCH  14  15
+DOCKED: ATOM     15  C13 LPR A 702      42.064  31.197  45.173 -0.11 -0.24    +0.338 C 
+DOCKED: ATOM     16  N3  LPR A 702      42.030  30.361  43.924 +0.10 -0.38    +0.618 N 
+DOCKED: ENDBRANCH  14  15
+DOCKED: ENDBRANCH  13  14
+DOCKED: ENDBRANCH  12  13
+DOCKED: ENDBRANCH   1  12
+DOCKED: BRANCH   1  17
+DOCKED: ATOM     17  N1  LPR A 702      41.914  35.911  46.887 -0.46 +0.28    -0.279 NA
+DOCKED: BRANCH  17  18
+DOCKED: ATOM     18  C4  LPR A 702      40.986  35.991  47.691 -0.25 -0.14    +0.185 C 
+DOCKED: BRANCH  18  19
+DOCKED: ATOM     19  C14 LPR A 702      39.933  35.046  48.118 -0.49 -0.02    +0.035 C 
+DOCKED: BRANCH  19  20
+DOCKED: ATOM     20  C15 LPR A 702      38.699  35.295  48.972 -0.51 -0.00    +0.003 C 
+DOCKED: BRANCH  20  21
+DOCKED: ATOM     21  C16 LPR A 702      38.737  34.875  50.410 -0.34 -0.00    +0.000 A 
+DOCKED: ATOM     22  C21 LPR A 702      39.188  33.538  50.752 -0.29 -0.00    +0.000 A 
+DOCKED: ATOM     23  C20 LPR A 702      39.242  33.125  52.137 -0.42 -0.00    +0.000 A 
+DOCKED: ATOM     24  C19 LPR A 702      38.845  34.045  53.186 -0.35 -0.00    +0.000 A 
+DOCKED: ATOM     25  C18 LPR A 702      38.393  35.380  52.844 -0.24 -0.00    +0.000 A 
+DOCKED: ATOM     26  C17 LPR A 702      38.340  35.793  51.467 -0.26 -0.00    +0.000 A 
+DOCKED: ENDBRANCH  20  21
+DOCKED: ENDBRANCH  19  20
+DOCKED: ENDBRANCH  18  19
+DOCKED: BRANCH  18  27
+DOCKED: ATOM     27  C3  LPR A 702      41.517  36.404  49.063 -0.29 -0.20    +0.208 C 
+DOCKED: ATOM     28  O2  LPR A 702      41.699  37.636  49.316 +0.05 +0.66    -0.646 OA
+DOCKED: ATOM     29  O3  LPR A 702      41.785  35.559  49.895 -0.01 +0.66    -0.646 OA
+DOCKED: ENDBRANCH  18  27
+DOCKED: ENDBRANCH  17  18
+DOCKED: ENDBRANCH   1  17
+DOCKED: TORSDOF 12
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 17 of 20
+Run: 17 Seed: 1406582367 1609343762 [ Run 17 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -8.936
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 41.789 32.787 43.921 quatxyzw -0.700242 -0.617319 -0.010848 -0.358413 center 41.014 34.325 46.441 ntor 12 -161.6735 63.7682 48.1211 37.0818 -151.8122 166.5363 105.5995 180.0000 178.7513 178.3222 -79.6522 -100.2004
+State:	 41.789  32.787  43.921  -0.750 -0.661 -0.012 -137.995   -161.67   63.77   48.12   37.08 -151.81  166.54  105.60  180.00  178.75  178.32  -79.65 -100.20
+
+DOCKED: MODEL       17
+DOCKED: USER    Run = 17
+DOCKED: USER    DPF = C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -2.98 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    6.57 mM (millimolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -6.56 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -5.59 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -0.96 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -2.38 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -2.38 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lisinopril.pdbqt
+DOCKED: USER    NEWDPF about 41.013600 34.325200 46.441200
+DOCKED: USER    NEWDPF tran0 41.789060 32.786712 43.921383
+DOCKED: USER    NEWDPF quaternion0 -0.700242 -0.617319 -0.010848 -0.358413
+DOCKED: USER    NEWDPF axisangle0 -0.750075 -0.661251 -0.011620 -137.994507
+DOCKED: USER    NEWDPF quat0 -0.750075 -0.661251 -0.011620 -137.994507
+DOCKED: USER    NEWDPF dihe0 -161.67 63.77 48.12 37.08 -151.81 166.54 105.60 180.00 178.75 178.32 -79.65 -100.20 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  12 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C3_3  and  C4_4 
+DOCKED: REMARK    2  A    between atoms: C14_5  and  C4_4 
+DOCKED: REMARK    3  A    between atoms: C4_4  and  N1_13 
+DOCKED: REMARK    4  A    between atoms: C14_5  and  C15_6 
+DOCKED: REMARK    5  A    between atoms: C15_6  and  C16_7 
+DOCKED: REMARK    6  A    between atoms: C2_16  and  N1_13 
+DOCKED: REMARK       I    between atoms: C1_15  and  N2_24 
+DOCKED: REMARK    7  A    between atoms: C1_15  and  C2_16 
+DOCKED: REMARK    8  A    between atoms: C10_18  and  C2_16 
+DOCKED: REMARK    9  A    between atoms: C10_18  and  C11_19 
+DOCKED: REMARK   10  A    between atoms: C11_19  and  C12_20 
+DOCKED: REMARK   11  A    between atoms: C12_20  and  C13_21 
+DOCKED: REMARK   12  A    between atoms: C5_25  and  C9_29 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C2  LPR A 702      41.969  33.890  45.254 -0.28 -0.13    +0.177 C 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C1  LPR A 702      42.351  32.375  45.468 -0.20 -0.21    +0.256 C 
+DOCKED: ATOM      3  N2  LPR A 702      41.651  31.372  44.859 -0.09 +0.19    -0.311 N 
+DOCKED: ATOM      4  C5  LPR A 702      42.069  29.928  45.071 -0.17 -0.14    +0.171 A 
+DOCKED: ATOM      5  C8  LPR A 702      40.467  31.472  43.955 +0.03 -0.02    +0.105 A 
+DOCKED: ATOM      6  C6  LPR A 702      41.030  29.173  44.215 -0.21 -0.02    +0.035 A 
+DOCKED: ATOM      7  C7  LPR A 702      40.175  30.063  43.626 -0.21 -0.00    +0.027 A 
+DOCKED: ATOM      8  O1  LPR A 702      43.347  32.090  46.221 -0.30 +0.31    -0.270 OA
+DOCKED: BRANCH   4   9
+DOCKED: ATOM      9  C9  LPR A 702      43.527  29.695  44.525 -0.14 -0.20    +0.207 C 
+DOCKED: ATOM     10  O5  LPR A 702      44.371  30.533  44.608 +0.16 +0.60    -0.646 OA
+DOCKED: ATOM     11  O4  LPR A 702      43.690  28.517  44.022 +0.07 +0.78    -0.646 OA
+DOCKED: ENDBRANCH   4   9
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  12
+DOCKED: ATOM     12  C10 LPR A 702      40.986  34.330  46.339 -0.11 -0.02    +0.034 C 
+DOCKED: BRANCH  12  13
+DOCKED: ATOM     13  C11 LPR A 702      41.236  35.452  47.251 -0.49 -0.00    +0.005 C 
+DOCKED: BRANCH  13  14
+DOCKED: ATOM     14  C12 LPR A 702      42.568  36.283  46.962 -0.48 -0.05    +0.041 C 
+DOCKED: BRANCH  14  15
+DOCKED: ATOM     15  C13 LPR A 702      43.346  36.500  48.149 -0.20 -0.60    +0.338 C 
+DOCKED: ATOM     16  N3  LPR A 702      43.023  35.453  49.178 +0.08 -1.25    +0.618 N 
+DOCKED: ENDBRANCH  14  15
+DOCKED: ENDBRANCH  13  14
+DOCKED: ENDBRANCH  12  13
+DOCKED: ENDBRANCH   1  12
+DOCKED: BRANCH   1  17
+DOCKED: ATOM     17  N1  LPR A 702      41.418  33.964  43.841 -0.14 +0.13    -0.279 NA
+DOCKED: BRANCH  17  18
+DOCKED: ATOM     18  C4  LPR A 702      41.281  34.946  43.112 -0.31 -0.09    +0.185 C 
+DOCKED: BRANCH  18  19
+DOCKED: ATOM     19  C14 LPR A 702      42.077  35.494  41.994 -0.42 -0.02    +0.035 C 
+DOCKED: BRANCH  19  20
+DOCKED: ATOM     20  C15 LPR A 702      42.961  34.770  40.991 -0.37 -0.00    +0.003 C 
+DOCKED: BRANCH  20  21
+DOCKED: ATOM     21  C16 LPR A 702      43.096  33.282  41.112 -0.18 -0.00    +0.000 A 
+DOCKED: ATOM     22  C21 LPR A 702      44.409  32.697  41.314 -0.15 -0.00    +0.000 A 
+DOCKED: ATOM     23  C20 LPR A 702      44.551  31.264  41.446 -0.15 -0.00    +0.000 A 
+DOCKED: ATOM     24  C19 LPR A 702      43.382  30.408  41.375 -0.14 -0.00    +0.000 A 
+DOCKED: ATOM     25  C18 LPR A 702      42.069  30.992  41.171 -0.15 -0.00    +0.000 A 
+DOCKED: ATOM     26  C17 LPR A 702      41.926  32.418  41.042 -0.17 -0.00    +0.000 A 
+DOCKED: ENDBRANCH  20  21
+DOCKED: ENDBRANCH  19  20
+DOCKED: ENDBRANCH  18  19
+DOCKED: BRANCH  18  27
+DOCKED: ATOM     27  C3  LPR A 702      39.908  34.912  42.441 -0.46 -0.02    +0.208 C 
+DOCKED: ATOM     28  O2  LPR A 702      39.268  33.815  42.388 -0.47 -0.33    -0.646 OA
+DOCKED: ATOM     29  O3  LPR A 702      39.444  35.919  41.944 +0.06 +0.14    -0.646 OA
+DOCKED: ENDBRANCH  18  27
+DOCKED: ENDBRANCH  17  18
+DOCKED: ENDBRANCH   1  17
+DOCKED: TORSDOF 12
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 18 of 20
+Run: 18 Seed: 66523976 1398759195 [ Run 18 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -11.938
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 41.436 32.450 45.020 quatxyzw 0.825428 0.405866 -0.288528 -0.265882 center 41.014 34.325 46.441 ntor 12 179.1732 -168.9149 97.9940 180.0000 179.6376 -138.2827 -175.7469 145.2914 -154.3959 41.7913 -39.6180 -138.9982
+State:	 41.436  32.450  45.020   0.856  0.421 -0.299 -149.161    179.17 -168.91   97.99  180.00  179.64 -138.28 -175.75  145.29 -154.40   41.79  -39.62 -139.00
+
+DOCKED: MODEL       18
+DOCKED: USER    Run = 18
+DOCKED: USER    DPF = C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -6.60 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =   14.44 uM (micromolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =  -10.18 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -8.31 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -1.87 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -1.75 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -1.75 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lisinopril.pdbqt
+DOCKED: USER    NEWDPF about 41.013600 34.325200 46.441200
+DOCKED: USER    NEWDPF tran0 41.436375 32.450261 45.019613
+DOCKED: USER    NEWDPF quaternion0 0.825428 0.405866 -0.288528 -0.265882
+DOCKED: USER    NEWDPF axisangle0 0.856248 0.421020 -0.299301 -149.161293
+DOCKED: USER    NEWDPF quat0 0.856248 0.421020 -0.299301 -149.161293
+DOCKED: USER    NEWDPF dihe0 179.17 -168.91 97.99 180.00 179.64 -138.28 -175.75 145.29 -154.40 41.79 -39.62 -139.00 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  12 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C3_3  and  C4_4 
+DOCKED: REMARK    2  A    between atoms: C14_5  and  C4_4 
+DOCKED: REMARK    3  A    between atoms: C4_4  and  N1_13 
+DOCKED: REMARK    4  A    between atoms: C14_5  and  C15_6 
+DOCKED: REMARK    5  A    between atoms: C15_6  and  C16_7 
+DOCKED: REMARK    6  A    between atoms: C2_16  and  N1_13 
+DOCKED: REMARK       I    between atoms: C1_15  and  N2_24 
+DOCKED: REMARK    7  A    between atoms: C1_15  and  C2_16 
+DOCKED: REMARK    8  A    between atoms: C10_18  and  C2_16 
+DOCKED: REMARK    9  A    between atoms: C10_18  and  C11_19 
+DOCKED: REMARK   10  A    between atoms: C11_19  and  C12_20 
+DOCKED: REMARK   11  A    between atoms: C12_20  and  C13_21 
+DOCKED: REMARK   12  A    between atoms: C5_25  and  C9_29 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C2  LPR A 702      41.982  33.862  44.161 -0.22 -0.11    +0.177 C 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C1  LPR A 702      41.875  33.925  45.734 -0.26 -0.21    +0.256 C 
+DOCKED: ATOM      3  N2  LPR A 702      42.043  35.099  46.412 -0.23 +0.32    -0.311 N 
+DOCKED: ATOM      4  C5  LPR A 702      41.905  35.119  47.924 -0.32 -0.22    +0.171 A 
+DOCKED: ATOM      5  C8  LPR A 702      42.355  36.456  45.872 -0.08 -0.12    +0.105 A 
+DOCKED: ATOM      6  C6  LPR A 702      42.163  36.608  48.240 -0.44 -0.04    +0.035 A 
+DOCKED: ATOM      7  C7  LPR A 702      42.406  37.297  47.084 -0.30 -0.04    +0.027 A 
+DOCKED: ATOM      8  O1  LPR A 702      41.613  32.850  46.378 -0.13 +0.22    -0.270 OA
+DOCKED: BRANCH   4   9
+DOCKED: ATOM      9  C9  LPR A 702      40.448  34.698  48.345 -0.30 -0.16    +0.207 C 
+DOCKED: ATOM     10  O5  LPR A 702      40.190  34.357  49.458 -0.03 +0.49    -0.646 OA
+DOCKED: ATOM     11  O4  LPR A 702      39.600  34.793  47.377 -0.38 +0.29    -0.646 OA
+DOCKED: ENDBRANCH   4   9
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  12
+DOCKED: ATOM     12  C10 LPR A 702      41.211  35.029  43.546 -0.38 -0.02    +0.034 C 
+DOCKED: BRANCH  12  13
+DOCKED: ATOM     13  C11 LPR A 702      41.149  35.288  42.103 -0.51 -0.00    +0.005 C 
+DOCKED: BRANCH  13  14
+DOCKED: ATOM     14  C12 LPR A 702      42.355  34.684  41.249 -0.37 -0.02    +0.041 C 
+DOCKED: BRANCH  14  15
+DOCKED: ATOM     15  C13 LPR A 702      43.521  35.521  41.280 -0.19 -0.27    +0.338 C 
+DOCKED: ATOM     16  N3  LPR A 702      43.296  36.688  42.201 +0.06 -0.60    +0.618 N 
+DOCKED: ENDBRANCH  14  15
+DOCKED: ENDBRANCH  13  14
+DOCKED: ENDBRANCH  12  13
+DOCKED: ENDBRANCH   1  12
+DOCKED: BRANCH   1  17
+DOCKED: ATOM     17  N1  LPR A 702      41.451  32.490  43.784 -0.07 +0.11    -0.279 NA
+DOCKED: BRANCH  17  18
+DOCKED: ATOM     18  C4  LPR A 702      41.026  32.095  42.698 -0.19 -0.02    +0.185 C 
+DOCKED: BRANCH  18  19
+DOCKED: ATOM     19  C14 LPR A 702      41.180  30.828  41.952 -0.21 -0.00    +0.035 C 
+DOCKED: BRANCH  19  20
+DOCKED: ATOM     20  C15 LPR A 702      40.851  29.407  42.383 -0.26 -0.00    +0.003 C 
+DOCKED: BRANCH  20  21
+DOCKED: ATOM     21  C16 LPR A 702      41.069  29.034  43.818 -0.21 -0.00    +0.000 A 
+DOCKED: ATOM     22  C21 LPR A 702      42.270  29.486  44.499 -0.20 -0.00    +0.000 A 
+DOCKED: ATOM     23  C20 LPR A 702      42.486  29.144  45.887 -0.39 -0.00    +0.000 A 
+DOCKED: ATOM     24  C19 LPR A 702      41.504  28.350  46.602 -0.44 -0.00    +0.000 A 
+DOCKED: ATOM     25  C18 LPR A 702      40.305  27.899  45.922 -0.26 -0.00    +0.000 A 
+DOCKED: ATOM     26  C17 LPR A 702      40.088  28.239  44.541 -0.33 -0.00    +0.000 A 
+DOCKED: ENDBRANCH  20  21
+DOCKED: ENDBRANCH  19  20
+DOCKED: ENDBRANCH  18  19
+DOCKED: BRANCH  18  27
+DOCKED: ATOM     27  C3  LPR A 702      39.503  32.221  42.655 -0.25 +0.17    +0.208 C 
+DOCKED: ATOM     28  O2  LPR A 702      38.960  32.890  41.722 -1.39 -1.12    -0.646 OA
+DOCKED: ATOM     29  O3  LPR A 702      38.822  31.705  43.520 -0.03 -0.54    -0.646 OA
+DOCKED: ENDBRANCH  18  27
+DOCKED: ENDBRANCH  17  18
+DOCKED: ENDBRANCH   1  17
+DOCKED: TORSDOF 12
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 19 of 20
+Run: 19 Seed: 987901047 2044194490 [ Run 19 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -13.448
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 40.289 34.613 45.920 quatxyzw 0.028186 0.118866 -0.162554 0.979108 center 41.014 34.325 46.441 ntor 12 9.8711 -20.5132 -176.8795 128.2499 -50.1817 -56.8413 -150.0488 12.9167 -179.6210 38.9706 22.4723 -54.6976
+State:	 40.289  34.613  45.920   0.139  0.585 -0.799 23.465      9.87  -20.51 -176.88  128.25  -50.18  -56.84 -150.05   12.92 -179.62   38.97   22.47  -54.70
+
+DOCKED: MODEL       19
+DOCKED: USER    Run = 19
+DOCKED: USER    DPF = C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -7.29 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    4.50 uM (micromolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =  -10.87 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =  -10.35 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -0.52 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -2.57 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -2.57 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lisinopril.pdbqt
+DOCKED: USER    NEWDPF about 41.013600 34.325200 46.441200
+DOCKED: USER    NEWDPF tran0 40.289295 34.613134 45.919719
+DOCKED: USER    NEWDPF quaternion0 0.028186 0.118866 -0.162554 0.979108
+DOCKED: USER    NEWDPF axisangle0 0.138613 0.584566 -0.799418 23.464781
+DOCKED: USER    NEWDPF quat0 0.138613 0.584566 -0.799418 23.464781
+DOCKED: USER    NEWDPF dihe0 9.87 -20.51 -176.88 128.25 -50.18 -56.84 -150.05 12.92 -179.62 38.97 22.47 -54.70 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  12 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C3_3  and  C4_4 
+DOCKED: REMARK    2  A    between atoms: C14_5  and  C4_4 
+DOCKED: REMARK    3  A    between atoms: C4_4  and  N1_13 
+DOCKED: REMARK    4  A    between atoms: C14_5  and  C15_6 
+DOCKED: REMARK    5  A    between atoms: C15_6  and  C16_7 
+DOCKED: REMARK    6  A    between atoms: C2_16  and  N1_13 
+DOCKED: REMARK       I    between atoms: C1_15  and  N2_24 
+DOCKED: REMARK    7  A    between atoms: C1_15  and  C2_16 
+DOCKED: REMARK    8  A    between atoms: C10_18  and  C2_16 
+DOCKED: REMARK    9  A    between atoms: C10_18  and  C11_19 
+DOCKED: REMARK   10  A    between atoms: C11_19  and  C12_20 
+DOCKED: REMARK   11  A    between atoms: C12_20  and  C13_21 
+DOCKED: REMARK   12  A    between atoms: C5_25  and  C9_29 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C2  LPR A 702      42.026  34.677  45.838 -0.35 -0.16    +0.177 C 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C1  LPR A 702      41.211  34.487  44.501 -0.27 -0.14    +0.256 C 
+DOCKED: ATOM      3  N2  LPR A 702      41.840  34.269  43.308 -0.10 +0.17    -0.311 N 
+DOCKED: ATOM      4  C5  LPR A 702      41.016  34.065  42.050 -0.29 -0.04    +0.171 A 
+DOCKED: ATOM      5  C8  LPR A 702      43.304  34.187  43.023 -0.18 -0.08    +0.105 A 
+DOCKED: ATOM      6  C6  LPR A 702      42.116  33.855  40.988 -0.28 -0.01    +0.035 A 
+DOCKED: ATOM      7  C7  LPR A 702      43.350  33.933  41.570 -0.18 -0.02    +0.027 A 
+DOCKED: ATOM      8  O1  LPR A 702      39.931  34.529  44.547 -0.26 +0.06    -0.270 OA
+DOCKED: BRANCH   4   9
+DOCKED: ATOM      9  C9  LPR A 702      40.114  32.783  42.189 -0.28 +0.08    +0.207 C 
+DOCKED: ATOM     10  O5  LPR A 702      40.556  31.741  42.563 -0.06 -0.10    -0.646 OA
+DOCKED: ATOM     11  O4  LPR A 702      38.879  33.005  41.886 -1.44 -1.04    -0.646 OA
+DOCKED: ENDBRANCH   4   9
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  12
+DOCKED: ATOM     12  C10 LPR A 702      43.082  33.578  45.956 -0.42 -0.04    +0.034 C 
+DOCKED: BRANCH  12  13
+DOCKED: ATOM     13  C11 LPR A 702      42.921  32.388  46.798 -0.47 -0.01    +0.005 C 
+DOCKED: BRANCH  13  14
+DOCKED: ATOM     14  C12 LPR A 702      42.637  31.029  46.010 -0.42 -0.04    +0.041 C 
+DOCKED: BRANCH  14  15
+DOCKED: ATOM     15  C13 LPR A 702      42.660  31.206  44.586 -0.09 -0.25    +0.338 C 
+DOCKED: ATOM     16  N3  LPR A 702      42.042  30.015  43.907 +0.10 -0.41    +0.618 N 
+DOCKED: ENDBRANCH  14  15
+DOCKED: ENDBRANCH  13  14
+DOCKED: ENDBRANCH  12  13
+DOCKED: ENDBRANCH   1  12
+DOCKED: BRANCH   1  17
+DOCKED: ATOM     17  N1  LPR A 702      40.983  34.666  46.942 -0.63 +0.20    -0.279 NA
+DOCKED: BRANCH  17  18
+DOCKED: ATOM     18  C4  LPR A 702      40.666  35.567  47.718 -0.33 -0.13    +0.185 C 
+DOCKED: BRANCH  18  19
+DOCKED: ATOM     19  C14 LPR A 702      40.006  35.578  49.040 -0.44 -0.02    +0.035 C 
+DOCKED: BRANCH  19  20
+DOCKED: ATOM     20  C15 LPR A 702      40.056  34.542  50.153 -0.45 -0.00    +0.003 C 
+DOCKED: BRANCH  20  21
+DOCKED: ATOM     21  C16 LPR A 702      39.076  34.666  51.280 -0.36 -0.00    +0.000 A 
+DOCKED: ATOM     22  C21 LPR A 702      38.372  35.920  51.480 -0.26 -0.00    +0.000 A 
+DOCKED: ATOM     23  C20 LPR A 702      37.414  36.049  52.555 -0.20 -0.00    +0.000 A 
+DOCKED: ATOM     24  C19 LPR A 702      37.155  34.926  53.436 -0.24 -0.00    +0.000 A 
+DOCKED: ATOM     25  C18 LPR A 702      37.858  33.673  53.238 -0.38 -0.00    +0.000 A 
+DOCKED: ATOM     26  C17 LPR A 702      38.811  33.543  52.167 -0.42 -0.00    +0.000 A 
+DOCKED: ENDBRANCH  20  21
+DOCKED: ENDBRANCH  19  20
+DOCKED: ENDBRANCH  18  19
+DOCKED: BRANCH  18  27
+DOCKED: ATOM     27  C3  LPR A 702      41.885  36.428  48.046 -0.36 -0.23    +0.208 C 
+DOCKED: ATOM     28  O2  LPR A 702      42.349  37.213  47.161 -1.25 +0.83    -0.646 OA
+DOCKED: ATOM     29  O3  LPR A 702      42.419  36.345  49.135 -0.04 +0.86    -0.646 OA
+DOCKED: ENDBRANCH  18  27
+DOCKED: ENDBRANCH  17  18
+DOCKED: ENDBRANCH   1  17
+DOCKED: TORSDOF 12
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 20 of 20
+Run: 20 Seed: 348180138 377454653 [ Run 20 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -11.742
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 40.503 33.072 44.391 quatxyzw 0.068485 0.292853 0.746912 -0.593017 center 41.014 34.325 46.441 ntor 12 12.9384 50.9371 -141.7953 152.3484 43.6034 7.5138 -84.0324 66.1242 -175.9593 177.2150 -40.8922 -145.6939
+State:	 40.503  33.072  44.391   0.085  0.364  0.928 -107.257     12.94   50.94 -141.80  152.35   43.60    7.51  -84.03   66.12 -175.96  177.22  -40.89 -145.69
+
+DOCKED: MODEL       20
+DOCKED: USER    Run = 20
+DOCKED: USER    DPF = C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -6.41 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =   20.04 uM (micromolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -9.99 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -8.67 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -1.32 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -1.75 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -1.75 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lisinopril.pdbqt
+DOCKED: USER    NEWDPF about 41.013600 34.325200 46.441200
+DOCKED: USER    NEWDPF tran0 40.502907 33.072252 44.390744
+DOCKED: USER    NEWDPF quaternion0 0.068485 0.292853 0.746912 -0.593017
+DOCKED: USER    NEWDPF axisangle0 0.085054 0.363707 0.927622 -107.257172
+DOCKED: USER    NEWDPF quat0 0.085054 0.363707 0.927622 -107.257172
+DOCKED: USER    NEWDPF dihe0 12.94 50.94 -141.80 152.35 43.60 7.51 -84.03 66.12 -175.96 177.22 -40.89 -145.69 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  12 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C3_3  and  C4_4 
+DOCKED: REMARK    2  A    between atoms: C14_5  and  C4_4 
+DOCKED: REMARK    3  A    between atoms: C4_4  and  N1_13 
+DOCKED: REMARK    4  A    between atoms: C14_5  and  C15_6 
+DOCKED: REMARK    5  A    between atoms: C15_6  and  C16_7 
+DOCKED: REMARK    6  A    between atoms: C2_16  and  N1_13 
+DOCKED: REMARK       I    between atoms: C1_15  and  N2_24 
+DOCKED: REMARK    7  A    between atoms: C1_15  and  C2_16 
+DOCKED: REMARK    8  A    between atoms: C10_18  and  C2_16 
+DOCKED: REMARK    9  A    between atoms: C10_18  and  C11_19 
+DOCKED: REMARK   10  A    between atoms: C11_19  and  C12_20 
+DOCKED: REMARK   11  A    between atoms: C12_20  and  C13_21 
+DOCKED: REMARK   12  A    between atoms: C5_25  and  C9_29 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C2  LPR A 702      40.220  34.434  43.346 -0.39 -0.03    +0.177 C 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C1  LPR A 702      39.874  32.988  42.818 -0.31 +0.08    +0.256 C 
+DOCKED: ATOM      3  N2  LPR A 702      40.647  31.909  43.139 -0.11 +0.01    -0.311 N 
+DOCKED: ATOM      4  C5  LPR A 702      40.263  30.531  42.631 -0.19 +0.03    +0.171 A 
+DOCKED: ATOM      5  C8  LPR A 702      41.889  31.861  43.968 -0.14 -0.05    +0.105 A 
+DOCKED: ATOM      6  C6  LPR A 702      41.384  29.655  43.228 -0.14 -0.02    +0.035 A 
+DOCKED: ATOM      7  C7  LPR A 702      42.250  30.430  43.950 -0.15 -0.02    +0.027 A 
+DOCKED: ATOM      8  O1  LPR A 702      38.836  32.831  42.083 -1.73 -0.45    -0.270 OA
+DOCKED: BRANCH   4   9
+DOCKED: ATOM      9  C9  LPR A 702      38.856  30.112  43.199 -0.16 +0.17    +0.207 C 
+DOCKED: ATOM     10  O5  LPR A 702      38.063  30.920  43.572 +0.08 -0.91    -0.646 OA
+DOCKED: ATOM     11  O4  LPR A 702      38.671  28.834  43.183 -0.06 -0.22    -0.646 OA
+DOCKED: ENDBRANCH   4   9
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  12
+DOCKED: ATOM     12  C10 LPR A 702      41.131  35.143  42.343 -0.48 -0.01    +0.034 C 
+DOCKED: BRANCH  12  13
+DOCKED: ATOM     13  C11 LPR A 702      42.176  34.458  41.574 -0.37 -0.00    +0.005 C 
+DOCKED: BRANCH  13  14
+DOCKED: ATOM     14  C12 LPR A 702      43.321  35.402  40.988 -0.40 -0.03    +0.041 C 
+DOCKED: BRANCH  14  15
+DOCKED: ATOM     15  C13 LPR A 702      43.684  36.452  41.896 -0.22 -0.34    +0.338 C 
+DOCKED: ATOM     16  N3  LPR A 702      44.416  37.541  41.162 +0.00 -0.80    +0.618 N 
+DOCKED: ENDBRANCH  14  15
+DOCKED: ENDBRANCH  13  14
+DOCKED: ENDBRANCH  12  13
+DOCKED: ENDBRANCH   1  12
+DOCKED: BRANCH   1  17
+DOCKED: ATOM     17  N1  LPR A 702      40.842  34.217  44.714 -0.31 +0.12    -0.279 NA
+DOCKED: BRANCH  17  18
+DOCKED: ATOM     18  C4  LPR A 702      41.648  34.923  45.320 -0.34 -0.14    +0.185 C 
+DOCKED: BRANCH  18  19
+DOCKED: ATOM     19  C14 LPR A 702      41.766  35.336  46.734 -0.49 -0.03    +0.035 C 
+DOCKED: BRANCH  19  20
+DOCKED: ATOM     20  C15 LPR A 702      41.433  34.560  47.999 -0.42 -0.00    +0.003 C 
+DOCKED: BRANCH  20  21
+DOCKED: ATOM     21  C16 LPR A 702      40.313  35.059  48.861 -0.43 -0.00    +0.000 A 
+DOCKED: ATOM     22  C21 LPR A 702      39.032  35.377  48.254 -0.50 -0.00    +0.000 A 
+DOCKED: ATOM     23  C20 LPR A 702      37.939  35.847  49.076 -0.37 -0.00    +0.000 A 
+DOCKED: ATOM     24  C19 LPR A 702      38.120  36.001  50.508 -0.28 -0.00    +0.000 A 
+DOCKED: ATOM     25  C18 LPR A 702      39.399  35.684  51.114 -0.28 -0.00    +0.000 A 
+DOCKED: ATOM     26  C17 LPR A 702      40.488  35.215  50.297 -0.28 -0.00    +0.000 A 
+DOCKED: ENDBRANCH  20  21
+DOCKED: ENDBRANCH  19  20
+DOCKED: ENDBRANCH  18  19
+DOCKED: BRANCH  18  27
+DOCKED: ATOM     27  C3  LPR A 702      43.068  34.404  45.097 -0.26 -0.22    +0.208 C 
+DOCKED: ATOM     28  O2  LPR A 702      43.789  34.932  44.193 +0.05 +0.72    -0.646 OA
+DOCKED: ATOM     29  O3  LPR A 702      43.494  33.480  45.761 +0.02 +0.83    -0.646 OA
+DOCKED: ENDBRANCH  18  27
+DOCKED: ENDBRANCH  17  18
+DOCKED: ENDBRANCH   1  17
+DOCKED: TORSDOF 12
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+DPF> analysis                             # perform a ranked cluster analysis
+
+
+		CLUSTER ANALYSIS OF CONFORMATIONS
+		_________________________________
+
+Number of conformations = 20
+
+RMSD cluster analysis will be performed using the ligand atoms only (29 / 29 total atoms).
+
+Outputting structurally similar clusters, ranked in order of increasing energy.
+
+
+________________________________________________________________________________
+
+Number of distinct conformational clusters found = 9,  out of 20 runs,
+Using an rmsd-tolerance of 2.0 A
+
+
+	CLUSTERING HISTOGRAM
+	____________________
+
+________________________________________________________________________________
+     |           |     |           |     |                                    
+Clus | Lowest    | Run | Mean      | Num | Histogram                          
+-ter | Binding   |     | Binding   | in  |                                    
+Rank | Energy    |     | Energy    | Clus|    5    10   15   20   25   30   35
+_____|___________|_____|___________|_____|____:____|____:____|____:____|____:___
+   1 |     -8.04 |  13 |     -7.38 |   3 |###
+   2 |     -7.29 |  19 |     -7.10 |   5 |#####
+   3 |     -6.60 |  18 |     -6.32 |   2 |##
+   4 |     -6.41 |  20 |     -5.90 |   4 |####
+   5 |     -5.58 |   2 |     -5.40 |   2 |##
+   6 |     -4.83 |   1 |     -4.83 |   1 |#
+   7 |     -3.67 |  11 |     -3.67 |   1 |#
+   8 |     -2.98 |  17 |     -2.98 |   1 |#
+   9 |     -2.62 |   3 |     -2.62 |   1 |#
+_____|___________|_____|___________|_____|______________________________________
+
+
+Number of multi-member conformational clusters found = 5, out of 20 runs.
+
+	RMSD TABLE
+	__________
+
+_____________________________________________________________________
+     |      |      |           |         |                 |
+Rank | Sub- | Run  | Binding   | Cluster | Reference       | Grep
+     | Rank |      | Energy    | RMSD    | RMSD            | Pattern
+_____|______|______|___________|_________|_________________|___________
+   1      1     13       -8.04      0.00      1.76           RANKING
+   1      2      9       -7.14      1.91      1.14           RANKING
+   1      3     12       -6.96      1.52      1.32           RANKING
+   2      1     19       -7.29      0.00      1.11           RANKING
+   2      2     14       -7.20      1.38      1.57           RANKING
+   2      3      4       -7.08      1.18      1.34           RANKING
+   2      4     16       -7.07      1.04      1.30           RANKING
+   2      5      6       -6.85      1.18      1.38           RANKING
+   3      1     18       -6.60      0.00      3.96           RANKING
+   3      2     15       -6.03      1.77      3.59           RANKING
+   4      1     20       -6.41      0.00      2.96           RANKING
+   4      2      8       -5.97      1.12      2.84           RANKING
+   4      3      7       -5.68      0.96      3.05           RANKING
+   4      4      5       -5.55      1.45      3.41           RANKING
+   5      1      2       -5.58      0.00      3.36           RANKING
+   5      2     10       -5.21      1.74      3.31           RANKING
+   6      1      1       -4.83      0.00      3.54           RANKING
+   7      1     11       -3.67      0.00      2.10           RANKING
+   8      1     17       -2.98      0.00      3.42           RANKING
+   9      1      3       -2.62      0.00      2.39           RANKING
+_______________________________________________________________________
+
+
+
+	INFORMATION ENTROPY ANALYSIS FOR THIS CLUSTERING
+	________________________________________________
+
+
+Information entropy for this clustering = 0.67  (rmstol = 2.00 Angstrom)
+
+_______________________________________________________________________
+
+
+	STATISTICAL MECHANICAL ANALYSIS
+	_______________________________
+
+
+Partition function, Q =    20.20            at Temperature, T = 298.15 K
+Free energy,        A ~ -1780.86 kcal/mol   at Temperature, T = 298.15 K
+Internal energy,    U =    -5.94 kcal/mol   at Temperature, T = 298.15 K
+Entropy,            S =     5.95 kcal/mol/K at Temperature, T = 298.15 K
+
+_______________________________________________________________________
+
+
+	LOWEST ENERGY DOCKED CONFORMATION from EACH CLUSTER
+	___________________________________________________
+
+
+
+Keeping original residue number (specified in the input PDBQ file) for outputting.
+
+MODEL       13
+USER    Run = 13
+USER    Cluster Rank = 1
+USER    Number of conformations in this cluster = 3
+USER  
+USER    RMSD from reference structure       = 1.757 A
+USER  
+USER    Estimated Free Energy of Binding    =   -8.04 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    Estimated Inhibition Constant, Ki   =    1.28 uM (micromolar)  [Temperature = 298.15 K]
+USER    
+USER    (1) Final Intermolecular Energy     =  -11.62 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   -9.49 kcal/mol
+USER        Electrostatic Energy            =   -2.13 kcal/mol
+USER    (2) Final Total Internal Energy     =   -2.06 kcal/mol
+USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -2.06 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dpf
+USER    NEWDPF move	lisinopril.pdbqt
+USER    NEWDPF about	41.013600 34.325200 46.441200
+USER    NEWDPF tran0	41.403702 34.051159 46.142028
+USER    NEWDPF axisangle0	-0.235412 0.916635 -0.323050 -10.326281
+USER    NEWDPF quaternion0	-0.021185 0.082490 -0.029072 -0.995942
+USER    NEWDPF dihe0	23.97 3.31 180.00 158.16 82.36 69.23 132.80 169.74 -15.32 -7.50 176.59 -11.90 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  C2  LPR A 702      42.869  33.462  45.413 -0.27 -0.18    +0.177     1.757
+ATOM      2  C1  LPR A 702      41.605  33.689  44.497 -0.20 -0.14    +0.256     1.757
+ATOM      3  N2  LPR A 702      41.716  34.246  43.255 -0.11 +0.16    -0.311     1.757
+ATOM      4  C5  LPR A 702      40.476  34.421  42.397 -0.37 -0.03    +0.171     1.757
+ATOM      5  C8  LPR A 702      42.940  34.737  42.555 -0.22 -0.08    +0.105     1.757
+ATOM      6  C6  LPR A 702      41.067  35.061  41.122 -0.48 -0.01    +0.035     1.757
+ATOM      7  C7  LPR A 702      42.419  35.215  41.260 -0.37 -0.02    +0.027     1.757
+ATOM      8  O1  LPR A 702      40.455  33.329  44.933 -0.42 +0.07    -0.270     1.757
+ATOM      9  C9  LPR A 702      39.830  33.022  42.077 -0.30 +0.12    +0.207     1.757
+ATOM     10  O5  LPR A 702      40.471  32.017  42.085 -0.28 -0.21    -0.646     1.757
+ATOM     11  O4  LPR A 702      38.562  33.098  41.843 -1.24 -1.27    -0.646     1.757
+ATOM     12  C10 LPR A 702      43.398  32.042  45.216 -0.33 -0.03    +0.034     1.757
+ATOM     13  C11 LPR A 702      43.184  31.260  43.994 -0.20 -0.00    +0.005     1.757
+ATOM     14  C12 LPR A 702      42.415  29.876  44.194 -0.19 -0.03    +0.041     1.757
+ATOM     15  C13 LPR A 702      42.063  29.638  45.566 -0.19 -0.30    +0.338     1.757
+ATOM     16  N3  LPR A 702      42.014  28.161  45.839 +0.00 -0.90    +0.618     1.757
+ATOM     17  N1  LPR A 702      42.396  33.766  46.823 -0.25 +0.36    -0.279     1.757
+ATOM     18  C4  LPR A 702      42.133  34.854  47.336 -0.38 -0.24    +0.185     1.757
+ATOM     19  C14 LPR A 702      42.235  36.249  46.857 -0.49 -0.04    +0.035     1.757
+ATOM     20  C15 LPR A 702      42.194  37.547  47.647 -0.49 -0.00    +0.003     1.757
+ATOM     21  C16 LPR A 702      41.779  37.487  49.086 -0.38 -0.00    +0.000     1.757
+ATOM     22  C21 LPR A 702      40.387  37.706  49.438 -0.26 -0.00    +0.000     1.757
+ATOM     23  C20 LPR A 702      39.971  37.637  50.821 -0.17 -0.00    +0.000     1.757
+ATOM     24  C19 LPR A 702      40.944  37.349  51.859 -0.23 -0.00    +0.000     1.757
+ATOM     25  C18 LPR A 702      42.334  37.131  51.508 -0.33 -0.00    +0.000     1.757
+ATOM     26  C17 LPR A 702      42.749  37.198  50.132 -0.45 -0.00    +0.000     1.757
+ATOM     27  C3  LPR A 702      40.683  34.867  47.820 -0.33 -0.16    +0.208     1.757
+ATOM     28  O2  LPR A 702      40.439  34.716  49.058 -0.02 +0.52    -0.646     1.757
+ATOM     29  O3  LPR A 702      39.773  34.997  47.025 -0.55 +0.28    -0.646     1.757
+TER
+ENDMDL
+MODEL       19
+USER    Run = 19
+USER    Cluster Rank = 2
+USER    Number of conformations in this cluster = 5
+USER  
+USER    RMSD from reference structure       = 1.114 A
+USER  
+USER    Estimated Free Energy of Binding    =   -7.29 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    Estimated Inhibition Constant, Ki   =    4.50 uM (micromolar)  [Temperature = 298.15 K]
+USER    
+USER    (1) Final Intermolecular Energy     =  -10.87 kcal/mol
+USER        vdW + Hbond + desolv Energy     =  -10.35 kcal/mol
+USER        Electrostatic Energy            =   -0.52 kcal/mol
+USER    (2) Final Total Internal Energy     =   -2.57 kcal/mol
+USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -2.57 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dpf
+USER    NEWDPF move	lisinopril.pdbqt
+USER    NEWDPF about	41.013600 34.325200 46.441200
+USER    NEWDPF tran0	40.289295 34.613134 45.919719
+USER    NEWDPF axisangle0	0.138613 0.584566 -0.799418 23.464781
+USER    NEWDPF quaternion0	0.028186 0.118866 -0.162554 0.979108
+USER    NEWDPF dihe0	9.87 -20.51 -176.88 128.25 -50.18 -56.84 -150.05 12.92 -179.62 38.97 22.47 -54.70 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  C2  LPR A 702      42.026  34.677  45.838 -0.35 -0.16    +0.177     1.114
+ATOM      2  C1  LPR A 702      41.211  34.487  44.501 -0.27 -0.14    +0.256     1.114
+ATOM      3  N2  LPR A 702      41.840  34.269  43.308 -0.10 +0.17    -0.311     1.114
+ATOM      4  C5  LPR A 702      41.016  34.065  42.050 -0.29 -0.04    +0.171     1.114
+ATOM      5  C8  LPR A 702      43.304  34.187  43.023 -0.18 -0.08    +0.105     1.114
+ATOM      6  C6  LPR A 702      42.116  33.855  40.988 -0.28 -0.01    +0.035     1.114
+ATOM      7  C7  LPR A 702      43.350  33.933  41.570 -0.18 -0.02    +0.027     1.114
+ATOM      8  O1  LPR A 702      39.931  34.529  44.547 -0.26 +0.06    -0.270     1.114
+ATOM      9  C9  LPR A 702      40.114  32.783  42.189 -0.28 +0.08    +0.207     1.114
+ATOM     10  O5  LPR A 702      40.556  31.741  42.563 -0.06 -0.10    -0.646     1.114
+ATOM     11  O4  LPR A 702      38.879  33.005  41.886 -1.44 -1.04    -0.646     1.114
+ATOM     12  C10 LPR A 702      43.082  33.578  45.956 -0.42 -0.04    +0.034     1.114
+ATOM     13  C11 LPR A 702      42.921  32.388  46.798 -0.47 -0.01    +0.005     1.114
+ATOM     14  C12 LPR A 702      42.637  31.029  46.010 -0.42 -0.04    +0.041     1.114
+ATOM     15  C13 LPR A 702      42.660  31.206  44.586 -0.09 -0.25    +0.338     1.114
+ATOM     16  N3  LPR A 702      42.042  30.015  43.907 +0.10 -0.41    +0.618     1.114
+ATOM     17  N1  LPR A 702      40.983  34.666  46.942 -0.63 +0.20    -0.279     1.114
+ATOM     18  C4  LPR A 702      40.666  35.567  47.718 -0.33 -0.13    +0.185     1.114
+ATOM     19  C14 LPR A 702      40.006  35.578  49.040 -0.44 -0.02    +0.035     1.114
+ATOM     20  C15 LPR A 702      40.056  34.542  50.153 -0.45 -0.00    +0.003     1.114
+ATOM     21  C16 LPR A 702      39.076  34.666  51.280 -0.36 -0.00    +0.000     1.114
+ATOM     22  C21 LPR A 702      38.372  35.920  51.480 -0.26 -0.00    +0.000     1.114
+ATOM     23  C20 LPR A 702      37.414  36.049  52.555 -0.20 -0.00    +0.000     1.114
+ATOM     24  C19 LPR A 702      37.155  34.926  53.436 -0.24 -0.00    +0.000     1.114
+ATOM     25  C18 LPR A 702      37.858  33.673  53.238 -0.38 -0.00    +0.000     1.114
+ATOM     26  C17 LPR A 702      38.811  33.543  52.167 -0.42 -0.00    +0.000     1.114
+ATOM     27  C3  LPR A 702      41.885  36.428  48.046 -0.36 -0.23    +0.208     1.114
+ATOM     28  O2  LPR A 702      42.349  37.213  47.161 -1.25 +0.83    -0.646     1.114
+ATOM     29  O3  LPR A 702      42.419  36.345  49.135 -0.04 +0.86    -0.646     1.114
+TER
+ENDMDL
+MODEL       18
+USER    Run = 18
+USER    Cluster Rank = 3
+USER    Number of conformations in this cluster = 2
+USER  
+USER    RMSD from reference structure       = 3.960 A
+USER  
+USER    Estimated Free Energy of Binding    =   -6.60 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    Estimated Inhibition Constant, Ki   =   14.44 uM (micromolar)  [Temperature = 298.15 K]
+USER    
+USER    (1) Final Intermolecular Energy     =  -10.18 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   -8.31 kcal/mol
+USER        Electrostatic Energy            =   -1.87 kcal/mol
+USER    (2) Final Total Internal Energy     =   -1.75 kcal/mol
+USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -1.75 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dpf
+USER    NEWDPF move	lisinopril.pdbqt
+USER    NEWDPF about	41.013600 34.325200 46.441200
+USER    NEWDPF tran0	41.436375 32.450261 45.019613
+USER    NEWDPF axisangle0	0.856248 0.421020 -0.299301 -149.161293
+USER    NEWDPF quaternion0	0.825428 0.405866 -0.288528 -0.265882
+USER    NEWDPF dihe0	179.17 -168.91 97.99 180.00 179.64 -138.28 -175.75 145.29 -154.40 41.79 -39.62 -139.00 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  C2  LPR A 702      41.982  33.862  44.161 -0.22 -0.11    +0.177     3.960
+ATOM      2  C1  LPR A 702      41.875  33.925  45.734 -0.26 -0.21    +0.256     3.960
+ATOM      3  N2  LPR A 702      42.043  35.099  46.412 -0.23 +0.32    -0.311     3.960
+ATOM      4  C5  LPR A 702      41.905  35.119  47.924 -0.32 -0.22    +0.171     3.960
+ATOM      5  C8  LPR A 702      42.355  36.456  45.872 -0.08 -0.12    +0.105     3.960
+ATOM      6  C6  LPR A 702      42.163  36.608  48.240 -0.44 -0.04    +0.035     3.960
+ATOM      7  C7  LPR A 702      42.406  37.297  47.084 -0.30 -0.04    +0.027     3.960
+ATOM      8  O1  LPR A 702      41.613  32.850  46.378 -0.13 +0.22    -0.270     3.960
+ATOM      9  C9  LPR A 702      40.448  34.698  48.345 -0.30 -0.16    +0.207     3.960
+ATOM     10  O5  LPR A 702      40.190  34.357  49.458 -0.03 +0.49    -0.646     3.960
+ATOM     11  O4  LPR A 702      39.600  34.793  47.377 -0.38 +0.29    -0.646     3.960
+ATOM     12  C10 LPR A 702      41.211  35.029  43.546 -0.38 -0.02    +0.034     3.960
+ATOM     13  C11 LPR A 702      41.149  35.288  42.103 -0.51 -0.00    +0.005     3.960
+ATOM     14  C12 LPR A 702      42.355  34.684  41.249 -0.37 -0.02    +0.041     3.960
+ATOM     15  C13 LPR A 702      43.521  35.521  41.280 -0.19 -0.27    +0.338     3.960
+ATOM     16  N3  LPR A 702      43.296  36.688  42.201 +0.06 -0.60    +0.618     3.960
+ATOM     17  N1  LPR A 702      41.451  32.490  43.784 -0.07 +0.11    -0.279     3.960
+ATOM     18  C4  LPR A 702      41.026  32.095  42.698 -0.19 -0.02    +0.185     3.960
+ATOM     19  C14 LPR A 702      41.180  30.828  41.952 -0.21 -0.00    +0.035     3.960
+ATOM     20  C15 LPR A 702      40.851  29.407  42.383 -0.26 -0.00    +0.003     3.960
+ATOM     21  C16 LPR A 702      41.069  29.034  43.818 -0.21 -0.00    +0.000     3.960
+ATOM     22  C21 LPR A 702      42.270  29.486  44.499 -0.20 -0.00    +0.000     3.960
+ATOM     23  C20 LPR A 702      42.486  29.144  45.887 -0.39 -0.00    +0.000     3.960
+ATOM     24  C19 LPR A 702      41.504  28.350  46.602 -0.44 -0.00    +0.000     3.960
+ATOM     25  C18 LPR A 702      40.305  27.899  45.922 -0.26 -0.00    +0.000     3.960
+ATOM     26  C17 LPR A 702      40.088  28.239  44.541 -0.33 -0.00    +0.000     3.960
+ATOM     27  C3  LPR A 702      39.503  32.221  42.655 -0.25 +0.17    +0.208     3.960
+ATOM     28  O2  LPR A 702      38.960  32.890  41.722 -1.39 -1.12    -0.646     3.960
+ATOM     29  O3  LPR A 702      38.822  31.705  43.520 -0.03 -0.54    -0.646     3.960
+TER
+ENDMDL
+MODEL       20
+USER    Run = 20
+USER    Cluster Rank = 4
+USER    Number of conformations in this cluster = 4
+USER  
+USER    RMSD from reference structure       = 2.964 A
+USER  
+USER    Estimated Free Energy of Binding    =   -6.41 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    Estimated Inhibition Constant, Ki   =   20.04 uM (micromolar)  [Temperature = 298.15 K]
+USER    
+USER    (1) Final Intermolecular Energy     =   -9.99 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   -8.67 kcal/mol
+USER        Electrostatic Energy            =   -1.32 kcal/mol
+USER    (2) Final Total Internal Energy     =   -1.75 kcal/mol
+USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -1.75 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dpf
+USER    NEWDPF move	lisinopril.pdbqt
+USER    NEWDPF about	41.013600 34.325200 46.441200
+USER    NEWDPF tran0	40.502907 33.072252 44.390744
+USER    NEWDPF axisangle0	0.085054 0.363707 0.927622 -107.257172
+USER    NEWDPF quaternion0	0.068485 0.292853 0.746912 -0.593017
+USER    NEWDPF dihe0	12.94 50.94 -141.80 152.35 43.60 7.51 -84.03 66.12 -175.96 177.22 -40.89 -145.69 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  C2  LPR A 702      40.220  34.434  43.346 -0.39 -0.03    +0.177     2.964
+ATOM      2  C1  LPR A 702      39.874  32.988  42.818 -0.31 +0.08    +0.256     2.964
+ATOM      3  N2  LPR A 702      40.647  31.909  43.139 -0.11 +0.01    -0.311     2.964
+ATOM      4  C5  LPR A 702      40.263  30.531  42.631 -0.19 +0.03    +0.171     2.964
+ATOM      5  C8  LPR A 702      41.889  31.861  43.968 -0.14 -0.05    +0.105     2.964
+ATOM      6  C6  LPR A 702      41.384  29.655  43.228 -0.14 -0.02    +0.035     2.964
+ATOM      7  C7  LPR A 702      42.250  30.430  43.950 -0.15 -0.02    +0.027     2.964
+ATOM      8  O1  LPR A 702      38.836  32.831  42.083 -1.73 -0.45    -0.270     2.964
+ATOM      9  C9  LPR A 702      38.856  30.112  43.199 -0.16 +0.17    +0.207     2.964
+ATOM     10  O5  LPR A 702      38.063  30.920  43.572 +0.08 -0.91    -0.646     2.964
+ATOM     11  O4  LPR A 702      38.671  28.834  43.183 -0.06 -0.22    -0.646     2.964
+ATOM     12  C10 LPR A 702      41.131  35.143  42.343 -0.48 -0.01    +0.034     2.964
+ATOM     13  C11 LPR A 702      42.176  34.458  41.574 -0.37 -0.00    +0.005     2.964
+ATOM     14  C12 LPR A 702      43.321  35.402  40.988 -0.40 -0.03    +0.041     2.964
+ATOM     15  C13 LPR A 702      43.684  36.452  41.896 -0.22 -0.34    +0.338     2.964
+ATOM     16  N3  LPR A 702      44.416  37.541  41.162 +0.00 -0.80    +0.618     2.964
+ATOM     17  N1  LPR A 702      40.842  34.217  44.714 -0.31 +0.12    -0.279     2.964
+ATOM     18  C4  LPR A 702      41.648  34.923  45.320 -0.34 -0.14    +0.185     2.964
+ATOM     19  C14 LPR A 702      41.766  35.336  46.734 -0.49 -0.03    +0.035     2.964
+ATOM     20  C15 LPR A 702      41.433  34.560  47.999 -0.42 -0.00    +0.003     2.964
+ATOM     21  C16 LPR A 702      40.313  35.059  48.861 -0.43 -0.00    +0.000     2.964
+ATOM     22  C21 LPR A 702      39.032  35.377  48.254 -0.50 -0.00    +0.000     2.964
+ATOM     23  C20 LPR A 702      37.939  35.847  49.076 -0.37 -0.00    +0.000     2.964
+ATOM     24  C19 LPR A 702      38.120  36.001  50.508 -0.28 -0.00    +0.000     2.964
+ATOM     25  C18 LPR A 702      39.399  35.684  51.114 -0.28 -0.00    +0.000     2.964
+ATOM     26  C17 LPR A 702      40.488  35.215  50.297 -0.28 -0.00    +0.000     2.964
+ATOM     27  C3  LPR A 702      43.068  34.404  45.097 -0.26 -0.22    +0.208     2.964
+ATOM     28  O2  LPR A 702      43.789  34.932  44.193 +0.05 +0.72    -0.646     2.964
+ATOM     29  O3  LPR A 702      43.494  33.480  45.761 +0.02 +0.83    -0.646     2.964
+TER
+ENDMDL
+MODEL        2
+USER    Run = 2
+USER    Cluster Rank = 5
+USER    Number of conformations in this cluster = 2
+USER  
+USER    RMSD from reference structure       = 3.363 A
+USER  
+USER    Estimated Free Energy of Binding    =   -5.58 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    Estimated Inhibition Constant, Ki   =   80.57 uM (micromolar)  [Temperature = 298.15 K]
+USER    
+USER    (1) Final Intermolecular Energy     =   -9.16 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   -8.67 kcal/mol
+USER        Electrostatic Energy            =   -0.50 kcal/mol
+USER    (2) Final Total Internal Energy     =   -2.41 kcal/mol
+USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -2.41 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dpf
+USER    NEWDPF move	lisinopril.pdbqt
+USER    NEWDPF about	41.013600 34.325200 46.441200
+USER    NEWDPF tran0	41.084701 35.318390 44.647360
+USER    NEWDPF axisangle0	0.575148 -0.815485 0.064713 -163.472700
+USER    NEWDPF quaternion0	0.569177 -0.807018 0.064041 -0.143728
+USER    NEWDPF dihe0	32.28 105.08 -120.49 93.64 116.95 16.95 -161.18 66.77 -176.11 -18.61 179.52 -135.00 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  C2  LPR A 702      41.111  33.850  45.580 -0.10 -0.09    +0.177     3.363
+ATOM      2  C1  LPR A 702      41.444  35.212  46.302 -0.29 -0.20    +0.256     3.363
+ATOM      3  N2  LPR A 702      40.794  35.591  47.442 -0.21 +0.22    -0.311     3.363
+ATOM      4  C5  LPR A 702      41.164  36.898  48.119 -0.19 -0.15    +0.171     3.363
+ATOM      5  C8  LPR A 702      39.711  34.878  48.183 -0.33 -0.06    +0.105     3.363
+ATOM      6  C6  LPR A 702      40.206  36.904  49.330 -0.26 -0.02    +0.035     3.363
+ATOM      7  C7  LPR A 702      39.431  35.778  49.319 -0.37 -0.02    +0.027     3.363
+ATOM      8  O1  LPR A 702      42.352  35.967  45.807 -0.45 +0.29    -0.270     3.363
+ATOM      9  C9  LPR A 702      42.666  36.864  48.588 -0.38 -0.29    +0.207     3.363
+ATOM     10  O5  LPR A 702      43.567  37.011  47.822 -0.40 +1.01    -0.646     3.363
+ATOM     11  O4  LPR A 702      42.788  36.693  49.862 -0.12 +0.84    -0.646     3.363
+ATOM     12  C10 LPR A 702      42.229  32.842  45.843 -0.38 -0.03    +0.034     3.363
+ATOM     13  C11 LPR A 702      43.616  33.227  46.126 -0.42 -0.01    +0.005     3.363
+ATOM     14  C12 LPR A 702      44.536  33.459  44.842 -0.40 -0.05    +0.041     3.363
+ATOM     15  C13 LPR A 702      44.028  34.491  43.983 -0.10 -0.35    +0.338     3.363
+ATOM     16  N3  LPR A 702      44.255  34.124  42.543 +0.08 -0.53    +0.618     3.363
+ATOM     17  N1  LPR A 702      40.925  34.213  44.117 -0.21 +0.11    -0.279     3.363
+ATOM     18  C4  LPR A 702      40.916  33.477  43.130 -0.27 -0.04    +0.185     3.363
+ATOM     19  C14 LPR A 702      41.094  32.020  42.953 -0.26 -0.01    +0.035     3.363
+ATOM     20  C15 LPR A 702      40.667  30.877  43.861 -0.19 -0.00    +0.003     3.363
+ATOM     21  C16 LPR A 702      41.735  30.053  44.512 -0.21 -0.00    +0.000     3.363
+ATOM     22  C21 LPR A 702      43.029  29.920  43.865 -0.15 -0.00    +0.000     3.363
+ATOM     23  C20 LPR A 702      44.073  29.139  44.489 -0.16 -0.00    +0.000     3.363
+ATOM     24  C19 LPR A 702      43.830  28.485  45.761 -0.35 -0.00    +0.000     3.363
+ATOM     25  C18 LPR A 702      42.538  28.616  46.408 -0.43 -0.00    +0.000     3.363
+ATOM     26  C17 LPR A 702      41.498  29.395  45.789 -0.28 -0.00    +0.000     3.363
+ATOM     27  C3  LPR A 702      39.613  33.660  42.353 -0.39 +0.08    +0.208     3.363
+ATOM     28  O2  LPR A 702      39.106  34.821  42.253 -0.06 -0.12    -0.646     3.363
+ATOM     29  O3  LPR A 702      39.056  32.701  41.855 -1.40 -1.08    -0.646     3.363
+TER
+ENDMDL
+MODEL        1
+USER    Run = 1
+USER    Cluster Rank = 6
+USER    Number of conformations in this cluster = 1
+USER  
+USER    RMSD from reference structure       = 3.540 A
+USER  
+USER    Estimated Free Energy of Binding    =   -4.83 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    Estimated Inhibition Constant, Ki   =  289.36 uM (micromolar)  [Temperature = 298.15 K]
+USER    
+USER    (1) Final Intermolecular Energy     =   -8.41 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   -7.24 kcal/mol
+USER        Electrostatic Energy            =   -1.17 kcal/mol
+USER    (2) Final Total Internal Energy     =   -2.91 kcal/mol
+USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -2.91 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dpf
+USER    NEWDPF move	lisinopril.pdbqt
+USER    NEWDPF about	41.013600 34.325200 46.441200
+USER    NEWDPF tran0	40.568258 33.341455 42.978958
+USER    NEWDPF axisangle0	0.977953 -0.010926 0.208537 88.080571
+USER    NEWDPF quaternion0	0.679838 -0.007595 0.144968 0.718851
+USER    NEWDPF dihe0	124.56 -22.00 48.82 160.06 -76.21 73.39 125.42 45.15 -163.17 -14.71 111.86 -126.88 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  C2  LPR A 702      41.902  32.490  43.702 -0.14 -0.09    +0.177     3.540
+ATOM      2  C1  LPR A 702      40.649  31.664  43.217 -0.17 -0.01    +0.256     3.540
+ATOM      3  N2  LPR A 702      40.789  30.544  42.446 -0.09 +0.01    -0.311     3.540
+ATOM      4  C5  LPR A 702      39.558  29.764  42.023 -0.21 +0.09    +0.171     3.540
+ATOM      5  C8  LPR A 702      42.041  29.919  41.924 -0.09 -0.05    +0.105     3.540
+ATOM      6  C6  LPR A 702      40.183  28.617  41.200 -0.21 -0.00    +0.035     3.540
+ATOM      7  C7  LPR A 702      41.544  28.748  41.175 -0.21 -0.01    +0.027     3.540
+ATOM      8  O1  LPR A 702      39.480  32.053  43.567 -0.31 -0.10    -0.270     3.540
+ATOM      9  C9  LPR A 702      38.804  29.206  43.286 -0.27 +0.08    +0.207     3.540
+ATOM     10  O5  LPR A 702      39.373  28.603  44.143 +0.02 +0.20    -0.646     3.540
+ATOM     11  O4  LPR A 702      37.546  29.498  43.287 -0.53 -0.96    -0.646     3.540
+ATOM     12  C10 LPR A 702      42.209  32.149  45.161 -0.30 -0.03    +0.034     3.540
+ATOM     13  C11 LPR A 702      41.913  30.846  45.766 -0.27 -0.00    +0.005     3.540
+ATOM     14  C12 LPR A 702      42.975  29.694  45.460 -0.34 -0.04    +0.041     3.540
+ATOM     15  C13 LPR A 702      42.353  28.477  45.020 -0.12 -0.41    +0.338     3.540
+ATOM     16  N3  LPR A 702      41.253  28.088  45.967 -0.01 -0.90    +0.618     3.540
+ATOM     17  N1  LPR A 702      41.534  33.944  43.463 -0.11 +0.13    -0.279     3.540
+ATOM     18  C4  LPR A 702      42.136  34.962  43.803 -0.28 -0.13    +0.185     3.540
+ATOM     19  C14 LPR A 702      42.394  35.594  45.114 -0.42 -0.03    +0.035     3.540
+ATOM     20  C15 LPR A 702      42.900  34.968  46.405 -0.47 -0.00    +0.003     3.540
+ATOM     21  C16 LPR A 702      42.220  35.343  47.687 -0.47 -0.00    +0.000     3.540
+ATOM     22  C21 LPR A 702      42.839  36.319  48.565 -0.49 -0.00    +0.000     3.540
+ATOM     23  C20 LPR A 702      42.187  36.699  49.798 -0.42 -0.00    +0.000     3.540
+ATOM     24  C19 LPR A 702      40.914  36.105  50.160 -0.30 -0.00    +0.000     3.540
+ATOM     25  C18 LPR A 702      40.295  35.129  49.283 -0.41 -0.00    +0.000     3.540
+ATOM     26  C17 LPR A 702      40.942  34.751  48.055 -0.43 -0.00    +0.000     3.540
+ATOM     27  C3  LPR A 702      43.564  34.932  43.260 -0.23 -0.19    +0.208     3.540
+ATOM     28  O2  LPR A 702      43.865  35.653  42.258 +0.02 +0.63    -0.646     3.540
+ATOM     29  O3  LPR A 702      44.397  34.206  43.767 +0.02 +0.65    -0.646     3.540
+TER
+ENDMDL
+MODEL       11
+USER    Run = 11
+USER    Cluster Rank = 7
+USER    Number of conformations in this cluster = 1
+USER  
+USER    RMSD from reference structure       = 2.098 A
+USER  
+USER    Estimated Free Energy of Binding    =   -3.67 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    Estimated Inhibition Constant, Ki   =    2.06 mM (millimolar)  [Temperature = 298.15 K]
+USER    
+USER    (1) Final Intermolecular Energy     =   -7.25 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   -8.44 kcal/mol
+USER        Electrostatic Energy            =   +1.19 kcal/mol
+USER    (2) Final Total Internal Energy     =   -1.44 kcal/mol
+USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -1.44 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dpf
+USER    NEWDPF move	lisinopril.pdbqt
+USER    NEWDPF about	41.013600 34.325200 46.441200
+USER    NEWDPF tran0	42.969897 34.632852 45.692773
+USER    NEWDPF axisangle0	-0.267428 -0.394134 -0.879284 -67.331444
+USER    NEWDPF quaternion0	-0.148248 -0.218487 -0.487428 -0.832286
+USER    NEWDPF dihe0	-166.33 27.95 -63.22 40.92 -78.52 97.52 -22.73 -113.85 -166.90 132.21 -85.83 99.56 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  C2  LPR A 702      43.351  32.983  46.092 -0.33 -0.23    +0.177     2.098
+ATOM      2  C1  LPR A 702      43.291  33.401  44.572 -0.16 -0.23    +0.256     2.098
+ATOM      3  N2  LPR A 702      42.103  33.483  43.903 -0.06 +0.18    -0.311     2.098
+ATOM      4  C5  LPR A 702      42.089  33.915  42.448 -0.14 -0.08    +0.171     2.098
+ATOM      5  C8  LPR A 702      40.724  33.205  44.405 -0.24 -0.03    +0.105     2.098
+ATOM      6  C6  LPR A 702      40.581  33.869  42.123 -0.41 -0.00    +0.035     2.098
+ATOM      7  C7  LPR A 702      39.877  33.473  43.227 -0.36 +0.00    +0.027     2.098
+ATOM      8  O1  LPR A 702      44.384  33.678  43.965 -0.22 +0.26    -0.270     2.098
+ATOM      9  C9  LPR A 702      42.652  35.377  42.306 -0.27 -0.15    +0.207     2.098
+ATOM     10  O5  LPR A 702      43.020  36.004  43.251 -0.00 +0.64    -0.646     2.098
+ATOM     11  O4  LPR A 702      42.690  35.782  41.080 +0.00 +0.42    -0.646     2.098
+ATOM     12  C10 LPR A 702      42.452  31.769  46.327 -0.43 -0.03    +0.034     2.098
+ATOM     13  C11 LPR A 702      42.553  30.526  45.555 -0.38 -0.00    +0.005     2.098
+ATOM     14  C12 LPR A 702      43.750  29.556  45.975 -0.36 -0.04    +0.041     2.098
+ATOM     15  C13 LPR A 702      43.283  28.294  46.476 -0.24 -0.43    +0.338     2.098
+ATOM     16  N3  LPR A 702      41.860  28.063  46.049 -0.00 -0.95    +0.618     2.098
+ATOM     17  N1  LPR A 702      42.939  34.226  46.860 -0.19 +0.47    -0.279     2.098
+ATOM     18  C4  LPR A 702      42.075  35.059  46.583 -0.38 -0.20    +0.185     2.098
+ATOM     19  C14 LPR A 702      40.651  35.199  46.952 -0.42 -0.02    +0.035     2.098
+ATOM     20  C15 LPR A 702      39.982  35.024  48.307 -0.51 -0.00    +0.003     2.098
+ATOM     21  C16 LPR A 702      40.334  35.988  49.400 -0.33 -0.00    +0.000     2.098
+ATOM     22  C21 LPR A 702      39.341  36.944  49.856 -0.26 -0.00    +0.000     2.098
+ATOM     23  C20 LPR A 702      39.663  37.870  50.919 -0.16 -0.00    +0.000     2.098
+ATOM     24  C19 LPR A 702      40.979  37.847  51.529 -0.20 -0.00    +0.000     2.098
+ATOM     25  C18 LPR A 702      41.972  36.893  51.073 -0.33 -0.00    +0.000     2.098
+ATOM     26  C17 LPR A 702      41.652  35.969  50.016 -0.35 -0.00    +0.000     2.098
+ATOM     27  C3  LPR A 702      42.562  36.460  46.950 -0.32 -0.26    +0.208     2.098
+ATOM     28  O2  LPR A 702      43.572  36.589  47.711 -0.46 +1.12    -0.646     2.098
+ATOM     29  O3  LPR A 702      41.975  37.440  46.536 -0.92 +0.76    -0.646     2.098
+TER
+ENDMDL
+MODEL       17
+USER    Run = 17
+USER    Cluster Rank = 8
+USER    Number of conformations in this cluster = 1
+USER  
+USER    RMSD from reference structure       = 3.425 A
+USER  
+USER    Estimated Free Energy of Binding    =   -2.98 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    Estimated Inhibition Constant, Ki   =    6.57 mM (millimolar)  [Temperature = 298.15 K]
+USER    
+USER    (1) Final Intermolecular Energy     =   -6.56 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   -5.59 kcal/mol
+USER        Electrostatic Energy            =   -0.96 kcal/mol
+USER    (2) Final Total Internal Energy     =   -2.38 kcal/mol
+USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -2.38 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dpf
+USER    NEWDPF move	lisinopril.pdbqt
+USER    NEWDPF about	41.013600 34.325200 46.441200
+USER    NEWDPF tran0	41.789060 32.786712 43.921383
+USER    NEWDPF axisangle0	-0.750075 -0.661251 -0.011620 -137.994507
+USER    NEWDPF quaternion0	-0.700242 -0.617319 -0.010848 -0.358413
+USER    NEWDPF dihe0	-161.67 63.77 48.12 37.08 -151.81 166.54 105.60 180.00 178.75 178.32 -79.65 -100.20 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  C2  LPR A 702      41.969  33.890  45.254 -0.28 -0.13    +0.177     3.425
+ATOM      2  C1  LPR A 702      42.351  32.375  45.468 -0.20 -0.21    +0.256     3.425
+ATOM      3  N2  LPR A 702      41.651  31.372  44.859 -0.09 +0.19    -0.311     3.425
+ATOM      4  C5  LPR A 702      42.069  29.928  45.071 -0.17 -0.14    +0.171     3.425
+ATOM      5  C8  LPR A 702      40.467  31.472  43.955 +0.03 -0.02    +0.105     3.425
+ATOM      6  C6  LPR A 702      41.030  29.173  44.215 -0.21 -0.02    +0.035     3.425
+ATOM      7  C7  LPR A 702      40.175  30.063  43.626 -0.21 -0.00    +0.027     3.425
+ATOM      8  O1  LPR A 702      43.347  32.090  46.221 -0.30 +0.31    -0.270     3.425
+ATOM      9  C9  LPR A 702      43.527  29.695  44.525 -0.14 -0.20    +0.207     3.425
+ATOM     10  O5  LPR A 702      44.371  30.533  44.608 +0.16 +0.60    -0.646     3.425
+ATOM     11  O4  LPR A 702      43.690  28.517  44.022 +0.07 +0.78    -0.646     3.425
+ATOM     12  C10 LPR A 702      40.986  34.330  46.339 -0.11 -0.02    +0.034     3.425
+ATOM     13  C11 LPR A 702      41.236  35.452  47.251 -0.49 -0.00    +0.005     3.425
+ATOM     14  C12 LPR A 702      42.568  36.283  46.962 -0.48 -0.05    +0.041     3.425
+ATOM     15  C13 LPR A 702      43.346  36.500  48.149 -0.20 -0.60    +0.338     3.425
+ATOM     16  N3  LPR A 702      43.023  35.453  49.178 +0.08 -1.25    +0.618     3.425
+ATOM     17  N1  LPR A 702      41.418  33.964  43.841 -0.14 +0.13    -0.279     3.425
+ATOM     18  C4  LPR A 702      41.281  34.946  43.112 -0.31 -0.09    +0.185     3.425
+ATOM     19  C14 LPR A 702      42.077  35.494  41.994 -0.42 -0.02    +0.035     3.425
+ATOM     20  C15 LPR A 702      42.961  34.770  40.991 -0.37 -0.00    +0.003     3.425
+ATOM     21  C16 LPR A 702      43.096  33.282  41.112 -0.18 -0.00    +0.000     3.425
+ATOM     22  C21 LPR A 702      44.409  32.697  41.314 -0.15 -0.00    +0.000     3.425
+ATOM     23  C20 LPR A 702      44.551  31.264  41.446 -0.15 -0.00    +0.000     3.425
+ATOM     24  C19 LPR A 702      43.382  30.408  41.375 -0.14 -0.00    +0.000     3.425
+ATOM     25  C18 LPR A 702      42.069  30.992  41.171 -0.15 -0.00    +0.000     3.425
+ATOM     26  C17 LPR A 702      41.926  32.418  41.042 -0.17 -0.00    +0.000     3.425
+ATOM     27  C3  LPR A 702      39.908  34.912  42.441 -0.46 -0.02    +0.208     3.425
+ATOM     28  O2  LPR A 702      39.268  33.815  42.388 -0.47 -0.33    -0.646     3.425
+ATOM     29  O3  LPR A 702      39.444  35.919  41.944 +0.06 +0.14    -0.646     3.425
+TER
+ENDMDL
+MODEL        3
+USER    Run = 3
+USER    Cluster Rank = 9
+USER    Number of conformations in this cluster = 1
+USER  
+USER    RMSD from reference structure       = 2.387 A
+USER  
+USER    Estimated Free Energy of Binding    =   -2.62 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    Estimated Inhibition Constant, Ki   =   11.92 mM (millimolar)  [Temperature = 298.15 K]
+USER    
+USER    (1) Final Intermolecular Energy     =   -6.20 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   -7.72 kcal/mol
+USER        Electrostatic Energy            =   +1.52 kcal/mol
+USER    (2) Final Total Internal Energy     =   -2.98 kcal/mol
+USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -2.98 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dpf
+USER    NEWDPF move	lisinopril.pdbqt
+USER    NEWDPF about	41.013600 34.325200 46.441200
+USER    NEWDPF tran0	41.766194 33.595078 46.352372
+USER    NEWDPF axisangle0	-0.063123 0.433660 0.898863 -150.478368
+USER    NEWDPF quaternion0	-0.061040 0.419348 0.869199 -0.254784
+USER    NEWDPF dihe0	136.75 179.15 -61.41 -40.57 97.26 24.58 42.58 -29.93 163.73 24.39 -90.43 -99.04 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  C2  LPR A 702      40.567  34.088  45.192 -0.17 -0.06    +0.177     2.387
+ATOM      2  C1  LPR A 702      41.308  32.711  44.979 -0.05 -0.13    +0.256     2.387
+ATOM      3  N2  LPR A 702      40.899  31.823  44.025 -0.08 +0.09    -0.311     2.387
+ATOM      4  C5  LPR A 702      41.656  30.521  43.837 -0.09 -0.09    +0.171     2.387
+ATOM      5  C8  LPR A 702      39.756  31.935  43.070 -0.31 +0.05    +0.105     2.387
+ATOM      6  C6  LPR A 702      40.865  29.864  42.686 -0.20 -0.01    +0.035     2.387
+ATOM      7  C7  LPR A 702      39.834  30.676  42.303 -0.27 +0.02    +0.027     2.387
+ATOM      8  O1  LPR A 702      42.319  32.434  45.715 -0.22 +0.23    -0.270     2.387
+ATOM      9  C9  LPR A 702      43.142  30.810  43.407 -0.08 -0.15    +0.207     2.387
+ATOM     10  O5  LPR A 702      44.032  30.064  43.678 +0.10 +0.59    -0.646     2.387
+ATOM     11  O4  LPR A 702      43.262  31.900  42.725 +0.11 +0.41    -0.646     2.387
+ATOM     12  C10 LPR A 702      40.680  34.933  43.923 -0.41 -0.01    +0.034     2.387
+ATOM     13  C11 LPR A 702      41.687  34.701  42.882 -0.39 -0.00    +0.005     2.387
+ATOM     14  C12 LPR A 702      42.881  35.760  42.840 -0.39 -0.04    +0.041     2.387
+ATOM     15  C13 LPR A 702      44.161  35.153  43.075 -0.09 -0.36    +0.338     2.387
+ATOM     16  N3  LPR A 702      44.041  34.085  44.126 +0.06 -0.62    +0.618     2.387
+ATOM     17  N1  LPR A 702      41.222  34.704  46.415 -0.53 +0.20    -0.279     2.387
+ATOM     18  C4  LPR A 702      40.796  35.585  47.162 -0.18 -0.12    +0.185     2.387
+ATOM     19  C14 LPR A 702      39.970  35.561  48.387 -0.47 -0.02    +0.035     2.387
+ATOM     20  C15 LPR A 702      39.621  34.390  49.293 -0.28 -0.00    +0.003     2.387
+ATOM     21  C16 LPR A 702      39.398  34.665  50.750 -0.38 -0.00    +0.000     2.387
+ATOM     22  C21 LPR A 702      38.981  33.584  51.625 -0.42 -0.00    +0.000     2.387
+ATOM     23  C20 LPR A 702      38.776  33.832  53.034 -0.38 -0.00    +0.000     2.387
+ATOM     24  C19 LPR A 702      38.985  35.162  53.576 -0.28 -0.00    +0.000     2.387
+ATOM     25  C18 LPR A 702      39.401  36.243  52.702 -0.20 -0.00    +0.000     2.387
+ATOM     26  C17 LPR A 702      39.607  35.996  51.299 -0.24 -0.00    +0.000     2.387
+ATOM     27  C3  LPR A 702      41.953  36.449  47.664 -0.36 -0.23    +0.208     2.387
+ATOM     28  O2  LPR A 702      42.470  36.200  48.798 -0.05 +0.91    -0.646     2.387
+ATOM     29  O3  LPR A 702      42.358  37.379  46.995 -1.46 +0.88    -0.646     2.387
+TER
+ENDMDL
+
+
+AVSFLD: # AVS field file
+AVSFLD: #
+AVSFLD: # Created by AutoDock
+AVSFLD: #
+AVSFLD: ndim=2           # number of dimensions in the field
+AVSFLD: nspace=1         # number of physical coordinates
+AVSFLD: veclen=7         # vector size
+AVSFLD: dim1=29          # atoms
+AVSFLD: dim2=9           # conformations
+AVSFLD: data=Real       # data type (byte,integer,Real,double)
+AVSFLD: field=uniform    # field coordinate layout
+AVSFLD: label= x y z vdW Elec q RMS
+AVSFLD: variable 1 file = C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dlg.pdb filetype = ascii offset = 5 stride = 12
+AVSFLD: variable 2 file = C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dlg.pdb filetype = ascii offset = 6 stride = 12
+AVSFLD: variable 3 file = C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dlg.pdb filetype = ascii offset = 7 stride = 12
+AVSFLD: variable 4 file = C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dlg.pdb filetype = ascii offset = 8 stride = 12
+AVSFLD: variable 5 file = C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dlg.pdb filetype = ascii offset = 9 stride = 12
+AVSFLD: variable 6 file = C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dlg.pdb filetype = ascii offset = 10 stride = 12
+AVSFLD: variable 7 file = C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/1dock.dlg.pdb filetype = ascii offset = 11 stride = 12
+AVSFLD: # end of file
+
+>>> Closing the docking parameter file (DPF)...
+This docking finished at:			9:50 19" p.m., 11/21/2021
+
+
+________________________________________________________________________________
+
+C:/Users/kossa/Desktop/Programy/AutoDock/TheBest/lisinopril/autodock4.exe: Successful Completion on "LAPTOP-B353CJIT"
+
+Real= 13m 34.61s,  CPU= 6m 24.02s,  System= 0.24s
+________________________________________________________________________________
+
